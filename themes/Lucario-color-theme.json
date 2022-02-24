@@ -1,14 +1,15 @@
 {
+	"name": "Lucario",
+	"type": "dark",
+	"colors": {
+		"editor.background": "#2b3e50",
+		"editor.foreground": "#F8F8F2",
+		"editorCursor.foreground": "#F8F8F2",
+		"editorWhitespace.foreground": "#61bbc8",
+		"editor.lineHighlightBackground": "#243443",
+		"editor.selectionBackground": "#19242f"
+	},
 	"tokenColors": [
-		{
-			"settings": {
-				"background": "#2b3e50",
-				"foreground": "#F8F8F2",
-				"selectionBorder": "#10171e",
-				"findHighlight": "#3F9AB7",
-				"findHighlightForeground": "#FFF"
-			}
-		},
 		{
 			"name": "Comment",
 			"scope": "comment",
@@ -163,7 +164,6 @@
 			"name": "Invalid",
 			"scope": "invalid",
 			"settings": {
-				"background": "#F92672",
 				"fontStyle": "",
 				"foreground": "#F8F8F0"
 			}
@@ -172,7 +172,6 @@
 			"name": "Invalid deprecated",
 			"scope": "invalid.deprecated",
 			"settings": {
-				"background": "#AE81FF",
 				"foreground": "#F8F8F0"
 			}
 		},
@@ -190,7 +189,6 @@
 			"name": "diff.deleted",
 			"scope": "markup.deleted",
 			"settings": {
-				"background": "#2b3e50",
 				"foreground": "#F92672"
 			}
 		},
@@ -198,7 +196,6 @@
 			"name": "diff.inserted",
 			"scope": "markup.inserted",
 			"settings": {
-				"background": "#2b3e50",
 				"foreground": "#A6E22E"
 			}
 		},
@@ -206,18 +203,8 @@
 			"name": "diff.changed",
 			"scope": "markup.changed",
 			"settings": {
-				"background": "#2b3e50",
 				"foreground": "#E6DB74"
 			}
 		}
 	],
-	"colors": {
-		"editor.background": "#2b3e50",
-		"editorCursor.foreground": "#F8F8F2",
-		"editor.foreground": "#F8F8F2",
-		"editorWhitespace.foreground": "#61bbc8",
-		"editor.lineHighlightBackground": "#243443",
-		"editor.selectionBackground": "#19242f"
-	},
-	"name": "Lucario"
 }
