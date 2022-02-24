@@ -1,0 +1,21 @@
+{
+    "name": "lucario-theme",
+    "displayName": "Lucario Theme",
+    "description": "A VSCode port of the Lucario theme by Raphael Amorim",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Lucario",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Lucario-color-theme.json"
+            }
+        ]
+    }
+}
