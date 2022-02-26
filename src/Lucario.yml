@@ -80,12 +80,6 @@ tokenColors:
   settings:
     foreground: *NumberPink
 
-- name: Variable catch-all
-  scope: variable
-  settings:
-    fontStyle: ''
-    foreground: *Orange
-
 - name: Instance variable
   scope: variable.other.readwrite.instance
   settings:
