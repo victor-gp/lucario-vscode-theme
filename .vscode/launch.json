@@ -12,6 +12,7 @@
             "preLaunchTask": "npm: build",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
+                "${workspaceFolder}/vgp-utils/samples",
                 "${file}"
             ]
         }
