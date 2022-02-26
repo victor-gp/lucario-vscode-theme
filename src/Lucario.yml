@@ -4,16 +4,16 @@ type: dark
 
 palette:
   base:
-    - &BG         '#2B3E50'
-    - &FG         '#F8F8F2'
-    - &Selection  '#19242F'
-    - &Comment    '#5C98CD'
-    - &Cyan       '#66D9EF'
-    - &Green      '#72C05D'
-    - &Orange     '#FFAB28'
-    - &Pink       '#CA94FF'
-    - &Red        '#FF6541'
-    - &Yellow     '#E6DB74'
+    - &BG             '#2B3E50'
+    - &FG             '#F8F8F2'
+    - &Selection      '#19242F'
+    - &Comment        '#5C98CD'
+    - &StorageCyan    '#66D9EF'
+    - &SoftGreen      '#72C05D'
+    - &InstanceOrange '#FFAB28'
+    - &NumberPink     '#CA94FF'
+    - &EntityRed      '#FF6541'
+    - &StringYellow   '#E6DB74'
   other:
     - &LineHighlight  '#243443'
     - &NonText        '#61BBC8'
@@ -22,6 +22,15 @@ palette:
     - &DiffHeader   '#75715E'
     - &DiffDeleted  '#F92672'
     - &DiffAdded    '#A6E22E'
+  atom:
+    - &Green      '#199C4B'
+    - &Yellow     '#F0CC04'
+    - &Orange     '#E94B35'
+    - &Function   '#8BE0FD'
+    - &Constant   '#6BE5FD'
+    - &Border     '#F8F8F0' # == *Invalid
+    - &Invisible  '#666'
+
 
 
 # workbench/UI colors
@@ -46,24 +55,24 @@ tokenColors:
 - name: String
   scope: string
   settings:
-    foreground: *Yellow
+    foreground: *StringYellow
 
 - name: Number
   scope: constant.numeric
   settings:
-    foreground: *Pink
+    foreground: *NumberPink
 
 - name: Built-in constant
   scope: constant.language
   settings:
-    foreground: *Pink
+    foreground: *NumberPink
 
 - name: User-defined constant
   scope:
   - constant.character
   - constant.other
   settings:
-    foreground: *Pink
+    foreground: *NumberPink
 
 - name: Variable
   scope: variable
@@ -73,67 +82,67 @@ tokenColors:
 - name: Keyword
   scope: keyword
   settings:
-    foreground: *Red
+    foreground: *EntityRed
 
 - name: Storage
   scope: storage
   settings:
     fontStyle: ''
-    foreground: *Red
+    foreground: *EntityRed
 
 - name: Storage type
   scope: storage.type
   settings:
     fontStyle: italic
-    foreground: *Cyan
+    foreground: *StorageCyan
 
 - name: Class name
   scope: entity.name.class
   settings:
     fontStyle: underline
-    foreground: *Green
+    foreground: *SoftGreen
 
 - name: Inherited class
   scope: entity.other.inherited-class
   settings:
     fontStyle: italic underline
-    foreground: *Green
+    foreground: *SoftGreen
 
 - name: Function name
   scope: entity.name.function
   settings:
     fontStyle: ''
-    foreground: *Green
+    foreground: *SoftGreen
 
 - name: Function argument
   scope: variable.parameter
   settings:
     fontStyle: italic
-    foreground: *Orange
+    foreground: *InstanceOrange
 
 - name: Tag name
   scope: entity.name.tag
   settings:
     fontStyle: ''
-    foreground: *Red
+    foreground: *EntityRed
 
 - name: Tag attribute
   scope: entity.other.attribute-name
   settings:
     fontStyle: ''
-    foreground: *Green
+    foreground: *SoftGreen
 
 - name: Library function
   scope: support.function
   settings:
     fontStyle: ''
-    foreground: *Cyan
+    foreground: *StorageCyan
 
 - name: Library constant
   scope: support.constant
   settings:
     fontStyle: ''
-    foreground: *Cyan
+    foreground: *StorageCyan
 
 - name: Library class/type
   scope:
@@ -141,7 +150,7 @@ tokenColors:
   - support.class
   settings:
     fontStyle: italic
-    foreground: *Cyan
+    foreground: *StorageCyan
 
 - name: Library variable
   scope: support.other.variable
@@ -179,4 +188,4 @@ tokenColors:
 - name: diff.changed
   scope: markup.changed
   settings:
-    foreground: *Yellow
+    foreground: *StringYellow
