@@ -74,10 +74,31 @@ tokenColors:
   settings:
     foreground: *NumberPink
 
-- name: Variable
+- name: Constant catch-all
+  scope:
+  - constant
+  settings:
+    foreground: *NumberPink
+
+- name: Variable catch-all
   scope: variable
   settings:
     fontStyle: ''
+    foreground: *Orange
+
+- name: Instance variable
+  scope: variable.other.readwrite.instance
+  settings:
+    foreground: *InstanceOrange
+
+- name: Escaped string (?)
+  scope:
+  - constant.character.escaped
+  - constant.character.escape
+  - string.source
+  - string.source.ruby
+  settings:
+    foreground: *NumberPink
 
 - name: Keyword
   scope: keyword
@@ -123,11 +144,13 @@ tokenColors:
 - name: Tag name
   scope: entity.name.tag
   settings:
-    fontStyle: ''
+    fontStyle: italic
     foreground: *EntityRed
 
 - name: Tag attribute
-  scope: entity.other.attribute-name
+  scope:
+  - entity.other.attribute-name
+  - markup.heading
   settings:
     fontStyle: ''
     foreground: *SoftGreen
@@ -136,13 +159,13 @@ tokenColors:
   scope: support.function
   settings:
     fontStyle: ''
-    foreground: *StorageCyan
+    foreground: *Function
 
 - name: Library constant
   scope: support.constant
   settings:
     fontStyle: ''
-    foreground: *StorageCyan
+    foreground: *Constant
 
 - name: Library class/type
   scope:
@@ -150,23 +173,31 @@ tokenColors:
   - support.class
   settings:
     fontStyle: italic
-    foreground: *StorageCyan
+    foreground: *Constant
 
 - name: Library variable
-  scope: support.other.variable
+  scope:
+  - support.other.variable
+  - variable.unordered
+  - variable.ordered
   settings:
     fontStyle: ''
+    foreground: *InstanceOrange
 
 - name: Invalid
-  scope: invalid
+  scope:
+    - invalid
+    # - invalid.deprecated
   settings:
     fontStyle: ''
     foreground: *Invalid
+    background: *Selection
 
 - name: Invalid deprecated
   scope: invalid.deprecated
   settings:
     foreground: *Invalid
+    background: *Selection
 
 - name: diff.header
   scope:
@@ -189,3 +220,21 @@ tokenColors:
   scope: markup.changed
   settings:
     foreground: *StringYellow
+
+- name: Markup emphasis
+  scope:
+  - markup.bold
+  - markup.italic
+  settings:
+    foreground: *EntityRed
+
+- name: Markup raw
+  scope: markup.raw
+  settings:
+    foreground: *StorageCyan
+
+- scope:
+  - punctuation.definition.tag.xml.plist
+  - constant.name.xml
+  settings:
+    foreground: *FG
