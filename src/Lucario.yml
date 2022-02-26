@@ -2,15 +2,37 @@ name: Lucario
 author: Víctor González Prieto
 type: dark
 
+palette:
+  base:
+    - &BG         '#2B3E50'
+    - &FG         '#F8F8F2'
+    - &Selection  '#19242F'
+    - &Comment    '#5C98CD'
+    - &Cyan       '#66D9EF'
+    - &Green      '#72C05D'
+    - &Orange     '#FFAB28'
+    - &Pink       '#CA94FF'
+    - &Red        '#FF6541'
+    - &Yellow     '#E6DB74'
+  other:
+    - &LineHighlight  '#243443'
+    - &NonText        '#61BBC8'
+  tmp:
+    - &Invalid      '#F8F8F0'
+    - &DiffHeader   '#75715E'
+    - &DiffDeleted  '#F92672'
+    - &DiffAdded    '#A6E22E'
+
+
 # UI/workbench colors
 colors:
 
-  editor.background: "#2B3E50"
-  editor.foreground: "#F8F8F2"
-  editorCursor.foreground: "#F8F8F2"
-  editorWhitespace.foreground: "#61BBC8"
-  editor.lineHighlightBackground: "#243443"
-  editor.selectionBackground: "#19242F"
+  editor.background: *BG
+  editor.foreground: *FG
+  editorCursor.foreground: *FG
+  editorWhitespace.foreground: *NonText
+  editor.lineHighlightBackground: *LineHighlight
+  editor.selectionBackground: *Selection
 
 
 # syntax colors
@@ -19,29 +41,29 @@ tokenColors:
 - name: Comment
   scope: comment
   settings:
-    foreground: "#5C98CD"
+    foreground: *Comment
 
 - name: String
   scope: string
   settings:
-    foreground: "#E6DB74"
+    foreground: *Yellow
 
 - name: Number
   scope: constant.numeric
   settings:
-    foreground: "#CA94FF"
+    foreground: *Pink
 
 - name: Built-in constant
   scope: constant.language
   settings:
-    foreground: "#CA94FF"
+    foreground: *Pink
 
 - name: User-defined constant
   scope:
   - constant.character
   - constant.other
   settings:
-    foreground: "#CA94FF"
+    foreground: *Pink
 
 - name: Variable
   scope: variable
@@ -51,67 +73,67 @@ tokenColors:
 - name: Keyword
   scope: keyword
   settings:
-    foreground: "#FF6541"
+    foreground: *Red
 
 - name: Storage
   scope: storage
   settings:
     fontStyle: ''
-    foreground: "#FF6541"
+    foreground: *Red
 
 - name: Storage type
   scope: storage.type
   settings:
     fontStyle: italic
-    foreground: "#66D9EF"
+    foreground: *Cyan
 
 - name: Class name
   scope: entity.name.class
   settings:
     fontStyle: underline
-    foreground: "#72C05D"
+    foreground: *Green
 
 - name: Inherited class
   scope: entity.other.inherited-class
   settings:
     fontStyle: italic underline
-    foreground: "#72C05D"
+    foreground: *Green
 
 - name: Function name
   scope: entity.name.function
   settings:
     fontStyle: ''
-    foreground: "#72C05D"
+    foreground: *Green
 
 - name: Function argument
   scope: variable.parameter
   settings:
     fontStyle: italic
-    foreground: "#FFAB28"
+    foreground: *Orange
 
 - name: Tag name
   scope: entity.name.tag
   settings:
     fontStyle: ''
-    foreground: "#FF6541"
+    foreground: *Red
 
 - name: Tag attribute
   scope: entity.other.attribute-name
   settings:
     fontStyle: ''
-    foreground: "#72C05D"
+    foreground: *Green
 
 - name: Library function
   scope: support.function
   settings:
     fontStyle: ''
-    foreground: "#66D9EF"
+    foreground: *Cyan
 
 - name: Library constant
   scope: support.constant
   settings:
     fontStyle: ''
-    foreground: "#66D9EF"
+    foreground: *Cyan
 
 - name: Library class/type
   scope:
@@ -119,7 +141,7 @@ tokenColors:
   - support.class
   settings:
     fontStyle: italic
-    foreground: "#66D9EF"
+    foreground: *Cyan
 
 - name: Library variable
   scope: support.other.variable
@@ -130,31 +152,31 @@ tokenColors:
   scope: invalid
   settings:
     fontStyle: ''
-    foreground: "#F8F8F0"
+    foreground: *Invalid
 
 - name: Invalid deprecated
   scope: invalid.deprecated
   settings:
-    foreground: "#F8F8F0"
+    foreground: *Invalid
 
 - name: diff.header
   scope:
   - meta.diff
   - meta.diff.header
   settings:
-    foreground: "#75715E"
+    foreground: *DiffHeader
 
 - name: diff.deleted
   scope: markup.deleted
   settings:
-    foreground: "#F92672"
+    foreground: *DiffDeleted
 
 - name: diff.inserted
   scope: markup.inserted
   settings:
-    foreground: "#A6E22E"
+    foreground: *DiffAdded
 
 - name: diff.changed
   scope: markup.changed
   settings:
-    foreground: "#E6DB74"
+    foreground: *Yellow
