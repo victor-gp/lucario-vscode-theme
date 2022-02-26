@@ -1,6 +1,6 @@
 name: Lucario
-author: Víctor González Prieto
 type: dark
+# semanticHighlighting: true
 
 palette:
   base:
@@ -24,7 +24,7 @@ palette:
     - &DiffAdded    '#A6E22E'
 
 
-# UI/workbench colors
+# workbench/UI colors
 colors:
 
   editor.background: *BG
