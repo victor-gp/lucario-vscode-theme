@@ -5,12 +5,12 @@ type: dark
 # UI/workbench colors
 colors:
 
-  editor.background: "#2b3e50"
+  editor.background: "#2B3E50"
   editor.foreground: "#F8F8F2"
   editorCursor.foreground: "#F8F8F2"
-  editorWhitespace.foreground: "#61bbc8"
+  editorWhitespace.foreground: "#61BBC8"
   editor.lineHighlightBackground: "#243443"
-  editor.selectionBackground: "#19242f"
+  editor.selectionBackground: "#19242F"
 
 
 # syntax colors
@@ -19,7 +19,7 @@ tokenColors:
 - name: Comment
   scope: comment
   settings:
-    foreground: "#5c98cd"
+    foreground: "#5C98CD"
 
 - name: String
   scope: string
@@ -29,19 +29,19 @@ tokenColors:
 - name: Number
   scope: constant.numeric
   settings:
-    foreground: "#ca94ff"
+    foreground: "#CA94FF"
 
 - name: Built-in constant
   scope: constant.language
   settings:
-    foreground: "#ca94ff"
+    foreground: "#CA94FF"
 
 - name: User-defined constant
   scope:
   - constant.character
   - constant.other
   settings:
-    foreground: "#ca94ff"
+    foreground: "#CA94FF"
 
 - name: Variable
   scope: variable
@@ -51,13 +51,13 @@ tokenColors:
 - name: Keyword
   scope: keyword
   settings:
-    foreground: "#ff6541"
+    foreground: "#FF6541"
 
 - name: Storage
   scope: storage
   settings:
     fontStyle: ''
-    foreground: "#ff6541"
+    foreground: "#FF6541"
 
 - name: Storage type
   scope: storage.type
@@ -87,13 +87,13 @@ tokenColors:
   scope: variable.parameter
   settings:
     fontStyle: italic
-    foreground: "#ffab28"
+    foreground: "#FFAB28"
 
 - name: Tag name
   scope: entity.name.tag
   settings:
     fontStyle: ''
-    foreground: "#ff6541"
+    foreground: "#FF6541"
 
 - name: Tag attribute
   scope: entity.other.attribute-name
