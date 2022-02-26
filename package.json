@@ -17,5 +17,12 @@
                 "path": "./themes/Lucario-color-theme.json"
             }
         ]
+    },
+
+    "scripts": {
+        "build": "node ./scripts/build.js"
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.0"
     }
 }

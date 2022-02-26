@@ -6,11 +6,13 @@
 	"version": "0.2.0",
     "configurations": [
         {
-            "name": "Extension",
+            "name": "Launch Theme",
             "type": "extensionHost",
             "request": "launch",
+            "preLaunchTask": "npm: build",
             "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "${file}"
             ]
         }
     ]
