@@ -17,6 +17,7 @@ const { Type, DEFAULT_SCHEMA, load } = require('js-yaml');
  * @prop {TokenColor[]} tokenColors - Textmate token colors.
  */
 
+// nice: should expand 3-digit hex colors (like #fff) before appending alpha
 const withAlphaType = new Type('!alpha', {
     kind: 'sequence',
     construct: ([hexRGB, alpha]) => hexRGB + alpha,

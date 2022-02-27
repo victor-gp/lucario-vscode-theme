@@ -16,14 +16,14 @@ palette:
     - &StringYellow   '#e6db74'
   other:
     - &LineHighlight  '#243443'
-    - &NonText        '#61bbc8'
+    - &NonText        '#61bbc8' #todo: replace Invisibles?
     - &AddGreen       '#a6e22e'
     - &ModYellow      '#f0cc04'
     - &DelMagenta     '#f92672'
   tmp:
-    - &Invalid      '#f8f8f0'
-    - &DiffHeader   '#75715e'
-    - &Invisible  '#666'
+    - &Invalid    '#f8f8f0'
+    - &DiffHeader '#75715e'
+    - &Invisibles '#666666'
 
 
 # non-syntax colors
@@ -34,7 +34,6 @@ colors:
   editorCursor.foreground: *FG
   editor.lineHighlightBackground: *LineHighlight
   editor.selectionBackground: *Selection
-  editorWhitespace.foreground: *Invisible
 
   editorLineNumber.foreground: !alpha [ *FG, 80 ]
   editorLineNumber.activeForeground: *FG
@@ -43,8 +42,11 @@ colors:
   editorGutter.deletedBackground: *DelMagenta
   editorGutter.foldingControlForeground: *FG
 
-  editorIndentGuide.background: '#444'
-  editorIndentGuide.activeBackground: # == editorWhitespace.FG
+  editorWhitespace.foreground: *Invisibles
+  editorIndentGuide.background: !alpha [*Invisibles, 64]
+  editorIndentGuide.activeBackground: *Invisibles
+  editorRuler.foreground: !alpha [*Invisibles, 64]
+
 
   statusBar.background: "#333"
   statusBarItem.remoteBackground: "#333"
