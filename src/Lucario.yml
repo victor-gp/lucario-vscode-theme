@@ -17,14 +17,14 @@ palette:
   other:
     - &LineHighlight  '#243443'
     - &NonText        '#61bbc8'
+    - &AddGreen       '#a6e22e'
+    - &ModYellow      '#f0cc04'
+    - &DelMagenta     '#f92672'
   tmp:
     - &Invalid      '#f8f8f0'
     - &DiffHeader   '#75715e'
-    - &DiffDeleted  '#f92672'
-    - &DiffAdded    '#a6e22e'
   atom:
     - &Green      '#199c4b'
-    - &Yellow     '#f0cc04'
     - &Orange     '#e94b35'
     - &Function   '#8be0fd'
     - &Constant   '#6be5fd'
@@ -44,11 +44,11 @@ colors:
 
   editorLineNumber.foreground: *Border #fixme: color picker says #a6aeb0
   editorLineNumber.activeForeground: #todo
-  # todo: drop bg, green added ffs, blue/purple dirty?, alphas!
+  # todo: drop bg, linenumber alphas
   editorGutter.background: '#283a4b' # LESS.darken(*BG, 2.3%)
-  editorGutter.addedBackground: *FG
-  editorGutter.deletedBackground: *Orange
-  editorGutter.modifiedBackground: *Yellow
+  editorGutter.addedBackground: *AddGreen
+  editorGutter.modifiedBackground: *ModYellow
+  editorGutter.deletedBackground: *DelMagenta
   editorGutter.foldingControlForeground: # == LineNumber.activeFG
 
   editorIndentGuide.background: '#444'
@@ -214,17 +214,17 @@ tokenColors:
 - name: diff.deleted
   scope: markup.deleted
   settings:
-    foreground: *DiffDeleted
+    foreground: *DelMagenta
 
 - name: diff.inserted
   scope: markup.inserted
   settings:
-    foreground: *DiffAdded
+    foreground: *AddGreen
 
 - name: diff.changed
   scope: markup.changed
   settings:
-    foreground: *StringYellow
+    foreground: *ModYellow
 
 - name: Markup emphasis
   scope:
