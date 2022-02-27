@@ -42,13 +42,12 @@ colors:
   editor.selectionBackground: *Selection
   editorWhitespace.foreground: *Invisible
 
-  editorLineNumber.foreground: *Border #fixme: color picker says #a6aeb0
-  editorLineNumber.activeForeground: #todo
-  # todo: linenumber alphas
+  editorLineNumber.foreground: !alpha [ *FG, 80 ]
+  editorLineNumber.activeForeground: *FG
   editorGutter.addedBackground: *AddGreen
   editorGutter.modifiedBackground: *ModYellow
   editorGutter.deletedBackground: *DelMagenta
-  editorGutter.foldingControlForeground: # == LineNumber.activeFG
+  editorGutter.foldingControlForeground: *FG
 
   editorIndentGuide.background: '#444'
   editorIndentGuide.activeBackground: # == editorWhitespace.FG
