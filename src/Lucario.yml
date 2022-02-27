@@ -53,6 +53,9 @@ colors:
   editorIndentGuide.background: '#444'
   editorIndentGuide.activeBackground: # == editorWhitespace.FG
 
+  statusBar.background: "#333"
+  statusBarItem.remoteBackground: "#333"
+
 
 # syntax colors
 tokenColors:
