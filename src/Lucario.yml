@@ -23,10 +23,6 @@ palette:
   tmp:
     - &Invalid      '#f8f8f0'
     - &DiffHeader   '#75715e'
-  atom:
-    - &Green      '#199c4b'
-    - &Orange     '#e94b35'
-    - &Border     '#f8f8f0' # == *Invalid
     - &Invisible  '#666'
 
 
