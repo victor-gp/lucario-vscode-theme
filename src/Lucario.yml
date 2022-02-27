@@ -26,8 +26,6 @@ palette:
   atom:
     - &Green      '#199c4b'
     - &Orange     '#e94b35'
-    - &Function   '#8be0fd'
-    - &Constant   '#6be5fd'
     - &Border     '#f8f8f0' # == *Invalid
     - &Invisible  '#666'
 
@@ -165,13 +163,13 @@ tokenColors:
   scope: support.function
   settings:
     fontStyle: ''
-    foreground: *Function
+    foreground: *StorageCyan
 
 - name: Library constant
   scope: support.constant
   settings:
     fontStyle: ''
-    foreground: *Constant
+    foreground: *StorageCyan
 
 - name: Library class/type
   scope:
@@ -179,7 +177,7 @@ tokenColors:
   - support.class
   settings:
     fontStyle: italic
-    foreground: *Constant
+    foreground: *StorageCyan
 
 - name: Library variable
   scope:
