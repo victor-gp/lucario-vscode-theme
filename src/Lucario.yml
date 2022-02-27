@@ -44,8 +44,7 @@ colors:
 
   editorLineNumber.foreground: *Border #fixme: color picker says #a6aeb0
   editorLineNumber.activeForeground: #todo
-  # todo: drop bg, linenumber alphas
-  editorGutter.background: '#283a4b' # LESS.darken(*BG, 2.3%)
+  # todo: linenumber alphas
   editorGutter.addedBackground: *AddGreen
   editorGutter.modifiedBackground: *ModYellow
   editorGutter.deletedBackground: *DelMagenta
