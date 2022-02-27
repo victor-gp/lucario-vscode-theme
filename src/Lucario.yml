@@ -4,31 +4,31 @@ type: dark
 
 palette:
   base:
-    - &BG             '#2B3E50'
-    - &FG             '#F8F8F2'
-    - &Selection      '#19242F'
-    - &Comment        '#5C98CD'
-    - &StorageCyan    '#66D9EF'
-    - &SoftGreen      '#72C05D'
-    - &InstanceOrange '#FFAB28'
-    - &NumberPink     '#CA94FF'
-    - &EntityRed      '#FF6541'
-    - &StringYellow   '#E6DB74'
+    - &BG             '#2b3e50'
+    - &FG             '#f8f8f2'
+    - &Selection      '#19242f'
+    - &Comment        '#5c98cd'
+    - &StorageCyan    '#66d9ef'
+    - &SoftGreen      '#72c05d'
+    - &InstanceOrange '#ffab28'
+    - &NumberPink     '#ca94ff'
+    - &EntityRed      '#ff6541'
+    - &StringYellow   '#e6db74'
   other:
     - &LineHighlight  '#243443'
-    - &NonText        '#61BBC8'
+    - &NonText        '#61bbc8'
   tmp:
-    - &Invalid      '#F8F8F0'
-    - &DiffHeader   '#75715E'
-    - &DiffDeleted  '#F92672'
-    - &DiffAdded    '#A6E22E'
+    - &Invalid      '#f8f8f0'
+    - &DiffHeader   '#75715e'
+    - &DiffDeleted  '#f92672'
+    - &DiffAdded    '#a6e22e'
   atom:
-    - &Green      '#199C4B'
-    - &Yellow     '#F0CC04'
-    - &Orange     '#E94B35'
-    - &Function   '#8BE0FD'
-    - &Constant   '#6BE5FD'
-    - &Border     '#F8F8F0' # == *Invalid
+    - &Green      '#199c4b'
+    - &Yellow     '#f0cc04'
+    - &Orange     '#e94b35'
+    - &Function   '#8be0fd'
+    - &Constant   '#6be5fd'
+    - &Border     '#f8f8f0' # == *Invalid
     - &Invisible  '#666'
 
 
