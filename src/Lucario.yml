@@ -20,8 +20,12 @@ palette:
     - &AddGreen       '#a6e22e'
     - &ModYellow      '#f0cc04'
     - &DelMagenta     '#f92672'
+    - &BgLight        '#f'
+    - &BgDark         '#22303f' # value 63 (-17)
+    - &BgDarkBorder   '#1b2732' # value 50
+    - &BgDarker       '#141c25' # value 37 (-43)
   tmp:
-    - &Invalid    '#f8f8f0'
+    - &Invalid    '#f8f8f0' # aka: Border
     - &DiffHeader '#75715e'
     - &Invisibles '#666666'
 
@@ -48,8 +52,19 @@ colors:
   editorRuler.foreground: !alpha [*Invisibles, 64]
 
 
-  statusBar.background: "#333"
-  statusBarItem.remoteBackground: "#333"
+  sideBar.background: *BgDark
+  sideBar.border: *BgDarkBorder
+  sideBarSectionHeader.background: *BG
+  sideBarSectionHeader.border: *BgDarkBorder
+
+  activityBar.background: *BgDarker
+  activityBar.border:
+
+  tab.inactiveBackground: *BgDark
+  editorGroupHeader.tabsBackground: *BgDarker
+
+  statusBar.background: *BgDarker
+  statusBarItem.remoteBackground: *BgDarker
 
 
 # syntax colors
