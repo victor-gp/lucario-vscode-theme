@@ -58,7 +58,14 @@ colors:
   sideBarSectionHeader.border: *BgDarkBorder
 
   activityBar.background: *BgDarker
-  activityBar.border:
+  # activityBar.border:
+  activityBar.foreground: *FG
+  activityBar.activeBackground: *BgDark
+  activityBar.activeBorder: *Comment
+  activityBar.inactiveForeground: !alpha [*Comment, c4]
+  activityBarBadge.background: *Comment
+  activityBarBadge.foreground: *BgDarker
+  activityBar.dropBorder: *Comment
 
   tab.inactiveBackground: *BgDark
   editorGroupHeader.tabsBackground: *BgDarker
