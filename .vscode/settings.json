@@ -2,4 +2,11 @@
     "yaml.customTags": [
         "!alpha sequence"
     ],
+    "colorize.languages": [
+        "yaml"
+    ],
+    "colorize.colorized_colors": [
+        "HEXA",
+    ],
+    // "colorize.colorized_variables": [ "yaml" ],
 }
