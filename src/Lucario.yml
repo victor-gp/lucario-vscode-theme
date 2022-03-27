@@ -39,6 +39,8 @@ colors:
   editor.lineHighlightBackground: *LineHighlight
   editor.selectionBackground: *Selection
 
+  focusBorder: *Comment
+
   editorLineNumber.foreground: !alpha [ *FG, 80 ]
   editorLineNumber.activeForeground: *FG
   editorGutter.addedBackground: *AddGreen
