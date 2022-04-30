@@ -285,6 +285,21 @@ tokenColors:
   settings:
     foreground: *ConstantPink
 
+- name: Markdown - Link title
+  scope:
+  - string.other.link.title.markdown
+  - punctuation.definition.link.title.begin.markdown # the brackets in []()
+  - punctuation.definition.link.title.end.markdown
+  settings:
+    foreground: *StringYellow
+
+- name: Markdown - Link url
+  scope:
+  - markup.underline.link.markdown
+  - punctuation.definition.metadata.markdown # the parens in []()
+  settings:
+    foreground: *InstanceOrange
+
 - scope:
   - punctuation.definition.tag.xml.plist
   - constant.name.xml
