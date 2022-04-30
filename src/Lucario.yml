@@ -307,6 +307,7 @@ tokenColors:
   scope:
   - markup.underline.link.markdown
   - punctuation.definition.metadata.markdown # the parens in []()
+  - punctuation.definition.link.markdown # the angle quotes in <url>
   settings:
     foreground: !alpha [*InstanceOrange, a0]
 
