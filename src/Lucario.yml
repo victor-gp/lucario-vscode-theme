@@ -259,6 +259,27 @@ tokenColors:
   settings:
     foreground: *StorageCyan
 
+- name: Markdown - Raw Inline
+  scope:
+  - text.html.markdown markup.inline.raw.markdown
+  - markup.inline.raw.string.markdown
+  settings:
+    foreground: *StorageCyan
+    # linter says: tokens background colors are currently not supported
+    # background: *BgDark
+
+- name: Markdown - Raw Backticks
+  scope:
+  - punctuation.definition.raw.markdown
+  - markup.fenced_code.block.markdown
+  settings:
+    foreground: *NumberPink
+
+- name: Markdown - Code Fences Language
+  scope: fenced_code.block.language.markdown
+  settings:
+    foreground: *NumberPink
+
 - scope:
   - punctuation.definition.tag.xml.plist
   - constant.name.xml
