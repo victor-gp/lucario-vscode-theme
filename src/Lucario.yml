@@ -11,7 +11,7 @@ palette:
     - &StorageCyan    '#66d9ef'
     - &SoftGreen      '#72c05d'
     - &InstanceOrange '#ffab28'
-    - &NumberPink     '#ca94ff'
+    - &ConstantPink     '#ca94ff'
     - &EntityRed      '#ff6541'
     - &StringYellow   '#e6db74'
   other:
@@ -92,25 +92,25 @@ tokenColors:
 - name: Number
   scope: constant.numeric
   settings:
-    foreground: *NumberPink
+    foreground: *ConstantPink
 
 - name: Built-in constant
   scope: constant.language
   settings:
-    foreground: *NumberPink
+    foreground: *ConstantPink
 
 - name: User-defined constant
   scope:
   - constant.character
   - constant.other
   settings:
-    foreground: *NumberPink
+    foreground: *ConstantPink
 
 - name: Constant catch-all
   scope:
   - constant
   settings:
-    foreground: *NumberPink
+    foreground: *ConstantPink
 
 - name: Instance variable
   scope: variable.other.readwrite.instance
@@ -124,7 +124,7 @@ tokenColors:
   - string.source
   - string.source.ruby
   settings:
-    foreground: *NumberPink
+    foreground: *ConstantPink
 
 - name: Keyword
   scope: keyword
