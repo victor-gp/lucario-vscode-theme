@@ -291,7 +291,7 @@ tokenColors:
     foreground: *ConstantPink
 
 - name: Markdown - Code fences language
-  scope: fenced_code.block.language.markdown
+  scope: fenced_code.block.language
   settings:
     foreground: *ConstantPink
 
