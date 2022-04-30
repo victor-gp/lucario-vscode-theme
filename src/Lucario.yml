@@ -293,7 +293,7 @@ tokenColors:
   - markup.underline.link.markdown
   - punctuation.definition.metadata.markdown # the parens in []()
   settings:
-    foreground: *InstanceOrange
+    foreground: !alpha [*InstanceOrange, a0]
 
 - scope:
   - punctuation.definition.tag.xml.plist
