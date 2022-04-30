@@ -259,6 +259,11 @@ tokenColors:
   settings:
     foreground: *StorageCyan
 
+- name: Markdown - Heading
+  scope: markup.heading.markdown
+  settings:
+    fontStyle: "bold"
+
 - name: Markdown - Bold
   scope: markup.bold.markdown
   settings:
