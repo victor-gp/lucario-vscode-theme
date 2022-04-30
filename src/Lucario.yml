@@ -285,7 +285,7 @@ tokenColors:
 
 - name: Markdown - Block-level punctuation
   scope:
-  - markup.fenced_code.block.markdown # code fences ```
+  - markup.fenced_code.block.markdown punctuation.definition.markdown # code fences ```
   - punctuation.definition.quote.begin.markdown # quote >
   settings:
     foreground: *ConstantPink
