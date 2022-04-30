@@ -310,6 +310,12 @@ tokenColors:
   settings:
     foreground: !alpha [*InstanceOrange, a0]
 
+- name: Markdown - List item marker
+  # i.e.: "- " or "1. "
+  scope: punctuation.definition.list.begin
+  settings:
+    foreground: *ConstantPink
+
 - scope:
   - punctuation.definition.tag.xml.plist
   - constant.name.xml
