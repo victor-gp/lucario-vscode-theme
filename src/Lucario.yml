@@ -268,15 +268,20 @@ tokenColors:
     # linter says: tokens background colors are currently not supported
     # background: *BgDark
 
-- name: Markdown - Raw Backticks
+- name: Markdown - Raw backticks
   scope:
   - punctuation.definition.raw.markdown
   - markup.fenced_code.block.markdown
   settings:
     foreground: *ConstantPink
 
-- name: Markdown - Code Fences Language
+- name: Markdown - Code fences language
   scope: fenced_code.block.language.markdown
+  settings:
+    foreground: *ConstantPink
+
+- name: Markdown - Quote block >
+  scope: punctuation.definition.quote.begin.markdown
   settings:
     foreground: *ConstantPink
 
