@@ -259,6 +259,16 @@ tokenColors:
   settings:
     foreground: *StorageCyan
 
+- name: Markdown - Bold
+  scope: markup.bold.markdown
+  settings:
+    fontStyle: "bold"
+
+- name: Markdown - Italics
+  scope: markup.italic.markdown
+  settings:
+    fontStyle: "italic"
+
 - name: Markdown - Raw Inline
   scope:
   - punctuation.definition.raw.markdown # backticks
