@@ -307,9 +307,15 @@ tokenColors:
   scope:
   - markup.underline.link.markdown
   - punctuation.definition.metadata.markdown # the parens in []()
-  - punctuation.definition.link.markdown # the angle quotes in <url>
   settings:
-    foreground: !alpha [*InstanceOrange, a0]
+    foreground: !alpha [*InstanceOrange, 80]
+
+- name: Markdown - Raw url # like "<url>"
+  scope:
+  - meta.link.inet.markdown markup.underline.link.markdown
+  - meta.link.inet.markdown punctuation.definition.link.markdown # the angle quotes
+  settings:
+    foreground: *InstanceOrange
 
 - name: Markdown - List item marker
   # i.e.: "- " or "1. "
