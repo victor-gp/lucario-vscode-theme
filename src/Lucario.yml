@@ -324,6 +324,12 @@ tokenColors:
   settings:
     foreground: *ConstantPink
 
+- name: Markdown - HTML special characters
+  # e.g.: &nbsp; or &amp;
+  scope: text.html.markdown constant.character.entity.named
+  settings:
+    foreground: *ConstantPink
+
 #nice: improve md syntax to pick up emoji, like ":emoji-code:"
 #      or perhaps I can target that with semantic scopes?
 
