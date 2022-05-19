@@ -286,7 +286,7 @@ tokenColors:
 - name: Markdown - Block-level punctuation
   scope:
   - markup.fenced_code.block.markdown punctuation.definition.markdown # code fences ```
-  - punctuation.definition.quote.begin.markdown # quote >
+  - punctuation.definition.quote.begin.markdown # blockquote >
   - meta.separator.markdown # ---
   settings:
     foreground: *ConstantPink
@@ -295,6 +295,11 @@ tokenColors:
   scope: fenced_code.block.language
   settings:
     foreground: *ConstantPink
+
+- name: Markdown - Blockquote plain text
+  scope: markup.quote.markdown meta.paragraph.markdown
+  settings:
+    foreground: !alpha [*FG, aa]
 
 - name: Markdown - Link title
   scope:
