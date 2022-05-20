@@ -355,14 +355,14 @@ tokenColors:
   - entity.name.type.anchor.yaml
   - punctuation.definition.anchor.yaml
   settings:
-    foreground: *InstanceOrange
+    foreground: *FG
 
 - name: YAML - Alias
   scope:
   - variable.other.alias.yaml
   - punctuation.definition.alias.yaml
   settings:
-    foreground: *FG
+    foreground: *InstanceOrange
 
 - name: YAML - String quotes
   scope: source.yaml punctuation.definition.string
