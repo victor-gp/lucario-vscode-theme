@@ -343,3 +343,9 @@ tokenColors:
   - constant.name.xml
   settings:
     foreground: *FG
+
+- name: YAML - Key
+  # clear italics in entity.name.tag
+  scope: entity.name.tag.yaml
+  settings:
+    fontStyle: ''
