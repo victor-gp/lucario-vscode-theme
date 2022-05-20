@@ -368,3 +368,14 @@ tokenColors:
   scope: source.yaml punctuation.definition.string
   settings:
     foreground: *FG
+
+- name: YAML - Directives
+  scope:
+  - punctuation.definition.directive.begin.yaml
+  - meta.directive.yaml keyword.other.directive
+  - meta.directive.yaml constant.numeric
+  - meta.directive.yaml storage.type
+  - meta.directive.yaml support.type
+  settings:
+    foreground: *SoftGreen
+    fontStyle: '' # clear support.type italics
