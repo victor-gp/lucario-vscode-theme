@@ -379,3 +379,10 @@ tokenColors:
   settings:
     foreground: *SoftGreen
     fontStyle: '' # clear support.type italics
+
+- name: YAML - Block scalar flow control
+  scope:
+  - source.yaml keyword.control.flow.block-scalar
+  - storage.modifier.chomping-indicator.yaml
+  settings:
+    foreground: *FG
