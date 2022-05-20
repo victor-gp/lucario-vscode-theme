@@ -363,3 +363,8 @@ tokenColors:
   - punctuation.definition.alias.yaml
   settings:
     foreground: *FG
+
+- name: YAML - String quotes
+  scope: source.yaml punctuation.definition.string
+  settings:
+    foreground: *FG
