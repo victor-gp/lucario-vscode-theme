@@ -292,7 +292,7 @@ tokenColors:
     foreground: *ConstantPink
 
 - name: Markdown - Code fences language
-  scope: fenced_code.block.language
+  scope: text.html.markdown fenced_code.block.language
   settings:
     foreground: *ConstantPink
 
@@ -325,7 +325,7 @@ tokenColors:
 
 - name: Markdown - List item marker
   # i.e.: "- " or "1. "
-  scope: punctuation.definition.list.begin
+  scope: text.html.markdown punctuation.definition.list.begin
   settings:
     foreground: *ConstantPink
 
