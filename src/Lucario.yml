@@ -300,15 +300,14 @@ tokenColors:
 
 - name: Markdown - Link title
   scope:
-  - string.other.link.title.markdown
-  - punctuation.definition.link.title.begin.markdown # the brackets in []()
-  - punctuation.definition.link.title.end.markdown
+  - text.html.markdown string.other.link # for [link](url) and ![image](url)
+  - text.html.markdown punctuation.definition.link # [] and ![]
   settings:
     foreground: *StringYellow
 
 - name: Markdown - Link url
   scope:
-  - markup.underline.link.markdown
+  - text.html.markdown markup.underline.link
   - punctuation.definition.metadata.markdown # the parens in []()
   settings:
     foreground: !alpha [*InstanceOrange, 80]
