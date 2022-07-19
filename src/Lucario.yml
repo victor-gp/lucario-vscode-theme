@@ -38,7 +38,6 @@ palette:
     - &TermBlue     '#6B9FED'
     - &TermMagenta  '#FF73FD'
     - &TermCyan     '#8EE478' # looks green ¯\_ (ツ)_/¯
-    - &TermWhite    '#EEEEEE'
 
 
 # non-syntax colors
@@ -95,7 +94,7 @@ colors:
   terminal.ansiBrightBlue: *TermBlue
   terminal.ansiBrightMagenta: *TermMagenta
   terminal.ansiBrightCyan: *TermCyan
-  terminal.ansiBrightWhite: *TermWhite
+  terminal.ansiBrightWhite: '#FFFFFF'
   terminal.ansiBlack: *TermBlack
   terminal.ansiRed: *TermRed
   terminal.ansiGreen: *TermGreen
@@ -103,7 +102,7 @@ colors:
   terminal.ansiBlue: *TermBlue
   terminal.ansiMagenta: *TermMagenta
   terminal.ansiCyan: *TermCyan
-  terminal.ansiWhite: *TermWhite
+  terminal.ansiWhite: '#EEEEEE'
 
 # syntax colors
 tokenColors:
