@@ -33,11 +33,11 @@ palette:
     - &TermFG       '#F8F8F2'
     - &TermBlack    '#4F4F4F'
     - &TermRed      '#FA6960'
-    - &TermGreen    '#FBB036' # looks orange ¯\_ (ツ)_/¯
+    - &TermGreen    '#8EE478'
     - &TermYellow   '#FFFFB6'
     - &TermBlue     '#6B9FED'
     - &TermMagenta  '#FF73FD'
-    - &TermCyan     '#8EE478' # looks green ¯\_ (ツ)_/¯
+    - &TermCyan     '#FBB036' # actually orange ¯\_ (ツ)_/¯
 
 
 # non-syntax colors
