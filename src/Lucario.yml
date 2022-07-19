@@ -28,6 +28,17 @@ palette:
     - &Invalid    '#f8f8f0' # aka: Border
     - &DiffHeader '#75715e'
     - &Invisibles '#666666'
+  terminal:
+    - &TermBG       '#2B3E50'
+    - &TermFG       '#F8F8F2'
+    - &TermBlack    '#4F4F4F'
+    - &TermRed      '#FA6960'
+    - &TermGreen    '#FBB036' # looks orange ¯\_ (ツ)_/¯
+    - &TermYellow   '#FFFFB6'
+    - &TermBlue     '#6B9FED'
+    - &TermMagenta  '#FF73FD'
+    - &TermCyan     '#8EE478' # looks green ¯\_ (ツ)_/¯
+    - &TermWhite    '#EEEEEE'
 
 
 # non-syntax colors
@@ -75,6 +86,24 @@ colors:
   statusBar.background: *BgDarker
   statusBarItem.remoteBackground: *BgDarker
 
+  terminal.background: *TermBG
+  terminal.foreground: *TermFG
+  terminal.ansiBrightBlack: *TermBlack
+  terminal.ansiBrightRed: *TermRed
+  terminal.ansiBrightGreen: *TermGreen
+  terminal.ansiBrightYellow: *TermYellow
+  terminal.ansiBrightBlue: *TermBlue
+  terminal.ansiBrightMagenta: *TermMagenta
+  terminal.ansiBrightCyan: *TermCyan
+  terminal.ansiBrightWhite: *TermWhite
+  terminal.ansiBlack: *TermBlack
+  terminal.ansiRed: *TermRed
+  terminal.ansiGreen: *TermGreen
+  terminal.ansiYellow: *TermYellow
+  terminal.ansiBlue: *TermBlue
+  terminal.ansiMagenta: *TermMagenta
+  terminal.ansiCyan: *TermCyan
+  terminal.ansiWhite: *TermWhite
 
 # syntax colors
 tokenColors:
