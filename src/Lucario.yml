@@ -4,16 +4,16 @@ type: dark
 
 palette:
   base:
-    - &BG             '#2b3e50'
-    - &FG             '#f8f8f2'
-    - &Selection      '#19242f'
-    - &Comment        '#5c98cd'
-    - &StorageCyan    '#66d9ef'
-    - &SoftGreen      '#72c05d'
-    - &InstanceOrange '#ffab28'
-    - &ConstantPink   '#ca94ff'
-    - &EntityRed      '#ff6541'
-    - &StringYellow   '#e6db74'
+    - &BG         '#2b3e50'
+    - &FG         '#f8f8f2'
+    - &Selection  '#19242f'
+    - &Comment    '#5c98cd'
+    - &Cyan    '#66d9ef'
+    - &Green   '#72c05d'
+    - &Orange  '#ffab28'
+    - &Pink    '#ca94ff'
+    - &Red     '#ff6541'
+    - &Yellow  '#e6db74'
   other:
     - &LineHighlight  '#243443'
     - &NonText        '#61bbc8' #todo: replace Invisibles?
@@ -104,35 +104,35 @@ tokenColors:
 - name: String
   scope: string
   settings:
-    foreground: *StringYellow
+    foreground: *Yellow
 
 - name: Number
   scope: constant.numeric
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Built-in constant
   scope: constant.language
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: User-defined constant
   scope:
   - constant.character
   - constant.other
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Constant catch-all
   scope:
   - constant
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Instance variable
   scope: variable.other.readwrite.instance
   settings:
-    foreground: *InstanceOrange
+    foreground: *Orange
 
 - name: Escaped string (?)
   scope:
@@ -141,54 +141,54 @@ tokenColors:
   - string.source
   - string.source.ruby
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Keyword
   scope: keyword
   settings:
-    foreground: *EntityRed
+    foreground: *Red
 
 - name: Storage
   scope: storage
   settings:
     fontStyle: ''
-    foreground: *EntityRed
+    foreground: *Red
 
 - name: Storage type
   scope: storage.type
   settings:
     fontStyle: italic
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Class name
   scope: entity.name.class
   settings:
     fontStyle: underline
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: Inherited class
   scope: entity.other.inherited-class
   settings:
     fontStyle: italic underline
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: Function name
   scope: entity.name.function
   settings:
     fontStyle: ''
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: Function argument
   scope: variable.parameter
   settings:
     fontStyle: italic
-    foreground: *InstanceOrange
+    foreground: *Orange
 
 - name: Tag name
   scope: entity.name.tag
   settings:
     fontStyle: italic
-    foreground: *EntityRed
+    foreground: *Red
 
 - name: Tag attribute
   scope:
@@ -196,19 +196,19 @@ tokenColors:
   - markup.heading
   settings:
     fontStyle: ''
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: Library function
   scope: support.function
   settings:
     fontStyle: ''
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Library constant
   scope: support.constant
   settings:
     fontStyle: ''
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Library class/type
   scope:
@@ -216,7 +216,7 @@ tokenColors:
   - support.class
   settings:
     fontStyle: italic
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Library variable
   scope:
@@ -225,7 +225,7 @@ tokenColors:
   - variable.ordered
   settings:
     fontStyle: ''
-    foreground: *InstanceOrange
+    foreground: *Orange
 
 - name: Invalid
   scope:
@@ -269,12 +269,12 @@ tokenColors:
   - markup.bold
   - markup.italic
   settings:
-    foreground: *EntityRed
+    foreground: *Red
 
 - name: Markup raw
   scope: markup.raw
   settings:
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - scope:
   - punctuation.definition.tag.xml.plist
