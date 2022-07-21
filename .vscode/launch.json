@@ -12,7 +12,8 @@
             "preLaunchTask": "npm: build",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "${workspaceFolder}/vgp-utils/samples",
+                "${workspaceFolder}/vgp-utils/my-samples",
+                "${workspaceFolder}/vgp-utils/night-owl-samples",
                 "${file}"
             ]
         }

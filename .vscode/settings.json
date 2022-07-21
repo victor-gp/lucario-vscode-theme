@@ -9,4 +9,5 @@
         "HEXA",
     ],
     // "colorize.colorized_variables": [ "yaml" ],
+    // "editor.bracketPairColorization.enabled": true,
 }
