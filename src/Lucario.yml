@@ -71,6 +71,9 @@ colors:
   tab.inactiveBackground: *BgDark
   editorGroupHeader.tabsBackground: *BgDarker
 
+  editorGroup.border: *Cyan
+  panel.border: *Cyan
+
   statusBar.background: *BgDarker
   statusBarItem.remoteBackground: *BgDarker
 
