@@ -11,7 +11,7 @@ palette:
     - &StorageCyan    '#66d9ef'
     - &SoftGreen      '#72c05d'
     - &InstanceOrange '#ffab28'
-    - &ConstantPink     '#ca94ff'
+    - &ConstantPink   '#ca94ff'
     - &EntityRed      '#ff6541'
     - &StringYellow   '#e6db74'
   other:
@@ -87,14 +87,6 @@ colors:
 
   terminal.background: *TermBG
   terminal.foreground: *TermFG
-  terminal.ansiBrightBlack: *TermBlack
-  terminal.ansiBrightRed: *TermRed
-  terminal.ansiBrightGreen: *TermGreen
-  terminal.ansiBrightYellow: *TermYellow
-  terminal.ansiBrightBlue: *TermBlue
-  terminal.ansiBrightMagenta: *TermMagenta
-  terminal.ansiBrightCyan: *TermCyan
-  terminal.ansiBrightWhite: '#FFFFFF'
   terminal.ansiBlack: *TermBlack
   terminal.ansiRed: *TermRed
   terminal.ansiGreen: *TermGreen
@@ -103,6 +95,14 @@ colors:
   terminal.ansiMagenta: *TermMagenta
   terminal.ansiCyan: *TermCyan
   terminal.ansiWhite: '#EEEEEE'
+  terminal.ansiBrightBlack: *TermBlack
+  terminal.ansiBrightRed: *TermRed
+  terminal.ansiBrightGreen: *TermGreen
+  terminal.ansiBrightYellow: *TermYellow
+  terminal.ansiBrightBlue: *TermBlue
+  terminal.ansiBrightMagenta: *TermMagenta
+  terminal.ansiBrightCyan: *TermCyan
+  terminal.ansiBrightWhite: '#FFFFFF'
 
 # syntax colors
 tokenColors:
