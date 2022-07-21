@@ -76,7 +76,7 @@ colors:
 
   terminal.background: *BG
   terminal.foreground: *FG
-  terminal.ansiBlack:         '#4f4f4f'
+  terminal.ansiBlack: *BG
   terminal.ansiRed:           '#ff6c60'
   terminal.ansiGreen:         '#8ee478'
   terminal.ansiYellow:        '#ffffb6'
@@ -84,14 +84,14 @@ colors:
   terminal.ansiMagenta:       '#ff73fd'
   terminal.ansiCyan:          '#fbb036' # actually orange ¯\_ (ツ)_/¯
   terminal.ansiWhite:         '#eeeeee'
-  terminal.ansiBrightBlack:   '#4f4f4f' # == standard
+  terminal.ansiBrightBlack:   '#4f4f4f'
   terminal.ansiBrightRed:     '#fa6960'
   terminal.ansiBrightGreen:   '#8ee478' # == standard
   terminal.ansiBrightYellow:  '#feffb9'
   terminal.ansiBrightBlue:    '#6b9fed'
   terminal.ansiBrightMagenta: '#fc6ffa'
   terminal.ansiBrightCyan:    '#fbb036' # == standard
-  terminal.ansiBrightWhite:   '#ffffff'
+  terminal.ansiBrightWhite: *FG
 
 # syntax colors
 tokenColors:
