@@ -28,17 +28,6 @@ palette:
     - &Invalid    '#f8f8f0' # aka: Border
     - &DiffHeader '#75715e'
     - &Invisibles '#666666'
-  terminal:
-    - &TermBG       '#2b3e50'
-    - &TermFG       '#f8f8f2'
-    - &TermBlack    '#4f4f4f'
-    - &TermRed      '#fa6960'
-    - &TermGreen    '#fbb036' # looks orange ¯\_ (ツ)_/¯
-    - &TermYellow   '#ffffb6'
-    - &TermBlue     '#6b9fed'
-    - &TermMagenta  '#ff73fd'
-    - &TermCyan     '#8ee478' # looks green ¯\_ (ツ)_/¯
-
 
 # non-syntax colors
 colors:
@@ -85,24 +74,24 @@ colors:
   statusBar.background: *BgDarker
   statusBarItem.remoteBackground: *BgDarker
 
-  terminal.background: *TermBG
-  terminal.foreground: *TermFG
-  terminal.ansiBlack: *TermBlack
-  terminal.ansiRed: *TermRed
-  terminal.ansiGreen: *TermGreen
-  terminal.ansiYellow: *TermYellow
-  terminal.ansiBlue: *TermBlue
-  terminal.ansiMagenta: *TermMagenta
-  terminal.ansiCyan: *TermCyan
-  terminal.ansiWhite: '#eeeeee'
-  terminal.ansiBrightBlack: *TermBlack
-  terminal.ansiBrightRed: *TermRed
-  terminal.ansiBrightGreen: *TermGreen
-  terminal.ansiBrightYellow: *TermYellow
-  terminal.ansiBrightBlue: *TermBlue
-  terminal.ansiBrightMagenta: *TermMagenta
-  terminal.ansiBrightCyan: *TermCyan
-  terminal.ansiBrightWhite: '#ffffff'
+  terminal.background: *BG
+  terminal.foreground: *FG
+  terminal.ansiBlack:         '#4f4f4f'
+  terminal.ansiRed:           '#ff6c60'
+  terminal.ansiGreen:         '#fbb036' # actually orange ¯\_ (ツ)_/¯
+  terminal.ansiYellow:        '#ffffb6'
+  terminal.ansiBlue:          '#5796ed'
+  terminal.ansiMagenta:       '#ff73fd'
+  terminal.ansiCyan:          '#8ee478' # actually green ¯\_ (ツ)_/¯
+  terminal.ansiWhite:         '#eeeeee'
+  terminal.ansiBrightBlack:   '#4f4f4f' # == standard
+  terminal.ansiBrightRed:     '#fa6960'
+  terminal.ansiBrightGreen:   '#fbb036' # == standard
+  terminal.ansiBrightYellow:  '#feffb9'
+  terminal.ansiBrightBlue:    '#6b9fed'
+  terminal.ansiBrightMagenta: '#fc6ffa'
+  terminal.ansiBrightCyan:    '#8ee478' # == standard
+  terminal.ansiBrightWhite:   '#ffffff'
 
 # syntax colors
 tokenColors:
