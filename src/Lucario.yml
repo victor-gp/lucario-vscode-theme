@@ -93,6 +93,14 @@ colors:
   terminal.ansiBrightCyan:    '#8ee478' # == standard
   terminal.ansiBrightWhite:   '#ffffff'
 
+  editorBracketHighlight.foreground1: *FG
+  editorBracketHighlight.foreground2: *Cyan
+  editorBracketHighlight.foreground3: *Yellow
+  editorBracketHighlight.foreground4: *Pink
+  editorBracketHighlight.foreground5: *Green
+  editorBracketHighlight.foreground6: *Orange
+  editorBracketHighlight.unexpectedBracket.foreground: *DelMagenta
+
 # syntax colors
 tokenColors:
 
