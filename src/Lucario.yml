@@ -4,16 +4,16 @@ type: dark
 
 palette:
   base:
-    - &BG             '#2b3e50'
-    - &FG             '#f8f8f2'
-    - &Selection      '#19242f'
-    - &Comment        '#5c98cd'
-    - &StorageCyan    '#66d9ef'
-    - &SoftGreen      '#72c05d'
-    - &InstanceOrange '#ffab28'
-    - &ConstantPink   '#ca94ff'
-    - &EntityRed      '#ff6541'
-    - &StringYellow   '#e6db74'
+    - &BG         '#2b3e50'
+    - &FG         '#f8f8f2'
+    - &Selection  '#19242f'
+    - &Comment    '#5c98cd'
+    - &Cyan    '#66d9ef'
+    - &Green   '#72c05d'
+    - &Orange  '#ffab28'
+    - &Pink    '#ca94ff'
+    - &Red     '#ff6541'
+    - &Yellow  '#e6db74'
   other:
     - &LineHighlight  '#243443'
     - &NonText        '#61bbc8' #todo: replace Invisibles?
@@ -71,6 +71,9 @@ colors:
   tab.inactiveBackground: *BgDark
   editorGroupHeader.tabsBackground: *BgDarker
 
+  editorGroup.border: *Cyan
+  panel.border: *Cyan
+
   statusBar.background: *BgDarker
   statusBarItem.remoteBackground: *BgDarker
 
@@ -93,6 +96,14 @@ colors:
   terminal.ansiBrightCyan:    '#fbb036' # == standard
   terminal.ansiBrightWhite: *FG
 
+  editorBracketHighlight.foreground1: *FG
+  editorBracketHighlight.foreground2: *Cyan
+  editorBracketHighlight.foreground3: *Yellow
+  editorBracketHighlight.foreground4: *Pink
+  editorBracketHighlight.foreground5: *Green
+  editorBracketHighlight.foreground6: *Orange
+  editorBracketHighlight.unexpectedBracket.foreground: *DelMagenta
+
 # syntax colors
 tokenColors:
 
@@ -104,35 +115,35 @@ tokenColors:
 - name: String
   scope: string
   settings:
-    foreground: *StringYellow
+    foreground: *Yellow
 
 - name: Number
   scope: constant.numeric
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Built-in constant
   scope: constant.language
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: User-defined constant
   scope:
   - constant.character
   - constant.other
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Constant catch-all
   scope:
   - constant
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Instance variable
   scope: variable.other.readwrite.instance
   settings:
-    foreground: *InstanceOrange
+    foreground: *Orange
 
 - name: Escaped string (?)
   scope:
@@ -141,52 +152,52 @@ tokenColors:
   - string.source
   - string.source.ruby
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Keyword
   scope: keyword
   settings:
-    foreground: *EntityRed
+    foreground: *Red
 
 - name: Storage
   scope: storage
   settings:
     fontStyle: ''
-    foreground: *EntityRed
+    foreground: *Red
 
 - name: Storage type
   scope: storage.type
   settings:
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Class name
   scope: entity.name.class
   settings:
     fontStyle: underline
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: Inherited class
   scope: entity.other.inherited-class
   settings:
     fontStyle: underline
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: Function name
   scope: entity.name.function
   settings:
     fontStyle: ''
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: Function argument
   scope: variable.parameter
   settings:
     fontStyle: italic
-    foreground: *InstanceOrange
+    foreground: *Orange
 
 - name: Tag name
   scope: entity.name.tag
   settings:
-    foreground: *EntityRed
+    foreground: *Red
 
 - name: Tag attribute
   scope:
@@ -194,26 +205,26 @@ tokenColors:
   - markup.heading
   settings:
     fontStyle: ''
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: Library function
   scope: support.function
   settings:
     fontStyle: ''
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Library constant
   scope: support.constant
   settings:
     fontStyle: ''
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Library class/type
   scope:
   - support.type
   - support.class
   settings:
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Library variable
   scope:
@@ -222,7 +233,7 @@ tokenColors:
   - variable.ordered
   settings:
     fontStyle: ''
-    foreground: *InstanceOrange
+    foreground: *Orange
 
 - name: Invalid
   scope:
@@ -266,12 +277,12 @@ tokenColors:
   - markup.bold
   - markup.italic
   settings:
-    foreground: *EntityRed
+    foreground: *Red
 
 - name: Markup raw
   scope: markup.raw
   settings:
-    foreground: *StorageCyan
+    foreground: *Cyan
 
 - name: Markdown - Heading
   scope: markup.heading.markdown
@@ -293,7 +304,7 @@ tokenColors:
   - punctuation.definition.raw.markdown # backticks
   - markup.inline.raw.string.markdown
   settings:
-    foreground: *StorageCyan
+    foreground: *Cyan
     # linter says: tokens background colors are currently not supported
     # background: *BgDark
 
@@ -303,12 +314,12 @@ tokenColors:
   - punctuation.definition.quote.begin.markdown # blockquote >
   - meta.separator.markdown # ---
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Markdown - Code fences language
   scope: text.html.markdown fenced_code.block.language
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Markdown - Blockquote plain text
   scope: markup.quote.markdown meta.paragraph.markdown
@@ -320,33 +331,33 @@ tokenColors:
   - text.html.markdown string.other.link # for [link](url) and ![image](url)
   - text.html.markdown punctuation.definition.link # [] and ![]
   settings:
-    foreground: *StringYellow
+    foreground: *Yellow
 
 - name: Markdown - Link url
   scope:
   - text.html.markdown markup.underline.link
   - punctuation.definition.metadata.markdown # the parens in []()
   settings:
-    foreground: !alpha [*InstanceOrange, 80]
+    foreground: !alpha [*Orange, 80]
 
 - name: Markdown - Raw url # like "<url>"
   scope:
   - meta.link.inet.markdown markup.underline.link.markdown
   - meta.link.inet.markdown punctuation.definition.link.markdown # the angle quotes
   settings:
-    foreground: *InstanceOrange
+    foreground: *Orange
 
 - name: Markdown - List item marker
   # i.e.: "- " or "1. "
   scope: text.html.markdown punctuation.definition.list.begin
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 - name: Markdown - HTML special characters
   # e.g.: &nbsp; or &amp;
   scope: text.html.markdown constant.character.entity.named
   settings:
-    foreground: *ConstantPink
+    foreground: *Pink
 
 #nice: improve md syntax to pick up emoji, like ":emoji-code:"
 #      or perhaps I can target that with semantic scopes?
@@ -369,7 +380,7 @@ tokenColors:
   - variable.other.alias.yaml
   - punctuation.definition.alias.yaml
   settings:
-    foreground: *InstanceOrange
+    foreground: *Orange
 
 - name: YAML - String quotes
   scope: source.yaml punctuation.definition.string
@@ -384,7 +395,7 @@ tokenColors:
   - meta.directive.yaml storage.type
   - meta.directive.yaml support.type
   settings:
-    foreground: *SoftGreen
+    foreground: *Green
 
 - name: YAML - Block scalar flow control
   scope:
