@@ -29,15 +29,15 @@ palette:
     - &DiffHeader '#75715e'
     - &Invisibles '#666666'
   terminal:
-    - &TermBG       '#2B3E50'
-    - &TermFG       '#F8F8F2'
-    - &TermBlack    '#4F4F4F'
-    - &TermRed      '#FA6960'
-    - &TermGreen    '#FBB036' # looks orange ¯\_ (ツ)_/¯
-    - &TermYellow   '#FFFFB6'
-    - &TermBlue     '#6B9FED'
-    - &TermMagenta  '#FF73FD'
-    - &TermCyan     '#8EE478' # looks green ¯\_ (ツ)_/¯
+    - &TermBG       '#2b3e50'
+    - &TermFG       '#f8f8f2'
+    - &TermBlack    '#4f4f4f'
+    - &TermRed      '#fa6960'
+    - &TermGreen    '#fbb036' # looks orange ¯\_ (ツ)_/¯
+    - &TermYellow   '#ffffb6'
+    - &TermBlue     '#6b9fed'
+    - &TermMagenta  '#ff73fd'
+    - &TermCyan     '#8ee478' # looks green ¯\_ (ツ)_/¯
 
 
 # non-syntax colors
@@ -94,7 +94,7 @@ colors:
   terminal.ansiBlue: *TermBlue
   terminal.ansiMagenta: *TermMagenta
   terminal.ansiCyan: *TermCyan
-  terminal.ansiWhite: '#EEEEEE'
+  terminal.ansiWhite: '#eeeeee'
   terminal.ansiBrightBlack: *TermBlack
   terminal.ansiBrightRed: *TermRed
   terminal.ansiBrightGreen: *TermGreen
@@ -102,7 +102,7 @@ colors:
   terminal.ansiBrightBlue: *TermBlue
   terminal.ansiBrightMagenta: *TermMagenta
   terminal.ansiBrightCyan: *TermCyan
-  terminal.ansiBrightWhite: '#FFFFFF'
+  terminal.ansiBrightWhite: '#ffffff'
 
 # syntax colors
 tokenColors:
