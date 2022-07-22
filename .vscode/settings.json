@@ -8,6 +8,6 @@
     "colorize.colorized_colors": [
         "HEXA",
     ],
+    // not supported:
     // "colorize.colorized_variables": [ "yaml" ],
-    // "editor.bracketPairColorization.enabled": true,
 }
