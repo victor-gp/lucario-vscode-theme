@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{ "path": "../src" },
+		{ "path": "../themes" },
+		{ "path": "../vgp-utils/my-samples" },
+		{ "path": "../vgp-utils/night-owl-samples" },
+	],
+	"settings": {
+		"files.watcherExclude": {
+			"**/target": true
+		},
+
+		// copy the outer config cause there's no support for extending/composing configs:
+		// https://github.com/microsoft/vscode/issues/15909
+		"yaml.customTags": [
+			"!alpha sequence",
+		],
+		"colorize.languages": [
+			"yaml",
+		],
+		"colorize.colorized_colors": [
+			"HEXA",
+		],
+
+		// extension host-only settings
+		"editor.bracketPairColorization.enabled": true,
+	},
+}

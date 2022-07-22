@@ -76,6 +76,12 @@ colors:
 
   statusBar.background: *BgDarker
   statusBarItem.remoteBackground: *BgDarker
+  statusBarItem.remoteForeground:  *Comment
+  statusBar.debuggingBackground: !alpha [*Orange, a8]
+  statusBar.debuggingForeground: '#000'
+  statusBar.noFolderBackground: !alpha [*Pink, a0]
+  statusBar.noFolderForeground: '#000'
+  statusBar.focusBorder: *Comment
 
   terminal.background: *BG
   terminal.foreground: *FG
