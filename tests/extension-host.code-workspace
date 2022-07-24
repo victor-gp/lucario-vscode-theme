@@ -1,4 +1,4 @@
-//nit: this workspace shouldn't appear in "Open Recent"
+//nit: this workspace shouldn't feature in "Open Recent"
 {
 	"folders": [
 		{ "path": "../src" },
@@ -25,5 +25,18 @@
 
 		// extension host-only settings
 		"editor.bracketPairColorization.enabled": true,
+		// colorize the status bar *Accent so the Extension Host is easier to differentiate
+		"peacock.color": "#5c98cd",
+		"workbench.colorCustomizations": {
+			"statusBar.background": "#5c98cd",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#3a7fbc",
+			"statusBarItem.remoteBackground": "#5c98cd",
+			"statusBarItem.remoteForeground": "#15202b"
+		},
+		"peacock.affectActivityBar": false,
+		"peacock.affectTitleBar": false,
+		"peacock.affectSashHover": false,
+		"peacock.showColorInStatusBar": false,
 	},
 }
