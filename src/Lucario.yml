@@ -17,9 +17,9 @@ palette:
   other:
     - &LineHighlight  '#243443'
     - &NonText        '#61bbc8' #todo: replace Invisibles?
-    - &AddGreen       '#a6e22e'
-    - &ModYellow      '#f0cc04'
-    - &DelMagenta     '#f92672'
+    - &HintGreen      '#a6e22e'
+    - &HintYellow     '#f0cc04'
+    - &HintMagenta    '#f92672'
     - &BgLight        '#f'
     - &BgDark         '#22303f' # value 63 (-17)
     - &BgDarkBorder   '#1b2732' # value 50
@@ -42,9 +42,9 @@ colors:
 
   editorLineNumber.foreground: !alpha [ *FG, 80 ]
   editorLineNumber.activeForeground: *FG
-  editorGutter.addedBackground: *AddGreen
-  editorGutter.modifiedBackground: *ModYellow
-  editorGutter.deletedBackground: *DelMagenta
+  editorGutter.addedBackground: *HintGreen
+  editorGutter.modifiedBackground: *HintYellow
+  editorGutter.deletedBackground: *HintMagenta
   editorGutter.foldingControlForeground: *FG
 
   editorWhitespace.foreground: *Invisibles
@@ -108,7 +108,7 @@ colors:
   editorBracketHighlight.foreground4: *Pink
   editorBracketHighlight.foreground5: *Green
   editorBracketHighlight.foreground6: *Orange
-  editorBracketHighlight.unexpectedBracket.foreground: *DelMagenta
+  editorBracketHighlight.unexpectedBracket.foreground: *HintMagenta
 
 # syntax colors
 tokenColors:
@@ -266,17 +266,17 @@ tokenColors:
 - name: diff.deleted
   scope: markup.deleted
   settings:
-    foreground: *DelMagenta
+    foreground: *HintMagenta
 
 - name: diff.inserted
   scope: markup.inserted
   settings:
-    foreground: *AddGreen
+    foreground: *HintGreen
 
 - name: diff.changed
   scope: markup.changed
   settings:
-    foreground: *ModYellow
+    foreground: *HintYellow
 
 - name: Markup emphasis
   scope:
