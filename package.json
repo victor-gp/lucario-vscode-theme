@@ -1,14 +1,31 @@
 {
-    "name": "lucario-theme",
+    "name": "lucario-vscode-theme",
     "displayName": "Lucario Theme",
-    "description": "A VSCode port of the Lucario theme by Raphael Amorim",
-    "version": "0.0.1",
+    "description": "VSCode port of the Lucario theme by Raphael Amorim. A dark-ish theme for the 80% use case.",
+    "version": "0.0.2",
+    "publisher": "victor-gp",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/victor-gp/lucario-vscode-theme"
+    },
     "engines": {
         "vscode": "^1.64.0"
     },
     "categories": [
         "Themes"
     ],
+    "keywords": [
+        "dark",
+        "darkish",
+        "comfortable",
+        "pokemon"
+    ],
+    "icon": null,
+    "galleryBanner": {
+        "color": "#2b3e50",
+        "theme": "dark"
+    },
     "contributes": {
         "themes": [
             {

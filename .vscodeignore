@@ -1,4 +1,6 @@
-.vscode/**
-.vscode-test/**
-.gitignore
-vsc-extension-quickstart.md
+**/*
+!themes/Lucario-color-theme.json
+!README.md
+!LICENSE
+!CHANGELOG.md
+!docs/assets/*
