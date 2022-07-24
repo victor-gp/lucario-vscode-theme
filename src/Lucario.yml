@@ -20,10 +20,9 @@ palette:
     - &HintGreen      "#a6e22e"
     - &HintYellow     "#f0cc04"
     - &HintMagenta    "#f92672"
-    - &BgLight        "#f"
-    - &BgDark         "#22303f" # value 63 (-17)
-    - &BgDarkBorder   "#1b2732" # value 50
-    - &BgDarker       "#141c25" # value 37 (-43)
+    - &BgShade1       "#22303f" # value 63 (-17)
+    - &BgShade2       "#1b2732" # value 50 / for subtle borders b/w BG & BgShade1
+    - &BgShade3       "#141c25" # value 37 (-43)
   tmp:
     - &Invalid      "#f8f8f0" # aka: Border
     - &DiffHeader   "#75715e"
@@ -52,29 +51,29 @@ colors:
   editorIndentGuide.activeBackground: *Invisibles
   editorRuler.foreground: !alpha [*Invisibles, 64]
 
-  sideBar.background: *BgDark
-  sideBar.border: *BgDarkBorder
+  sideBar.background: *BgShade1
+  sideBar.border: *BgShade2
   sideBarSectionHeader.background: *BG
-  sideBarSectionHeader.border: *BgDarkBorder
+  sideBarSectionHeader.border: *BgShade2
 
-  activityBar.background: *BgDarker
+  activityBar.background: *BgShade3
   # activityBar.border:
   activityBar.foreground: *FG
-  activityBar.activeBackground: *BgDark
+  activityBar.activeBackground: *BgShade1
   activityBar.activeBorder: *Accent
   activityBar.inactiveForeground: !alpha [*Accent, c4]
   activityBarBadge.background: *Accent
-  activityBarBadge.foreground: *BgDarker
+  activityBarBadge.foreground: *BgShade3
   activityBar.dropBorder: *Accent
 
-  tab.inactiveBackground: *BgDark
-  editorGroupHeader.tabsBackground: *BgDarker
+  tab.inactiveBackground: *BgShade1
+  editorGroupHeader.tabsBackground: *BgShade3
 
   editorGroup.border: *Cyan
   panel.border: *Cyan
 
-  statusBar.background: *BgDarker
-  statusBarItem.remoteBackground: *BgDarker
+  statusBar.background: *BgShade3
+  statusBarItem.remoteBackground: *BgShade3
   statusBarItem.remoteForeground: *Accent
   statusBar.debuggingBackground: !alpha [*Orange, a8]
   statusBar.debuggingForeground: "#000"
@@ -110,7 +109,7 @@ colors:
   editorBracketHighlight.unexpectedBracket.foreground: *HintMagenta
 
   editorHoverWidget.foreground: *FG
-  editorHoverWidget.background: *BgDark
+  editorHoverWidget.background: *BgShade1
   editorHoverWidget.border: *Accent
   editorHoverWidget.highlightForeground:
   editorHoverWidget.statusBarBackground:
