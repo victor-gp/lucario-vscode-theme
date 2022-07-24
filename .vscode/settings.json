@@ -10,4 +10,7 @@
     ],
     // not supported:
     // "colorize.colorized_variables": [ "yaml" ],
+
+    //todo: remove. set by `sandorex.vscode-theme-quick-switch`
+    "workbench.colorTheme": "Lucario",
 }
