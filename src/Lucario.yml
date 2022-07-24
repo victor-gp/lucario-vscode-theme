@@ -4,34 +4,33 @@ type: dark
 
 palette:
   base:
-    - &BG         '#2b3e50'
-    - &FG         '#f8f8f2'
-    - &Selection  '#19242f'
-    - &Comment    '#5c98cd'
-    - &Cyan    '#66d9ef'
-    - &Green   '#72c05d'
-    - &Orange  '#ffab28'
-    - &Pink    '#ca94ff'
-    - &Red     '#ff6541'
-    - &Yellow  '#e6db74'
+    - &BG         "#2b3e50"
+    - &FG         "#f8f8f2"
+    - &Selection  "#19242f"
+    - &Comment    "#5c98cd"
+    - &Cyan     "#66d9ef"
+    - &Green    "#72c05d"
+    - &Orange   "#ffab28"
+    - &Pink     "#ca94ff"
+    - &Red      "#ff6541"
+    - &Yellow   "#e6db74"
   other:
-    - &LineHighlight  '#243443'
-    - &NonText        '#61bbc8' #todo: replace Invisibles?
-    - &HintGreen      '#a6e22e'
-    - &HintYellow     '#f0cc04'
-    - &HintMagenta    '#f92672'
-    - &BgLight        '#f'
-    - &BgDark         '#22303f' # value 63 (-17)
-    - &BgDarkBorder   '#1b2732' # value 50
-    - &BgDarker       '#141c25' # value 37 (-43)
+    - &LineHighlight  "#243443"
+    - &NonText        "#61bbc8" #todo: replace Invisibles?
+    - &HintGreen      "#a6e22e"
+    - &HintYellow     "#f0cc04"
+    - &HintMagenta    "#f92672"
+    - &BgLight        "#f"
+    - &BgDark         "#22303f" # value 63 (-17)
+    - &BgDarkBorder   "#1b2732" # value 50
+    - &BgDarker       "#141c25" # value 37 (-43)
   tmp:
-    - &Invalid    '#f8f8f0' # aka: Border
-    - &DiffHeader '#75715e'
-    - &Invisibles '#666666'
+    - &Invalid      "#f8f8f0" # aka: Border
+    - &DiffHeader   "#75715e"
+    - &Invisibles   "#666666"
 
 # non-syntax colors
 colors:
-
   editor.background: *BG
   editor.foreground: *FG
   editorCursor.foreground: *FG
@@ -40,7 +39,7 @@ colors:
 
   focusBorder: *Comment
 
-  editorLineNumber.foreground: !alpha [ *FG, 80 ]
+  editorLineNumber.foreground: !alpha [*FG, 80]
   editorLineNumber.activeForeground: *FG
   editorGutter.addedBackground: *HintGreen
   editorGutter.modifiedBackground: *HintYellow
@@ -51,7 +50,6 @@ colors:
   editorIndentGuide.background: !alpha [*Invisibles, 64]
   editorIndentGuide.activeBackground: *Invisibles
   editorRuler.foreground: !alpha [*Invisibles, 64]
-
 
   sideBar.background: *BgDark
   sideBar.border: *BgDarkBorder
@@ -76,30 +74,30 @@ colors:
 
   statusBar.background: *BgDarker
   statusBarItem.remoteBackground: *BgDarker
-  statusBarItem.remoteForeground:  *Comment
+  statusBarItem.remoteForeground: *Comment
   statusBar.debuggingBackground: !alpha [*Orange, a8]
-  statusBar.debuggingForeground: '#000'
+  statusBar.debuggingForeground: "#000"
   statusBar.noFolderBackground: !alpha [*Pink, a0]
-  statusBar.noFolderForeground: '#000'
+  statusBar.noFolderForeground: "#000"
   statusBar.focusBorder: *Comment
 
   terminal.background: *BG
   terminal.foreground: *FG
   terminal.ansiBlack: *BG
-  terminal.ansiRed:           '#ff6c60'
-  terminal.ansiGreen:         '#8ee478'
-  terminal.ansiYellow:        '#ffffb6'
-  terminal.ansiBlue:          '#5796ed'
-  terminal.ansiMagenta:       '#ff73fd'
-  terminal.ansiCyan:          '#fbb036' # actually orange ¯\_ (ツ)_/¯
-  terminal.ansiWhite:         '#eeeeee'
-  terminal.ansiBrightBlack:   '#4f4f4f'
-  terminal.ansiBrightRed:     '#fa6960'
-  terminal.ansiBrightGreen:   '#8ee478' # == standard
-  terminal.ansiBrightYellow:  '#feffb9'
-  terminal.ansiBrightBlue:    '#6b9fed'
-  terminal.ansiBrightMagenta: '#fc6ffa'
-  terminal.ansiBrightCyan:    '#fbb036' # == standard
+  terminal.ansiRed:           "#ff6c60"
+  terminal.ansiGreen:         "#8ee478"
+  terminal.ansiYellow:        "#ffffb6"
+  terminal.ansiBlue:          "#5796ed"
+  terminal.ansiMagenta:       "#ff73fd"
+  terminal.ansiCyan:          "#fbb036" # actually orange ¯\_ (ツ)_/¯
+  terminal.ansiWhite:         "#eeeeee"
+  terminal.ansiBrightBlack:   "#4f4f4f"
+  terminal.ansiBrightRed:     "#fa6960"
+  terminal.ansiBrightGreen:   "#8ee478" # == standard
+  terminal.ansiBrightYellow:  "#feffb9"
+  terminal.ansiBrightBlue:    "#6b9fed"
+  terminal.ansiBrightMagenta: "#fc6ffa"
+  terminal.ansiBrightCyan:    "#fbb036" # == standard
   terminal.ansiBrightWhite: *FG
 
   editorBracketHighlight.foreground1: *FG
@@ -113,299 +111,299 @@ colors:
 # syntax colors
 tokenColors:
 
-- name: Comment
-  scope: comment
-  settings:
-    foreground: *Comment
+  - name: Comment
+    scope: comment
+    settings:
+      foreground: *Comment
 
-- name: String
-  scope: string
-  settings:
-    foreground: *Yellow
+  - name: String
+    scope: string
+    settings:
+      foreground: *Yellow
 
-- name: Number
-  scope: constant.numeric
-  settings:
-    foreground: *Pink
+  - name: Number
+    scope: constant.numeric
+    settings:
+      foreground: *Pink
 
-- name: Built-in constant
-  scope: constant.language
-  settings:
-    foreground: *Pink
+  - name: Built-in constant
+    scope: constant.language
+    settings:
+      foreground: *Pink
 
-- name: User-defined constant
-  scope:
-  - constant.character
-  - constant.other
-  settings:
-    foreground: *Pink
+  - name: User-defined constant
+    scope:
+      - constant.character
+      - constant.other
+    settings:
+      foreground: *Pink
 
-- name: Constant catch-all
-  scope:
-  - constant
-  settings:
-    foreground: *Pink
+  - name: Constant catch-all
+    scope:
+      - constant
+    settings:
+      foreground: *Pink
 
-- name: Instance variable
-  scope: variable.other.readwrite.instance
-  settings:
-    foreground: *Orange
+  - name: Instance variable
+    scope: variable.other.readwrite.instance
+    settings:
+      foreground: *Orange
 
-- name: Escaped string (?)
-  scope:
-  - constant.character.escaped
-  - constant.character.escape
-  - string.source
-  - string.source.ruby
-  settings:
-    foreground: *Pink
+  - name: Escaped string (?)
+    scope:
+      - constant.character.escaped
+      - constant.character.escape
+      - string.source
+      - string.source.ruby
+    settings:
+      foreground: *Pink
 
-- name: Keyword
-  scope: keyword
-  settings:
-    foreground: *Red
+  - name: Keyword
+    scope: keyword
+    settings:
+      foreground: *Red
 
-- name: Storage
-  scope: storage
-  settings:
-    fontStyle: ''
-    foreground: *Red
+  - name: Storage
+    scope: storage
+    settings:
+      fontStyle: ""
+      foreground: *Red
 
-- name: Storage type
-  scope: storage.type
-  settings:
-    foreground: *Cyan
+  - name: Storage type
+    scope: storage.type
+    settings:
+      foreground: *Cyan
 
-- name: Class name
-  scope: entity.name.class
-  settings:
-    fontStyle: underline
-    foreground: *Green
+  - name: Class name
+    scope: entity.name.class
+    settings:
+      fontStyle: underline
+      foreground: *Green
 
-- name: Inherited class
-  scope: entity.other.inherited-class
-  settings:
-    fontStyle: underline
-    foreground: *Green
+  - name: Inherited class
+    scope: entity.other.inherited-class
+    settings:
+      fontStyle: underline
+      foreground: *Green
 
-- name: Function name
-  scope: entity.name.function
-  settings:
-    fontStyle: ''
-    foreground: *Green
+  - name: Function name
+    scope: entity.name.function
+    settings:
+      fontStyle: ""
+      foreground: *Green
 
-- name: Function argument
-  scope: variable.parameter
-  settings:
-    fontStyle: italic
-    foreground: *Orange
+  - name: Function argument
+    scope: variable.parameter
+    settings:
+      fontStyle: italic
+      foreground: *Orange
 
-- name: Tag name
-  scope: entity.name.tag
-  settings:
-    foreground: *Red
+  - name: Tag name
+    scope: entity.name.tag
+    settings:
+      foreground: *Red
 
-- name: Tag attribute
-  scope:
-  - entity.other.attribute-name
-  - markup.heading
-  settings:
-    fontStyle: ''
-    foreground: *Green
+  - name: Tag attribute
+    scope:
+      - entity.other.attribute-name
+      - markup.heading
+    settings:
+      fontStyle: ""
+      foreground: *Green
 
-- name: Library function
-  scope: support.function
-  settings:
-    fontStyle: ''
-    foreground: *Cyan
+  - name: Library function
+    scope: support.function
+    settings:
+      fontStyle: ""
+      foreground: *Cyan
 
-- name: Library constant
-  scope: support.constant
-  settings:
-    fontStyle: ''
-    foreground: *Cyan
+  - name: Library constant
+    scope: support.constant
+    settings:
+      fontStyle: ""
+      foreground: *Cyan
 
-- name: Library class/type
-  scope:
-  - support.type
-  - support.class
-  settings:
-    foreground: *Cyan
+  - name: Library class/type
+    scope:
+      - support.type
+      - support.class
+    settings:
+      foreground: *Cyan
 
-- name: Library variable
-  scope:
-  - support.other.variable
-  - variable.unordered
-  - variable.ordered
-  settings:
-    fontStyle: ''
-    foreground: *Orange
+  - name: Library variable
+    scope:
+      - support.other.variable
+      - variable.unordered
+      - variable.ordered
+    settings:
+      fontStyle: ""
+      foreground: *Orange
 
-- name: Invalid
-  scope:
-    - invalid
-    # - invalid.deprecated
-  settings:
-    fontStyle: ''
-    foreground: *Invalid
-    background: *Selection
+  - name: Invalid
+    scope:
+      - invalid
+      # - invalid.deprecated
+    settings:
+      fontStyle: ""
+      foreground: *Invalid
+      background: *Selection
 
-- name: Invalid deprecated
-  scope: invalid.deprecated
-  settings:
-    foreground: *Invalid
-    background: *Selection
+  - name: Invalid deprecated
+    scope: invalid.deprecated
+    settings:
+      foreground: *Invalid
+      background: *Selection
 
-- name: diff.header
-  scope:
-  - meta.diff
-  - meta.diff.header
-  settings:
-    foreground: *DiffHeader
+  - name: diff.header
+    scope:
+      - meta.diff
+      - meta.diff.header
+    settings:
+      foreground: *DiffHeader
 
-- name: diff.deleted
-  scope: markup.deleted
-  settings:
-    foreground: *HintMagenta
+  - name: diff.deleted
+    scope: markup.deleted
+    settings:
+      foreground: *HintMagenta
 
-- name: diff.inserted
-  scope: markup.inserted
-  settings:
-    foreground: *HintGreen
+  - name: diff.inserted
+    scope: markup.inserted
+    settings:
+      foreground: *HintGreen
 
-- name: diff.changed
-  scope: markup.changed
-  settings:
-    foreground: *HintYellow
+  - name: diff.changed
+    scope: markup.changed
+    settings:
+      foreground: *HintYellow
 
-- name: Markup emphasis
-  scope:
-  - markup.bold
-  - markup.italic
-  settings:
-    foreground: *Red
+  - name: Markup emphasis
+    scope:
+      - markup.bold
+      - markup.italic
+    settings:
+      foreground: *Red
 
-- name: Markup raw
-  scope: markup.raw
-  settings:
-    foreground: *Cyan
+  - name: Markup raw
+    scope: markup.raw
+    settings:
+      foreground: *Cyan
 
-- name: Markdown - Heading
-  scope: markup.heading.markdown
-  settings:
-    fontStyle: bold
+  - name: Markdown - Heading
+    scope: markup.heading.markdown
+    settings:
+      fontStyle: bold
 
-- name: Markdown - Bold
-  scope: markup.bold.markdown
-  settings:
-    fontStyle: bold
+  - name: Markdown - Bold
+    scope: markup.bold.markdown
+    settings:
+      fontStyle: bold
 
-- name: Markdown - Italics
-  scope: markup.italic.markdown
-  settings:
-    fontStyle: italic
+  - name: Markdown - Italics
+    scope: markup.italic.markdown
+    settings:
+      fontStyle: italic
 
-- name: Markdown - Raw Inline
-  scope:
-  - punctuation.definition.raw.markdown # backticks
-  - markup.inline.raw.string.markdown
-  settings:
-    foreground: *Cyan
-    # linter says: tokens background colors are currently not supported
-    # background: *BgDark
+  - name: Markdown - Raw Inline
+    scope:
+      - punctuation.definition.raw.markdown # backticks
+      - markup.inline.raw.string.markdown
+    settings:
+      foreground: *Cyan
+      # linter says: tokens background colors are currently not supported
+      # background: *BgDark
 
-- name: Markdown - Block-level punctuation
-  scope:
-  - markup.fenced_code.block.markdown punctuation.definition.markdown # code fences ```
-  - punctuation.definition.quote.begin.markdown # blockquote >
-  - meta.separator.markdown # ---
-  settings:
-    foreground: *Pink
+  - name: Markdown - Block-level punctuation
+    scope:
+      - markup.fenced_code.block.markdown punctuation.definition.markdown # code fences ```
+      - punctuation.definition.quote.begin.markdown # blockquote >
+      - meta.separator.markdown # ---
+    settings:
+      foreground: *Pink
 
-- name: Markdown - Code fences language
-  scope: text.html.markdown fenced_code.block.language
-  settings:
-    foreground: *Pink
+  - name: Markdown - Code fences language
+    scope: text.html.markdown fenced_code.block.language
+    settings:
+      foreground: *Pink
 
-- name: Markdown - Blockquote plain text
-  scope: markup.quote.markdown meta.paragraph.markdown
-  settings:
-    foreground: !alpha [*FG, aa]
+  - name: Markdown - Blockquote plain text
+    scope: markup.quote.markdown meta.paragraph.markdown
+    settings:
+      foreground: !alpha [*FG, aa]
 
-- name: Markdown - Link title
-  scope:
-  - text.html.markdown string.other.link # for [link](url) and ![image](url)
-  - text.html.markdown punctuation.definition.link # [] and ![]
-  settings:
-    foreground: *Yellow
+  - name: Markdown - Link title
+    scope:
+      - text.html.markdown string.other.link # for [link](url) and ![image](url)
+      - text.html.markdown punctuation.definition.link # [] and ![]
+    settings:
+      foreground: *Yellow
 
-- name: Markdown - Link url
-  scope:
-  - text.html.markdown markup.underline.link
-  - punctuation.definition.metadata.markdown # the parens in []()
-  settings:
-    foreground: !alpha [*Orange, 80]
+  - name: Markdown - Link url
+    scope:
+      - text.html.markdown markup.underline.link
+      - punctuation.definition.metadata.markdown # the parens in []()
+    settings:
+      foreground: !alpha [*Orange, 80]
 
-- name: Markdown - Raw url # like "<url>"
-  scope:
-  - meta.link.inet.markdown markup.underline.link.markdown
-  - meta.link.inet.markdown punctuation.definition.link.markdown # the angle quotes
-  settings:
-    foreground: *Orange
+  - name: Markdown - Raw url # like "<url>"
+    scope:
+      - meta.link.inet.markdown markup.underline.link.markdown
+      - meta.link.inet.markdown punctuation.definition.link.markdown # the angle quotes
+    settings:
+      foreground: *Orange
 
-- name: Markdown - List item marker
-  # i.e.: "- " or "1. "
-  scope: text.html.markdown punctuation.definition.list.begin
-  settings:
-    foreground: *Pink
+  - name: Markdown - List item marker
+    # i.e.: "- " or "1. "
+    scope: text.html.markdown punctuation.definition.list.begin
+    settings:
+      foreground: *Pink
 
-- name: Markdown - HTML special characters
-  # e.g.: &nbsp; or &amp;
-  scope: text.html.markdown constant.character.entity.named
-  settings:
-    foreground: *Pink
+  - name: Markdown - HTML special characters
+    # e.g.: &nbsp; or &amp;
+    scope: text.html.markdown constant.character.entity.named
+    settings:
+      foreground: *Pink
 
-#nice: improve md syntax to pick up emoji, like ":emoji-code:"
-#      or perhaps I can target that with semantic scopes?
+  #nice: improve md syntax to pick up emoji, like ":emoji-code:"
+  #      or perhaps I can target that with semantic scopes?
 
-- scope:
-  - punctuation.definition.tag.xml.plist
-  - constant.name.xml
-  settings:
-    foreground: *FG
+  - scope:
+      - punctuation.definition.tag.xml.plist
+      - constant.name.xml
+    settings:
+      foreground: *FG
 
-- name: YAML - Anchor
-  scope:
-  - entity.name.type.anchor.yaml
-  - punctuation.definition.anchor.yaml
-  settings:
-    foreground: *FG
+  - name: YAML - Anchor
+    scope:
+      - entity.name.type.anchor.yaml
+      - punctuation.definition.anchor.yaml
+    settings:
+      foreground: *FG
 
-- name: YAML - Alias
-  scope:
-  - variable.other.alias.yaml
-  - punctuation.definition.alias.yaml
-  settings:
-    foreground: *Orange
+  - name: YAML - Alias
+    scope:
+      - variable.other.alias.yaml
+      - punctuation.definition.alias.yaml
+    settings:
+      foreground: *Orange
 
-- name: YAML - String quotes
-  scope: source.yaml punctuation.definition.string
-  settings:
-    foreground: *FG
+  - name: YAML - String quotes
+    scope: source.yaml punctuation.definition.string
+    settings:
+      foreground: *FG
 
-- name: YAML - Directives
-  scope:
-  - punctuation.definition.directive.begin.yaml
-  - meta.directive.yaml keyword.other.directive
-  - meta.directive.yaml constant.numeric
-  - meta.directive.yaml storage.type
-  - meta.directive.yaml support.type
-  settings:
-    foreground: *Green
+  - name: YAML - Directives
+    scope:
+      - punctuation.definition.directive.begin.yaml
+      - meta.directive.yaml keyword.other.directive
+      - meta.directive.yaml constant.numeric
+      - meta.directive.yaml storage.type
+      - meta.directive.yaml support.type
+    settings:
+      foreground: *Green
 
-- name: YAML - Block scalar flow control
-  scope:
-  - source.yaml keyword.control.flow.block-scalar
-  - storage.modifier.chomping-indicator.yaml
-  settings:
-    foreground: *FG
+  - name: YAML - Block scalar flow control
+    scope:
+      - source.yaml keyword.control.flow.block-scalar
+      - storage.modifier.chomping-indicator.yaml
+    settings:
+      foreground: *FG
