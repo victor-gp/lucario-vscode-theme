@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "node ./scripts/build.js",
+			"presentation": {
+				"reveal": "silent",
+				"revealProblems": "onProblem",
+				// drop this default? / maybe keep it for new contributors...
+				"showReuseMessage": true,
+			}
+		}
+	]
+}
