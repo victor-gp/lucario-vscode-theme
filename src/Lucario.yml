@@ -109,6 +109,12 @@ colors:
   editorBracketHighlight.foreground6: *Orange
   editorBracketHighlight.unexpectedBracket.foreground: *HintMagenta
 
+  editorHoverWidget.foreground: *FG
+  editorHoverWidget.background: *BG
+  editorHoverWidget.border: *Accent
+  editorHoverWidget.highlightForeground:
+  editorHoverWidget.statusBarBackground:
+
 # syntax colors
 tokenColors:
 
