@@ -4,10 +4,9 @@ type: dark
 
 palette:
   base:
-    - &BG         "#2b3e50"
-    - &FG         "#f8f8f2"
-    - &Selection  "#19242f"
-    - &Comment    "#5c98cd"
+    - &BG       "#2b3e50"
+    - &FG       "#f8f8f2"
+    - &Accent   "#5c98cd"
     - &Cyan     "#66d9ef"
     - &Green    "#72c05d"
     - &Orange   "#ffab28"
@@ -16,6 +15,7 @@ palette:
     - &Yellow   "#e6db74"
   other:
     - &LineHighlight  "#243443"
+    - &Selection      "#19242f"
     - &NonText        "#61bbc8" #todo: replace Invisibles?
     - &HintGreen      "#a6e22e"
     - &HintYellow     "#f0cc04"
@@ -38,7 +38,7 @@ colors:
   editor.lineHighlightBackground: *LineHighlight
   editor.selectionBackground: *Selection
 
-  focusBorder: *Comment
+  focusBorder: *Accent
 
   editorLineNumber.foreground: !alpha [*FG, 80]
   editorLineNumber.activeForeground: *FG
@@ -61,11 +61,11 @@ colors:
   # activityBar.border:
   activityBar.foreground: *FG
   activityBar.activeBackground: *BgDark
-  activityBar.activeBorder: *Comment
-  activityBar.inactiveForeground: !alpha [*Comment, c4]
-  activityBarBadge.background: *Comment
+  activityBar.activeBorder: *Accent
+  activityBar.inactiveForeground: !alpha [*Accent, c4]
+  activityBarBadge.background: *Accent
   activityBarBadge.foreground: *BgDarker
-  activityBar.dropBorder: *Comment
+  activityBar.dropBorder: *Accent
 
   tab.inactiveBackground: *BgDark
   editorGroupHeader.tabsBackground: *BgDarker
@@ -75,12 +75,12 @@ colors:
 
   statusBar.background: *BgDarker
   statusBarItem.remoteBackground: *BgDarker
-  statusBarItem.remoteForeground: *Comment
+  statusBarItem.remoteForeground: *Accent
   statusBar.debuggingBackground: !alpha [*Orange, a8]
   statusBar.debuggingForeground: "#000"
   statusBar.noFolderBackground: !alpha [*Pink, a0]
   statusBar.noFolderForeground: "#000"
-  statusBar.focusBorder: *Comment
+  statusBar.focusBorder: *Accent
 
   terminal.background: *BG
   terminal.foreground: *FG
@@ -115,7 +115,7 @@ tokenColors:
   - name: Comment
     scope: comment
     settings:
-      foreground: *Comment
+      foreground: *Accent
 
   - name: String
     scope: string
