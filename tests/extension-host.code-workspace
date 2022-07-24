@@ -1,3 +1,4 @@
+//nit: this workspace shouldn't appear in "Open Recent"
 {
 	"folders": [
 		{ "path": "../src" },
