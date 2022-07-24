@@ -110,7 +110,7 @@ colors:
   editorBracketHighlight.unexpectedBracket.foreground: *HintMagenta
 
   editorHoverWidget.foreground: *FG
-  editorHoverWidget.background: *BG
+  editorHoverWidget.background: *BgDark
   editorHoverWidget.border: *Accent
   editorHoverWidget.highlightForeground:
   editorHoverWidget.statusBarBackground:
