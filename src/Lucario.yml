@@ -28,7 +28,8 @@ palette:
     - &DiffHeader   "#75715e"
     - &Invisibles   "#666666"
 
-# non-syntax colors
+
+# UI colors (non-syntax)
 colors:
 
   editor.background: *BG
@@ -37,7 +38,16 @@ colors:
   editor.lineHighlightBackground: *LineHighlight
   editor.selectionBackground: *Selection
 
+  # Base colors
   focusBorder: *Accent
+  foreground: # Overall foreground color. This color is only used if not overridden by a component.
+  disabledForeground: # Overall foreground for disabled elements. This color is only used if not overridden by a component.
+  widget.shadow: # Shadow color of widgets such as Find/Replace inside the editor.
+  selection.background: # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal).
+  descriptionForeground: # Foreground color for description text providing additional information, for example for a label.
+  errorForeground: # Overall foreground color for error messages (this color is only used if not overridden by a component).
+  icon.foreground: # The default color for icons in the workbench.
+  sash.hoverBorder: # The hover border color for draggable sashes.
 
   editorLineNumber.foreground: !alpha [*FG, 80]
   editorLineNumber.activeForeground: *FG
@@ -62,7 +72,7 @@ colors:
   activityBar.activeBackground: *BgShade1
   activityBar.activeBorder: *Accent
   activityBar.inactiveForeground: !alpha [*Accent, c4]
-  activityBarBadge.background: *Accent
+  activityBarBadge.background: *Accent #nice: make it a shade
   activityBarBadge.foreground: *BgShade3
   activityBar.dropBorder: *Accent
 
@@ -113,6 +123,16 @@ colors:
   editorHoverWidget.border: *Accent
   editorHoverWidget.highlightForeground:
   editorHoverWidget.statusBarBackground:
+
+  # Text colors: colors inside a text document, such as the welcome page.
+  textBlockQuote.background: # Background color for block quotes in text.
+  textBlockQuote.border: # Border color for block quotes in text.
+  textCodeBlock.background: # Background color for code blocks in text.
+  textLink.activeForeground: # Foreground color for links in text when clicked on and on mouse hover.
+  textLink.foreground: # Foreground color for links in text.
+  textPreformat.foreground: # Foreground color for preformatted text segments.
+  textSeparator.foreground: # Color for text separators.
+
 
 # syntax colors
 tokenColors:
