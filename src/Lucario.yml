@@ -29,8 +29,9 @@ palette:
     - &Invisibles   "#666666"
 
 
-# UI colors (non-syntax)
 colors:
+  # UI colors (non-syntax)
+  # Reference: https://code.visualstudio.com/api/references/theme-color
 
   editor.background: *BG
   editor.foreground: *FG
@@ -40,14 +41,14 @@ colors:
 
   # Base colors
   focusBorder: *Accent
-  foreground: # Overall foreground color. This color is only used if not overridden by a component.
-  disabledForeground: # Overall foreground for disabled elements. This color is only used if not overridden by a component.
-  widget.shadow: # Shadow color of widgets such as Find/Replace inside the editor.
-  selection.background: # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal).
-  descriptionForeground: # Foreground color for description text providing additional information, for example for a label.
-  errorForeground: # Overall foreground color for error messages (this color is only used if not overridden by a component).
-  icon.foreground: # The default color for icons in the workbench.
-  sash.hoverBorder: # The hover border color for draggable sashes.
+  foreground: *FG
+  disabledForeground: # seen in menu dropdowns. default is #cccccc with 0.5 alpha
+  widget.shadow: # default is fine, black with low alpha
+  selection.background: *Selection
+  descriptionForeground: # ???
+  errorForeground: *HintMagenta
+  icon.foreground: # default is ok, #c5c5c5
+  sash.hoverBorder: # => focusBorder
 
   editorLineNumber.foreground: !alpha [*FG, 80]
   editorLineNumber.activeForeground: *FG
@@ -116,9 +117,9 @@ colors:
   editorBracketHighlight.foreground4: *Pink
   editorBracketHighlight.foreground5: *Green
   editorBracketHighlight.foreground6: *Orange
-  editorBracketHighlight.unexpectedBracket.foreground: *HintMagenta
+  editorBracketHighlight.unexpectedBracket.foreground: # => errorForeground
 
-  editorHoverWidget.foreground: *FG
+  editorHoverWidget.foreground: # => foreground
   editorHoverWidget.background: *BgShade1
   editorHoverWidget.border: *Accent
   editorHoverWidget.highlightForeground:
@@ -134,8 +135,8 @@ colors:
   textSeparator.foreground: # Color for text separators.
 
 
-# syntax colors
 tokenColors:
+  # syntax colors
 
   - name: Comment
     scope: comment
