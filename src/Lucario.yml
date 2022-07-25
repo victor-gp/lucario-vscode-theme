@@ -19,7 +19,7 @@ palette:
     - &NonText        "#61bbc8" #todo: replace Invisibles?
     - &HintGreen      "#a6e22e"
     - &HintYellow     "#f0cc04"
-    - &HintMagenta    "#f92672"
+    - &HintRed        "#f92672"
     - &BgShade1       "#22303f" # value 63 (-17)
     - &BgShade2       "#1b2732" # value 50 / for subtle borders b/w BG & BgShade1
     - &BgShade3       "#141c25" # value 37 (-43)
@@ -28,21 +28,33 @@ palette:
     - &DiffHeader   "#75715e"
     - &Invisibles   "#666666"
 
-# non-syntax colors
+
 colors:
+  # UI colors (non-syntax)
+  # Reference: https://code.visualstudio.com/api/references/theme-color
+
   editor.background: *BG
   editor.foreground: *FG
   editorCursor.foreground: *FG
   editor.lineHighlightBackground: *LineHighlight
   editor.selectionBackground: *Selection
 
+  # Base colors
   focusBorder: *Accent
+  foreground: *FG
+  disabledForeground: # seen in menu dropdowns. default is #cccccc with 0.5 alpha
+  widget.shadow: # default is fine, black with low alpha
+  selection.background: *Selection
+  descriptionForeground: # ???
+  errorForeground: *HintRed
+  icon.foreground: # default is ok, #c5c5c5
+  sash.hoverBorder: # => focusBorder
 
   editorLineNumber.foreground: !alpha [*FG, 80]
   editorLineNumber.activeForeground: *FG
   editorGutter.addedBackground: *HintGreen
   editorGutter.modifiedBackground: *HintYellow
-  editorGutter.deletedBackground: *HintMagenta
+  editorGutter.deletedBackground: *HintRed
   editorGutter.foldingControlForeground: *FG
 
   editorWhitespace.foreground: *Invisibles
@@ -61,7 +73,7 @@ colors:
   activityBar.activeBackground: *BgShade1
   activityBar.activeBorder: *Accent
   activityBar.inactiveForeground: !alpha [*Accent, c4]
-  activityBarBadge.background: *Accent
+  activityBarBadge.background: *Accent #nice: make it a shade
   activityBarBadge.foreground: *BgShade3
   activityBar.dropBorder: *Accent
 
@@ -105,16 +117,26 @@ colors:
   editorBracketHighlight.foreground4: *Pink
   editorBracketHighlight.foreground5: *Green
   editorBracketHighlight.foreground6: *Orange
-  editorBracketHighlight.unexpectedBracket.foreground: *HintMagenta
+  editorBracketHighlight.unexpectedBracket.foreground: # => errorForeground
 
-  editorHoverWidget.foreground: *FG
+  editorHoverWidget.foreground: # => foreground
   editorHoverWidget.background: *BgShade1
   editorHoverWidget.border: *Accent
   editorHoverWidget.highlightForeground:
   editorHoverWidget.statusBarBackground:
 
-# syntax colors
+  # Text colors: colors inside a text document, such as the welcome page.
+  textBlockQuote.background: # Background color for block quotes in text.
+  textBlockQuote.border: # Border color for block quotes in text.
+  textCodeBlock.background: # Background color for code blocks in text.
+  textLink.activeForeground: # Foreground color for links in text when clicked on and on mouse hover.
+  textLink.foreground: # Foreground color for links in text.
+  textPreformat.foreground: # Foreground color for preformatted text segments.
+  textSeparator.foreground: # Color for text separators.
+
+
 tokenColors:
+  # syntax colors
 
   - name: Comment
     scope: comment
@@ -269,7 +291,7 @@ tokenColors:
   - name: diff.deleted
     scope: markup.deleted
     settings:
-      foreground: *HintMagenta
+      foreground: *HintRed
 
   - name: diff.inserted
     scope: markup.inserted
