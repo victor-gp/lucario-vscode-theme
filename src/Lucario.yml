@@ -20,6 +20,7 @@ palette:
     - &HintGreen      "#a6e22e"
     - &HintYellow     "#f0cc04"
     - &HintRed        "#f92672"
+  variations:
     - &BgShade1       "#22303f" # value 63 (-17)
     - &BgShade2       "#1b2732" # value 50 / for subtle borders b/w BG & BgShade1
     - &BgShade3       "#141c25" # value 37 (-43)
@@ -40,17 +41,6 @@ colors:
   editor.lineHighlightBackground: *LineHighlight
   editor.selectionBackground: *Selection
 
-  # Base colors
-  focusBorder: *Accent
-  foreground: *FG
-  disabledForeground: # seen in menu dropdowns. default is #cccccc with 0.5 alpha
-  widget.shadow: # default is fine, black with low alpha
-  selection.background: *Selection
-  descriptionForeground: # ???
-  errorForeground: *HintRed
-  icon.foreground: # default is ok, #c5c5c5
-  sash.hoverBorder: # => focusBorder
-
   editorLineNumber.foreground: !alpha [*FG, 80]
   editorLineNumber.activeForeground: *FG
   editorGutter.addedBackground: *HintGreen
@@ -63,6 +53,17 @@ colors:
   editorIndentGuide.activeBackground: *Invisibles
   editorRuler.foreground: !alpha [*Invisibles, 64]
 
+  # Base colors
+  focusBorder: *Accent
+  foreground: *FG
+  disabledForeground: # seen in menu dropdowns. default is #cccccc with 0.5 alpha
+  widget.shadow: # default is fine, black with low alpha
+  selection.background: *Selection
+  descriptionForeground: # ???
+  errorForeground: *HintRed
+  icon.foreground: # default is ok, #c5c5c5
+  sash.hoverBorder: # => focusBorder
+
   sideBar.background: *BgShade1
   sideBar.border: *BgShade2
   sideBarSectionHeader.background: *BG
@@ -70,7 +71,7 @@ colors:
 
   activityBar.background: *BgShade3
   # activityBar.border:
-  activityBar.foreground: *FG
+  activityBar.foreground: # => foreground
   activityBar.activeBackground: *BgShade1
   activityBar.activeBorder: *Accent
   activityBar.inactiveForeground: !alpha [*Accent, c4]
@@ -81,9 +82,6 @@ colors:
   tab.inactiveBackground: *BgShade1
   editorGroupHeader.tabsBackground: *BgShade3
 
-  editorGroup.border: *Cyan
-  panel.border: *Cyan
-
   statusBar.background: *BgShade3
   statusBarItem.remoteBackground: *BgShade3
   statusBarItem.remoteForeground: *Accent
@@ -92,6 +90,9 @@ colors:
   statusBar.noFolderBackground: !alpha [*Pink, a0]
   statusBar.noFolderForeground: "#000"
   statusBar.focusBorder: *Accent
+
+  editorGroup.border: *Cyan
+  panel.border: *Cyan
 
   terminal.background: *BG
   terminal.foreground: *FG
