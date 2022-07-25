@@ -19,7 +19,7 @@ palette:
     - &NonText        "#61bbc8" #todo: replace Invisibles?
     - &HintGreen      "#a6e22e"
     - &HintYellow     "#f0cc04"
-    - &HintMagenta    "#f92672"
+    - &HintRed        "#f92672"
     - &BgShade1       "#22303f" # value 63 (-17)
     - &BgShade2       "#1b2732" # value 50 / for subtle borders b/w BG & BgShade1
     - &BgShade3       "#141c25" # value 37 (-43)
@@ -46,7 +46,7 @@ colors:
   widget.shadow: # default is fine, black with low alpha
   selection.background: *Selection
   descriptionForeground: # ???
-  errorForeground: *HintMagenta
+  errorForeground: *HintRed
   icon.foreground: # default is ok, #c5c5c5
   sash.hoverBorder: # => focusBorder
 
@@ -54,7 +54,7 @@ colors:
   editorLineNumber.activeForeground: *FG
   editorGutter.addedBackground: *HintGreen
   editorGutter.modifiedBackground: *HintYellow
-  editorGutter.deletedBackground: *HintMagenta
+  editorGutter.deletedBackground: *HintRed
   editorGutter.foldingControlForeground: *FG
 
   editorWhitespace.foreground: *Invisibles
@@ -294,7 +294,7 @@ tokenColors:
   - name: diff.deleted
     scope: markup.deleted
     settings:
-      foreground: *HintMagenta
+      foreground: *HintRed
 
   - name: diff.inserted
     scope: markup.inserted
