@@ -23,6 +23,7 @@ palette:
     - &BgShade1       "#22303f" # value 63 (-17)
     - &BgShade2       "#1b2732" # value 50 / for subtle borders b/w BG & BgShade1
     - &BgShade3       "#141c25" # value 37 (-43)
+    - &BgTint1        "#344a5e" # luminance + 5
   tmp:
     - &Invalid      "#f8f8f0" # aka: Border
     - &DiffHeader   "#75715e"
@@ -124,15 +125,6 @@ colors:
   editorHoverWidget.border: *Accent
   editorHoverWidget.highlightForeground:
   editorHoverWidget.statusBarBackground:
-
-  # Text colors: colors inside a text document, such as the welcome page.
-  textBlockQuote.background: # Background color for block quotes in text.
-  textBlockQuote.border: # Border color for block quotes in text.
-  textCodeBlock.background: # Background color for code blocks in text.
-  textLink.activeForeground: # Foreground color for links in text when clicked on and on mouse hover.
-  textLink.foreground: # Foreground color for links in text.
-  textPreformat.foreground: # Foreground color for preformatted text segments.
-  textSeparator.foreground: # Color for text separators.
 
 
 tokenColors:
