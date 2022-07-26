@@ -269,13 +269,15 @@ tokenColors:
     settings:
       fontStyle: ""
       foreground: *Invalid
-      background: *Selection
+      # not supported in vscode:
+      # background: *Selection
 
   - name: Invalid deprecated
     scope: invalid.deprecated
     settings:
       foreground: *Invalid
-      background: *Selection
+      # not supported in vscode:
+      # background: *Selection
 
   - name: diff.header
     scope:
