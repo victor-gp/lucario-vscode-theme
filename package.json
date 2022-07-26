@@ -1,16 +1,13 @@
 {
     "name": "lucario-vscode-theme",
-    "displayName": "Lucario Theme",
-    "description": "VSCode port of the Lucario theme by Raphael Amorim. A dark-ish theme for the 80% use case.",
     "version": "0.0.2",
+    "displayName": "Lucario Theme",
+    "description": "VSCode port of the Lucario theme by Raphael Amorim. A darkish theme for the 80% use case.",
     "publisher": "victor-gp",
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/victor-gp/lucario-vscode-theme"
-    },
-    "engines": {
-        "vscode": "^1.64.0"
     },
     "categories": [
         "Themes"
@@ -26,6 +23,8 @@
         "color": "#2b3e50",
         "theme": "dark"
     },
+    "bugs": "https://github.com/victor-gp/lucario-vscode-theme/issues",
+    "qna": "false",
     "contributes": {
         "themes": [
             {
@@ -34,6 +33,9 @@
                 "path": "./themes/Lucario-color-theme.json"
             }
         ]
+    },
+    "engines": {
+        "vscode": "^1.64.0"
     },
 
     "scripts": {
