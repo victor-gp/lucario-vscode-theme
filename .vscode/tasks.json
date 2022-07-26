@@ -2,13 +2,13 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "npm:build",
 			"type": "npm",
 			"script": "build",
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			},
-			"label": "npm:build",
 			"presentation": {
 				"reveal": "silent",
 				// drop this default? / maybe keep it for new contributors...
@@ -16,13 +16,13 @@
 			}
 		},
 		{
+			"label": "npm:watch",
 			"type": "npm",
 			"script": "watch",
 			"group": {
 				"kind": "build",
 				"isDefault": false
 			},
-			"label": "npm:watch",
 			"isBackground": true,
 			"problemMatcher": {
 				"pattern":[
@@ -44,12 +44,13 @@
 			}
 		},
 		{
-			"type": "shell",
-			"command": "kill -KILL $(pgrep -f \"sh -c node ./scripts/watch.js\")",
 			"label": "stop npm:watch",
+			"type": "shell",
+			"command": "pkill -f 'sh -c node ./scripts/watch.js'",
 			"presentation": {
 				"reveal": "silent",
 				"panel": "dedicated",
+				"close": true,
 			}
 		}
 	]
