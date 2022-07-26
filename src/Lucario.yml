@@ -436,3 +436,9 @@ tokenColors:
       - storage.modifier.chomping-indicator.yaml
     settings:
       foreground: *FG
+
+  - name: Ruby - Block parameters
+    scope:
+      - variable.other.block.ruby
+    settings:
+      foreground: *Orange
