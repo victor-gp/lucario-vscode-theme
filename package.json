@@ -37,7 +37,9 @@
     },
 
     "scripts": {
-        "build": "node ./scripts/build.js"
+        "build": "node ./scripts/build.js",
+        "prewatch": "npm run build",
+        "watch": "node ./scripts/watch.js"
     },
     "devDependencies": {
         "js-yaml": "^4.1.0"

@@ -10,12 +10,24 @@
 			},
 			"problemMatcher": [],
 			"label": "npm: build",
-			"detail": "node ./scripts/build.js",
 			"presentation": {
 				"reveal": "silent",
 				"revealProblems": "onProblem",
 				// drop this default? / maybe keep it for new contributors...
 				"showReuseMessage": true,
+			}
+		},
+		{
+			"type": "npm",
+			"script": "watch",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"label": "npm: watch",
+			"isBackground": true,
+			"presentation": {
+				"reveal": "silent",
 			}
 		}
 	]
