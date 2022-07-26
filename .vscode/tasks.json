@@ -8,7 +8,6 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"problemMatcher": [],
 			"label": "npm: build",
 			"presentation": {
 				"reveal": "silent",
@@ -26,6 +25,21 @@
 			},
 			"label": "npm: watch",
 			"isBackground": true,
+			"problemMatcher": {
+				"pattern":[
+					{
+						"kind": "file",
+						"regexp": "a (dummy) (pattern)",
+						"file": 1,
+						"message": 2
+					}
+				],
+				"background": {
+					"activeOnStart": true,
+					"endsPattern": "^watch: on$",
+					"beginsPattern": "none, always on",
+				}
+			},
 			"presentation": {
 				"reveal": "silent",
 			}

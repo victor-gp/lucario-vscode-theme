@@ -7,6 +7,7 @@ module.exports = async () => {
             await build();
         }
     });
+    console.log("watch: on\n");
 };
 
 if (require.main === module) {
