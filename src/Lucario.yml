@@ -336,9 +336,9 @@ tokenColors:
       - punctuation.definition.raw.markdown # backticks
       - markup.inline.raw.string.markdown
     settings:
-      foreground: *Cyan
-      # linter says: tokens background colors are currently not supported
-      # background: *BgDark
+      foreground: *Orange
+      # json linter says: token background colors are currently not supported
+      # background: *BgShade2
 
   - name: Markdown - Block-level punctuation
     scope:
@@ -365,20 +365,19 @@ tokenColors:
     settings:
       foreground: *Yellow
 
-  #todo: switch with cyan (inline preformatted) ?
   - name: Markdown - Link url
     scope:
       - text.html.markdown markup.underline.link
       - punctuation.definition.metadata.markdown # the parens in []()
     settings:
-      foreground: !alpha [*Orange, 80]
+      foreground: !alpha [*Cyan, 90]
 
   - name: Markdown - Raw url # like "<url>"
     scope:
       - meta.link.inet.markdown markup.underline.link.markdown
       - meta.link.inet.markdown punctuation.definition.link.markdown # the angle quotes
     settings:
-      foreground: *Orange
+      foreground: *Cyan
 
   - name: Markdown - List item marker
     # i.e.: "- " or "1. "
