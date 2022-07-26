@@ -12,7 +12,7 @@
             "preLaunchTask": "npm: build",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "${workspaceFolder}/tests/extension-host.code-workspace",
+                "${workspaceFolder}/.vscode/extension-host.code-workspace",
             ]
         }
     ]
