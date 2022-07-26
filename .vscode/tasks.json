@@ -8,10 +8,9 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"label": "npm: build",
+			"label": "npm:build",
 			"presentation": {
 				"reveal": "silent",
-				"revealProblems": "onProblem",
 				// drop this default? / maybe keep it for new contributors...
 				"showReuseMessage": true,
 			}
@@ -23,7 +22,7 @@
 				"kind": "build",
 				"isDefault": false
 			},
-			"label": "npm: watch",
+			"label": "npm:watch",
 			"isBackground": true,
 			"problemMatcher": {
 				"pattern":[
@@ -42,6 +41,15 @@
 			},
 			"presentation": {
 				"reveal": "silent",
+			}
+		},
+		{
+			"type": "shell",
+			"command": "kill -KILL $(pgrep -f \"sh -c node ./scripts/watch.js\")",
+			"label": "stop npm:watch",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "dedicated",
 			}
 		}
 	]

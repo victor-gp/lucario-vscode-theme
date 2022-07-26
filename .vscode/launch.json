@@ -9,7 +9,8 @@
             "name": "Launch Theme",
             "type": "extensionHost",
             "request": "launch",
-            "preLaunchTask": "npm: watch",
+            "preLaunchTask": "npm:watch",
+            "postDebugTask": "stop npm:watch",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
                 "${workspaceFolder}/.vscode/extension-host.code-workspace",
