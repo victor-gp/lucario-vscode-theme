@@ -70,7 +70,7 @@ colors:
   sideBarSectionHeader.border: *BgShade2
 
   activityBar.background: *BgShade3
-  # activityBar.border:
+  activityBar.border:
   activityBar.foreground: # => foreground
   activityBar.activeBackground: *BgShade1
   activityBar.activeBorder: *Accent
@@ -113,13 +113,14 @@ colors:
   terminal.ansiBrightCyan:    "#fbb036" # == standard
   terminal.ansiBrightWhite: *FG
 
+  # Editor - Bracket pair colorization
   editorBracketHighlight.foreground1: *FG
   editorBracketHighlight.foreground2: *Cyan
   editorBracketHighlight.foreground3: *Yellow
   editorBracketHighlight.foreground4: *Pink
   editorBracketHighlight.foreground5: *Green
   editorBracketHighlight.foreground6: *Orange
-  editorBracketHighlight.unexpectedBracket.foreground: # => errorForeground
+  editorBracketHighlight.unexpectedBracket.foreground: *HintRed
 
   editorHoverWidget.foreground: # => foreground
   editorHoverWidget.background: *BgShade1
@@ -127,7 +128,7 @@ colors:
   editorHoverWidget.highlightForeground:
   editorHoverWidget.statusBarBackground:
 
-  # Text colors: colors inside a text document, such as Markdown previews.
+  # Text colors: for text documents like Markdown previews
   textBlockQuote.background: !alpha [*BgTint1, c0]
   textBlockQuote.border: !alpha [*Pink, 80]
   textCodeBlock.background: # not respected? / trying *BgShade3
@@ -135,6 +136,22 @@ colors:
   textLink.foreground: *Cyan
   textPreformat.foreground: *Orange
   textSeparator.foreground: # not respected? / trying *Pink
+
+  # Editor - Errors and warnings
+  editorError.foreground: *HintRed # squiggles
+  editorError.border: # overlaps with squiggles
+  editorError.background:
+  editorWarning.foreground: *HintYellow
+  editorWarning.border:
+  editorWarning.background:
+  editorInfo.foreground: # Foreground color of info squiggles in the editor.
+  editorInfo.border: # Border color of info boxes in the editor.
+  editorInfo.background: # Background color of info text in the editor. The color must not be opaque so as not to hide underlying decorations.
+  editorHint.foreground: # Foreground color of hints in the editor.
+  editorHint.border: # Border color of hint boxes in the editor.
+  problemsErrorIcon.foreground: # The color used for the problems error icon.
+  problemsWarningIcon.foreground: # The color used for the problems warning icon.
+  problemsInfoIcon.foreground: # The color used for the problems info icon.
 
 
 tokenColors:
