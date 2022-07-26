@@ -1,6 +1,6 @@
 {
     "name": "lucario-vscode-theme",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "displayName": "Lucario Theme",
     "description": "VSCode port of the Lucario theme by Raphael Amorim. A darkish theme for the 80% use case.",
     "publisher": "victor-gp",
