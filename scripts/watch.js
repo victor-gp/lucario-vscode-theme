@@ -1,11 +1,16 @@
 const { watch } = require("fs");
 const build = require("./build");
 
-const srcName = "src/Lucario.yml"
+const srcName = "src/Lucario.yml";
+var fsTimeout;
 
 module.exports = async () => {
     watch(srcName, async (eventType, filename) => {
         if (eventType == "change") {
+            // skip duplicate events
+            if (fsTimeout) return;
+            fsTimeout = setTimeout(() => fsTimeout = null, 10); // ms
+
             try {
                 console.log("watch: rebuild...");
                 await build();
