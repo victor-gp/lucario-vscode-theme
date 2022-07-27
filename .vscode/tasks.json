@@ -46,6 +46,7 @@
 		{
 			"label": "stop npm:watch",
 			"type": "shell",
+			//nice: windows alternative: https://stackoverflow.com/q/68975002
 			"command": "pkill -f 'sh -c node ./scripts/watch.js'",
 			"presentation": {
 				"reveal": "silent",

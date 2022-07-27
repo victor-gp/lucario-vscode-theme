@@ -16,9 +16,10 @@ module.exports = async () => {
                 await build();
                 console.log("watch: ok. waiting for file changes...\n");
             } catch (error) {
-                delete error.mark.buffer // don't show the entire file
+                if (error?.mark?.buffer)
+                    delete error.mark.buffer; // don't show the entire file
                 console.error(error);
-                console.error("watch: build error. see above.")
+                console.error("watch: build error. see above.");
                 console.log("watch: waiting for file changes...\n");
             }
         }
