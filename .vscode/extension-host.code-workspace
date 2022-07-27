@@ -3,8 +3,7 @@
 	"folders": [
 		{ "path": "../src" },
 		{ "path": "../themes" },
-		{ "path": "../vgp-utils/my-samples" },
-		{ "path": "../vgp-utils/night-owl-samples" },
+		{ "path": "../samples" },
 	],
 	"settings": {
 		"files.watcherExclude": {
