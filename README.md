@@ -22,7 +22,7 @@ ext install victor-gp.lucario-theme
 
 The Lucario color scheme was [created by Raphael Amorim](https://github.com/raphamorim/lucario). It's available for a bunch of editors including Atom, Vim and Sublime Text.
 
-The scripts to write a color theme in YAML (VSCode likes it JSON) are adapted from [the Dracula theme's](https://github.com/dracula/visual-studio-code).
+VSCode takes JSON color themes. The scripts to develop in YAML are adapted from [the Dracula theme's](https://github.com/dracula/visual-studio-code).
 
 Some of the code samples used for testing come from other projects. They are attributed in [this document](.samples/attribution.md).
 
