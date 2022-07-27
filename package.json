@@ -9,6 +9,23 @@
         "type": "git",
         "url": "https://github.com/victor-gp/lucario-vscode-theme"
     },
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "prewatch": "npm run build",
+        "watch": "node ./scripts/watch.js"
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.0"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Lucario",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Lucario-color-theme.json"
+            }
+        ]
+    },
     "categories": [
         "Themes"
     ],
@@ -25,26 +42,8 @@
     },
     "bugs": "https://github.com/victor-gp/lucario-vscode-theme/issues",
     "qna": "false",
-    "contributes": {
-        "themes": [
-            {
-                "label": "Lucario",
-                "uiTheme": "vs-dark",
-                "path": "./themes/Lucario-color-theme.json"
-            }
-        ]
-    },
     "engines": {
         "vscode": "^1.64.0"
-    },
-
-    "scripts": {
-        "build": "node ./scripts/build.js",
-        "prewatch": "npm run build",
-        "watch": "node ./scripts/watch.js"
-    },
-    "devDependencies": {
-        "js-yaml": "^4.1.0"
     },
     "__metadata": {
         "id": "796484d7-b3e5-429f-8160-e725b1c7e112",
