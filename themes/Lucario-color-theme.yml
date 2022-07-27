@@ -114,22 +114,22 @@ colors:
 
   terminal.background: *BG
   terminal.foreground: *FG
-  terminal.ansiBlack: *BG
+  terminal.ansiBlack:         "#4f4f4f"
   terminal.ansiRed:           "#ff6c60"
-  terminal.ansiGreen:         "#8ee478"
+  terminal.ansiGreen:         "#fbb036" # actually orange ¯\_ (ツ)_/¯
   terminal.ansiYellow:        "#ffffb6"
   terminal.ansiBlue:          "#5796ed"
   terminal.ansiMagenta:       "#ff73fd"
-  terminal.ansiCyan:          "#fbb036" # actually orange ¯\_ (ツ)_/¯
+  terminal.ansiCyan:          "#8ee478" # actually green ¯\_ (ツ)_/¯
   terminal.ansiWhite:         "#eeeeee"
-  terminal.ansiBrightBlack:   "#4f4f4f"
+  terminal.ansiBrightBlack:   "#4f4f4f" # == standard
   terminal.ansiBrightRed:     "#fa6960"
-  terminal.ansiBrightGreen:   "#8ee478" # == standard
+  terminal.ansiBrightGreen:   "#fbb036" # == standard
   terminal.ansiBrightYellow:  "#feffb9"
   terminal.ansiBrightBlue:    "#6b9fed"
   terminal.ansiBrightMagenta: "#fc6ffa"
-  terminal.ansiBrightCyan:    "#fbb036" # == standard
-  terminal.ansiBrightWhite: *FG
+  terminal.ansiBrightCyan:    "#8ee478" # == standard
+  terminal.ansiBrightWhite:   "#ffffff"
 
   # Editor - Bracket pair colorization
   editorBracketHighlight.foreground1: *FG
@@ -236,6 +236,7 @@ tokenColors:
   - name: Storage type
     scope: storage.type
     settings:
+      fontStyle: italic
       foreground: *Cyan
 
   - name: Class name
@@ -247,7 +248,7 @@ tokenColors:
   - name: Inherited class
     scope: entity.other.inherited-class
     settings:
-      fontStyle: underline
+      fontStyle: italic underline
       foreground: *Green
 
   - name: Function name
@@ -265,6 +266,7 @@ tokenColors:
   - name: Tag name
     scope: entity.name.tag
     settings:
+      fontStyle: italic
       foreground: *Red
 
   - name: Tag attribute
@@ -292,6 +294,7 @@ tokenColors:
       - support.type
       - support.class
     settings:
+      fontStyle: italic
       foreground: *Cyan
 
   - name: Library variable
@@ -354,138 +357,8 @@ tokenColors:
     settings:
       foreground: *Cyan
 
-  - name: Markdown - Heading
-    scope: markup.heading.markdown
-    settings:
-      fontStyle: bold
-
-  - name: Markdown - Bold
-    scope: markup.bold.markdown
-    settings:
-      fontStyle: bold
-
-  - name: Markdown - Italics
-    scope: markup.italic.markdown
-    settings:
-      fontStyle: italic
-
-  - name: Markdown - Raw Inline
-    scope:
-      - punctuation.definition.raw.markdown # backticks
-      - markup.inline.raw.string.markdown
-    settings:
-      foreground: *Orange
-      # json linter says: token background colors are currently not supported
-      # background: *BgShade2
-
-  - name: Markdown - Block-level punctuation
-    scope:
-      - markup.fenced_code.block.markdown punctuation.definition.markdown # code fences ```
-      - punctuation.definition.quote.begin.markdown # blockquote >
-      - meta.separator.markdown # ---
-    settings:
-      foreground: *Pink
-
-  - name: Markdown - Code fences language
-    scope: text.html.markdown fenced_code.block.language
-    settings:
-      foreground: *Pink
-
-  - name: Markdown - Blockquote plain text
-    scope: markup.quote.markdown meta.paragraph.markdown
-    settings:
-      foreground: !alpha [*FG, aa]
-
-  - name: Markdown - Link title
-    scope:
-      - text.html.markdown string.other.link # for [link](url) and ![image](url)
-      - text.html.markdown punctuation.definition.link # [] and ![]
-    settings:
-      foreground: *Yellow
-
-  - name: Markdown - Link url
-    scope:
-      - text.html.markdown markup.underline.link
-      - punctuation.definition.metadata.markdown # the parens in []()
-    settings:
-      foreground: !alpha [*Cyan, 90]
-
-  - name: Markdown - Raw url # like "<url>"
-    scope:
-      - meta.link.inet.markdown markup.underline.link.markdown
-      - meta.link.inet.markdown punctuation.definition.link.markdown # the angle quotes
-    settings:
-      foreground: *Cyan
-
-  - name: Markdown - List item marker
-    # i.e.: "- " or "1. "
-    scope: text.html.markdown punctuation.definition.list.begin
-    settings:
-      foreground: *Pink
-
-  - name: Markdown - HTML special characters
-    # e.g.: &nbsp; or &amp;
-    scope: text.html.markdown constant.character.entity.named
-    settings:
-      foreground: *Pink
-
-  #nice: improve md syntax to pick up emoji, like ":emoji-code:"
-  #      or perhaps I can target that with semantic scopes?
-
   - scope:
       - punctuation.definition.tag.xml.plist
       - constant.name.xml
     settings:
       foreground: *FG
-
-  - name: YAML - Key
-    scope: entity.name.tag.yaml
-    settings:
-      foreground: *Cyan
-
-  - name: YAML - Anchor
-    scope:
-      - entity.name.type.anchor.yaml
-      - punctuation.definition.anchor.yaml
-    settings:
-      foreground: *FG
-
-  - name: YAML - Alias
-    scope:
-      - variable.other.alias.yaml
-      - punctuation.definition.alias.yaml
-    settings:
-      foreground: *Orange
-
-  - name: YAML - String quotes
-    scope: source.yaml punctuation.definition.string
-    settings:
-      foreground: *FG
-
-  - name: YAML - Tag
-    scope: storage.type.tag-handle.yaml
-    settings:
-      foreground: *Red
-
-  - name: YAML - Directive
-    scope:
-      - punctuation.definition.directive.begin.yaml
-      - meta.directive.yaml keyword.other.directive
-      - meta.directive.yaml constant.numeric
-      - meta.directive.yaml storage.type
-      - meta.directive.yaml support.type
-    settings:
-      foreground: *Green
-
-  - name: YAML - Block scalar flow control
-    scope:
-      - source.yaml keyword.control.flow.block-scalar
-      - storage.modifier.chomping-indicator.yaml
-    settings:
-      foreground: *FG
-
-  - name: Ruby - Block parameters
-    scope:
-      - variable.other.block.ruby
-    settings:
-      foreground: *Orange
