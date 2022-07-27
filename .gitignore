@@ -1,4 +1,4 @@
-themes/
+themes/*.json
 node_modules/
 
 # build artifacts originated from the source files in samples/

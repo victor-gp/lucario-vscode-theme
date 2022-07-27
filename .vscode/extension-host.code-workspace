@@ -1,7 +1,6 @@
 //nit: this workspace shouldn't feature in "Open Recent"
 {
 	"folders": [
-		{ "path": "../src" },
 		{ "path": "../themes" },
 		{ "path": "../samples" },
 	],

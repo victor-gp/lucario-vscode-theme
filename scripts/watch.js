@@ -1,7 +1,7 @@
 const { watch } = require("fs");
 const build = require("./build");
 
-const srcName = "src/Lucario.yml";
+const srcName = "themes/Lucario-color-theme.yml";
 var fsTimeout;
 
 module.exports = async () => {

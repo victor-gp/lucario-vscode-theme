@@ -28,7 +28,7 @@ const schema = DEFAULT_SCHEMA.extend([withAlphaType]);
 
 module.exports = async () => {
     const yamlFile = await readFile(
-        join(__dirname, '..', 'src', 'Lucario.yml'),
+        join(__dirname, '..', 'themes', 'Lucario-color-theme.yml'),
         'utf-8'
     );
 
