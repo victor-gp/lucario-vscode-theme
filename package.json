@@ -18,7 +18,7 @@
         "comfortable",
         "pokemon"
     ],
-    "icon": "assets/icon.png",
+    "icon": "assets/vsce/icon.png",
     "galleryBanner": {
         "color": "#2b3e50",
         "theme": "dark"
