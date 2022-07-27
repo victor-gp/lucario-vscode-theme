@@ -38,7 +38,7 @@ another code fence:
 bla bla bla
 ```
 
-a raw link: <https://marketplace.visualstudio.com/items?itemName=victor-gp.lucario-vscode-theme>
+a raw link: <https://marketplace.visualstudio.com/items?itemName=victor-gp.lucario-theme>
 
 inline html:
 

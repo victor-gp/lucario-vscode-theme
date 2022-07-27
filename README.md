@@ -7,7 +7,7 @@ VSCode port of [Raphael Amorim's Lucario theme](https://github.com/raphamorim/lu
 Launch VS Code Quick Open (`Ctrl+P`), paste the following command, and press enter.
 
 ```txt
-ext install victor-gp.lucario-vscode-theme
+ext install victor-gp.lucario-theme
 ```
 
 ## Credit
