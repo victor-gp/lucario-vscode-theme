@@ -25,6 +25,8 @@ palette:
     - &BgShade2       "#1b2732" # value 50 / for subtle borders b/w BG & BgShade1
     - &BgShade3       "#141c25" # value 37 (-43)
     - &BgTint1        "#344a5e" # luminance + 5
+    - &AccentTint1    "#65a6df" # Accent { luminance + 5 }
+    - &AccentShade1   "#548bbc" # Accent { luminance - 5 }
   tmp:
     - &Invalid      "#f8f8f0" # aka: Border
     - &DiffHeader   "#75715e"
@@ -64,13 +66,13 @@ colors:
   icon.foreground: # default is ok, #c5c5c5
   sash.hoverBorder: # => focusBorder
 
-  sideBar.background: *BgShade1
-  sideBar.border: *BgShade2
-  sideBarSectionHeader.background: *BG
-  sideBarSectionHeader.border: *BgShade2
+  sideBar.background: *BgShade3
+  sideBar.border:
+  sideBarSectionHeader.background: *BgShade2
+  sideBarSectionHeader.border: *BgShade3
 
   activityBar.background: *BgShade3
-  activityBar.border:
+  activityBar.border: *BgShade2
   activityBar.foreground: # => foreground
   activityBar.activeBackground: *BgShade1
   activityBar.activeBorder: *Accent
@@ -79,8 +81,19 @@ colors:
   activityBarBadge.foreground: *BgShade3
   activityBar.dropBorder: *Accent
 
-  tab.inactiveBackground: *BgShade1
   editorGroupHeader.tabsBackground: *BgShade3
+  editorGroupHeader.tabsBorder: *BgShade1
+  editorGroupHeader.border: # none
+  tab.activeBackground: *BgShade2
+  tab.activeBorderTop: *AccentTint1
+  tab.inactiveBackground: *BgShade3
+  tab.border: *BgShade1
+
+  breadcrumb.foreground: # Color of breadcrumb items.
+  breadcrumb.background: *BgShade3
+  breadcrumb.focusForeground: # Color of focused breadcrumb items.
+  breadcrumb.activeSelectionForeground: # Color of selected breadcrumb items.
+  breadcrumbPicker.background: *BgShade3 # = breadcrumb.background
 
   statusBar.background: *BgShade3
   statusBarItem.remoteBackground: *BgShade3
@@ -93,6 +106,11 @@ colors:
 
   editorGroup.border: *Cyan
   panel.border: *Cyan
+
+  scrollbar.shadow: # below breadcrumbs
+  scrollbarSlider.background: !alpha [*FG, 16]
+  scrollbarSlider.hoverBackground: !alpha [*FG, 32]
+  scrollbarSlider.activeBackground: !alpha [*FG, 48]
 
   terminal.background: *BG
   terminal.foreground: *FG
