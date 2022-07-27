@@ -8,7 +8,7 @@ Selling points:
 
 - a dark-ish theme that prevents eye strain while providing enough contrast for a well-lit room
 - committed to provide good syntax highlighting for many languages, ~~not just Python and JavaScript~~
-- inspired on [this beautiful creature](https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)#firstHeading) :blue_heart::black_heart:
+- inspired on [this beautiful creature](https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)#firstHeading) :black_heart::blue_heart:
 
 ## Installation
 
