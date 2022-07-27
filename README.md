@@ -4,6 +4,12 @@ VSCode port of [Raphael Amorim's Lucario theme](https://github.com/raphamorim/lu
 
 ![Preview of Lucario Theme in VS Code](./assets/preview.png)
 
+Selling points:
+
+- a dark-ish theme that prevents eye strain while providing enough contrast for a well-lit room
+- committed to provide good syntax highlighting for many languages, ~~not just Python and JavaScript~~
+- inspired on [this beautiful creature](https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)#firstHeading) :blue_heart::black_heart:
+
 ## Installation
 
 Launch VS Code Quick Open (`Ctrl+P`), paste the following command, and press enter.
