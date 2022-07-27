@@ -438,6 +438,11 @@ tokenColors:
     settings:
       foreground: *FG
 
+  - name: YAML - Key
+    scope: entity.name.tag.yaml
+    settings:
+      foreground: *Cyan
+
   - name: YAML - Anchor
     scope:
       - entity.name.type.anchor.yaml
@@ -457,7 +462,12 @@ tokenColors:
     settings:
       foreground: *FG
 
-  - name: YAML - Directives
+  - name: YAML - Tag
+    scope: storage.type.tag-handle.yaml
+    settings:
+      foreground: *Red
+
+  - name: YAML - Directive
     scope:
       - punctuation.definition.directive.begin.yaml
       - meta.directive.yaml keyword.other.directive
