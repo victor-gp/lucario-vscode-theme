@@ -2,6 +2,8 @@
 
 VSCode port of [Raphael Amorim's Lucario theme](https://github.com/raphamorim/lucario). A darkish syntax theme for the 80% use case.
 
+![Preview of Lucario Theme in VS Code](./assets/preview.png)
+
 ## Installation
 
 Launch VS Code Quick Open (`Ctrl+P`), paste the following command, and press enter.
