@@ -1,6 +1,6 @@
-# Lucario VSCode Theme
+# Lucario VS Code Theme
 
-VSCode port of [Raphael Amorim's Lucario theme](https://github.com/raphamorim/lucario). A darkish syntax theme for the 80% use case.
+VS Code port of [Raphael Amorim's Lucario theme](https://github.com/raphamorim/lucario). A darkish syntax theme for the 80% use case.
 
 ![Preview of Lucario Theme in VS Code](./assets/preview.png)
 
@@ -22,11 +22,11 @@ ext install victor-gp.lucario-theme
 
 The Lucario color scheme was [created by Raphael Amorim](https://github.com/raphamorim/lucario). It's available for a bunch of editors including Atom, Vim and Sublime Text.
 
-VSCode takes JSON color themes. The scripts to develop in YAML are adapted from [the Dracula theme](https://github.com/dracula/visual-studio-code).
+VS Code takes JSON color themes. The scripts to develop in YAML are adapted from [the Dracula theme](https://github.com/dracula/visual-studio-code).
 
 Some of the code samples used for testing come from other projects. They are attributed in [this document](./samples/_attribution.md).
 
-The theme logo on the VSCode Marketplace is a Lucario sprite from Pokémon Café Mix.
+The theme logo on the VS Code Marketplace is a Lucario sprite from Pokémon Café Mix.
 
 ## License
 
