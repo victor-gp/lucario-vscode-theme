@@ -180,13 +180,6 @@ colors:
   editorBracketHighlight.foreground6: *Orange
   editorBracketHighlight.unexpectedBracket.foreground: *HintRed
 
-  # Editor widget colors
-  editorHoverWidget.foreground: # => foreground
-  editorHoverWidget.background: *bg-lv-1
-  editorHoverWidget.border: *Accent
-  editorHoverWidget.highlightForeground:
-  editorHoverWidget.statusBarBackground:
-
   # Text colors: for text documents like Markdown previews
   textBlockQuote.background: !alpha [*BgTint1, c0]
   textBlockQuote.border: !alpha [*Pink, 80]
@@ -251,9 +244,9 @@ colors:
   editorSuggestWidget.selectedForeground: # Foreground color of the selected entry in the suggest widget.
   editorSuggestWidget.selectedIconForeground: # Icon foreground color of the selected entry in the suggest widget.
   editorSuggestWidgetStatus.foreground: # Foreground color of the suggest widget status.
-  editorHoverWidget.foreground: # Foreground color of the editor hover.
-  editorHoverWidget.background: # Background color of the editor hover.
-  editorHoverWidget.border: # Border color of the editor hover.
+  editorHoverWidget.foreground: # => foreground
+  editorHoverWidget.background: *bg-lv-1
+  editorHoverWidget.border: *Accent
   editorHoverWidget.highlightForeground: # Foreground color of the active item in the parameter hint.
   editorHoverWidget.statusBarBackground: # Background color of the editor hover status bar.
   editorGhostText.border: # Border color of the ghost text shown by inline completion providers and the suggest preview.
