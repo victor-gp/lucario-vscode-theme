@@ -1,6 +1,6 @@
 themes/*.json
 node_modules/
 
-# build artifacts originated from the source files in samples/
+# build artifacts originated from the source files in samples/.
 # they depend on the extensions you have installed, add your own!
 .metals
