@@ -4,6 +4,8 @@
 
 ### Syntax
 
+- Markdown: colorize strikethroughs, tweak blockquote text's alpha
+
 ### UI
 
 ### Other

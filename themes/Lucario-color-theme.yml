@@ -394,7 +394,7 @@ tokenColors:
   - name: Markdown - Blockquote plain text
     scope: markup.quote.markdown meta.paragraph.markdown
     settings:
-      foreground: !alpha [*FG, aa]
+      foreground: !alpha [*FG, c0]
 
   - name: Markdown - Strikethrough punctuation # i.e: "~~"
     scope: punctuation.definition.strikethrough.markdown

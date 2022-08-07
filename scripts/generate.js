@@ -18,6 +18,7 @@ const { Type, DEFAULT_SCHEMA, load } = require('js-yaml');
  */
 
 // nice: should expand 3-digit hex colors (like #fff) before appending alpha
+// nice: change alpha measurement unit to %
 const withAlphaType = new Type('!alpha', {
     kind: 'sequence',
     construct: ([hexRGB, alpha]) => hexRGB + alpha,
