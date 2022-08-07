@@ -396,6 +396,16 @@ tokenColors:
     settings:
       foreground: !alpha [*FG, aa]
 
+  - name: Markdown - Strikethrough punctuation # i.e: "~~"
+    scope: punctuation.definition.strikethrough.markdown
+    settings:
+      foreground: *Red
+
+  - name: Markdown - Strikethrough plain text
+    scope: markup.strikethrough.markdown
+    settings:
+      foreground: !alpha [*FG, 80]
+
   - name: Markdown - Link title
     scope:
       - text.html.markdown string.other.link # for [link](url) and ![image](url)
@@ -418,7 +428,7 @@ tokenColors:
       foreground: *Cyan
 
   - name: Markdown - List item marker
-    # i.e.: "- " or "1. "
+    # i.e.: "- ", "* ", "1. "
     scope: text.html.markdown punctuation.definition.list.begin
     settings:
       foreground: *Pink

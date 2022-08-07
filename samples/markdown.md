@@ -6,9 +6,11 @@ aliquip ex ea commodo consequat.
 
 a link: [Advent of Code 2021](https://adventofcode.com/2021)
 
-Also *italics* and **bold**.
+Also _italics_ and **bold**.
 
-> here's a md *block*quote
+~~A strikethrough with _italic text_~~
+
+> here's a md **block**quote
 >
 > multiline and with inline `code`
 
