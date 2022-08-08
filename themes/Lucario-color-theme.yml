@@ -77,17 +77,18 @@ colors:
   icon.foreground: # default is ok, #c5c5c5
   sash.hoverBorder: # => focusBorder
 
-  sideBar.background: *BgShade3
-  sideBar.border:
-  sideBarSectionHeader.background: *BgShade2
-  sideBarSectionHeader.border: *BgShade3
+  sideBar.background: *bg-lv-3
+  sideBar.foreground: *fg-base # => foreground #todo
+  sideBar.border: *border-base
+  sideBarSectionHeader.background: *bg-lv-2
+  sideBarSectionHeader.border: *border-base
 
-  activityBar.background: *BgShade3
-  activityBar.border: *BgShade2
-  activityBar.foreground: # => foreground
-  activityBar.activeBackground: *BgShade1
+  activityBar.background: *bg-lv-3
+  activityBar.border: *border-base
+  activityBar.foreground: *fg-highlight # foreground?
+  activityBar.activeBackground: *bg-lv-3-active
   activityBar.activeBorder: *Accent
-  activityBar.inactiveForeground: !alpha [*Accent, c4]
+  activityBar.inactiveForeground: *fg-subtle
   activityBarBadge.background: *Accent #nice: make it a shade
   activityBarBadge.foreground: *BgShade3
   activityBar.dropBorder: *Accent
