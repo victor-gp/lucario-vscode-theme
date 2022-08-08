@@ -13,9 +13,20 @@ palette:
     - &Pink     "#ca94ff"
     - &Red      "#ff6541"
     - &Yellow   "#e6db74"
-  other:
     - &LineHighlight  "#243443"
     - &Selection      "#19242f"
+  ui: # One Dark
+    - &bg-lv-1          "#243343"
+    - &bg-lv-2          "#19242f"
+    - &bg-lv-3          "#141c25"
+    - &bg-lv-1-hover    "#27384a"
+    - &bg-lv-3-active   "#19242f"
+    - &border-base      "#0f161c"
+    - &fg-base          "#99a8b8"
+    - &fg-subtle        "#99a8b899"
+    - &fg-highlight     "#d5dbe2"
+    - &fg-selected      "#f"
+  other:
     - &NonText        "#61bbc8" #todo: replace Invisibles?
     - &HintGreen      "#a6e22e"
     - &HintYellow     "#f0cc04"
