@@ -102,13 +102,16 @@ colors:
   activityBar.focusBorder: # => focusBorder
 
   # Editor Groups & Tabs
-  editorGroupHeader.tabsBackground: *BgShade3
-  editorGroupHeader.tabsBorder: *BgShade1
+  editorGroup.dropBackground: #todo
+  editorGroupHeader.noTabsBackground: # ?
+  editorGroupHeader.tabsBackground: *bg-lv-3
+  editorGroupHeader.tabsBorder: *border-base
   editorGroupHeader.border: # none
-  tab.activeBackground: *BgShade2
+  tab.activeBackground: *bg-lv-2
   tab.activeBorderTop: *AccentTint1
-  tab.inactiveBackground: *BgShade3
-  tab.border: *BgShade1
+  tab.inactiveBackground: *bg-lv-3
+  tab.border: *border-base
+  # todo: etc.
 
   # Breadcrumbs colors
   breadcrumb.foreground: # Color of breadcrumb items.
