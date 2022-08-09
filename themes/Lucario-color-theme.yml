@@ -79,6 +79,7 @@ colors:
   icon.foreground: # default is ok, #c5c5c5
   sash.hoverBorder: # => focusBorder
 
+  # Side Bar
   sideBar.background: *bg-lv-3
   sideBar.foreground: *fg-base # => foreground #todo
   sideBar.border: *border-base
@@ -88,6 +89,7 @@ colors:
   sideBarSectionHeader.foreground: # => sideBar.foreground
   sideBarSectionHeader.border: *border-base
 
+  # Activity Bar
   activityBar.background: *bg-lv-3
   activityBar.inactiveForeground: *fg-subtle # aka: .foreground
   activityBar.border: *border-base
@@ -99,6 +101,7 @@ colors:
   activityBar.dropBorder: *Accent
   activityBar.focusBorder: # => focusBorder
 
+  # Editor Groups & Tabs
   editorGroupHeader.tabsBackground: *BgShade3
   editorGroupHeader.tabsBorder: *BgShade1
   editorGroupHeader.border: # none
@@ -107,12 +110,14 @@ colors:
   tab.inactiveBackground: *BgShade3
   tab.border: *BgShade1
 
+  # Breadcrumbs colors
   breadcrumb.foreground: # Color of breadcrumb items.
   breadcrumb.background: *BgShade3
   breadcrumb.focusForeground: # Color of focused breadcrumb items.
   breadcrumb.activeSelectionForeground: # Color of selected breadcrumb items.
   breadcrumbPicker.background: *BgShade3 # = breadcrumb.background
 
+  # Status Bar colors
   statusBar.background: *bg-lv-3
   statusBar.foreground: *fg-base # => foreground #todo
   statusBar.border: *border-base
@@ -132,11 +137,13 @@ colors:
   editorGroup.border: *Cyan
   panel.border: *Cyan
 
+  # Scrollbar control
   scrollbar.shadow: # below breadcrumbs
   scrollbarSlider.background: !alpha [*FG, 16]
   scrollbarSlider.hoverBackground: !alpha [*FG, 32]
   scrollbarSlider.activeBackground: !alpha [*FG, 48]
 
+  # Integrated Terminal colors
   terminal.background: *BG
   terminal.foreground: *FG
   terminal.ansiBlack: *BG
@@ -165,6 +172,7 @@ colors:
   editorBracketHighlight.foreground6: *Orange
   editorBracketHighlight.unexpectedBracket.foreground: *HintRed
 
+  # Editor widget colors
   editorHoverWidget.foreground: # => foreground
   editorHoverWidget.background: *BgShade1
   editorHoverWidget.border: *Accent
