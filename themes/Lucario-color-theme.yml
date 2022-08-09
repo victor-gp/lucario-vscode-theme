@@ -144,6 +144,13 @@ colors:
   statusBar.noFolderBorder: *transparent
   statusBar.focusBorder: *Accent
 
+  # Title Bar colors
+  titleBar.activeBackground: *bg-lv-3
+  titleBar.activeForeground: *fg-base
+  titleBar.inactiveBackground:
+  titleBar.inactiveForeground:
+  titleBar.border: *border-base
+
   editorGroup.border: *Cyan
   panel.border: *Cyan
 
