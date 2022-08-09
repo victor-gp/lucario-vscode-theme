@@ -106,6 +106,10 @@ colors:
   tab.activeBorderTop: *AccentTint1
   tab.inactiveBackground: *bg-lv-3
   tab.border: *border-base
+  tab.activeForeground: *fg-highlight
+  tab.inactiveForeground: *fg-base
+  tab.unfocusedActiveForeground: *fg-subtle
+  tab.unfocusedInactiveForeground: *fg-subtle
   # todo: etc.
 
   # Breadcrumbs colors
