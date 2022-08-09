@@ -1,8 +1,8 @@
-# Lucario VS Code Theme
+# Lucario Theme for VS Code
 
 VS Code port of [Raphael Amorim's Lucario theme](https://github.com/raphamorim/lucario). A darkish syntax theme for the 80% use case.
 
-![Preview of Lucario Theme in VS Code](./assets/preview.png)
+![A VS Code window showing how pretty Lucario Theme looks.](./assets/preview.png)
 
 Selling points:
 
