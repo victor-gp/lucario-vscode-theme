@@ -82,7 +82,10 @@ colors:
   sideBar.background: *bg-lv-3
   sideBar.foreground: *fg-base # => foreground #todo
   sideBar.border: *border-base
+  sideBar.dropBackground: #todo
+  sideBarTitle.foreground: # => sideBar.foreground
   sideBarSectionHeader.background: *bg-lv-2
+  sideBarSectionHeader.foreground: # => sideBar.foreground
   sideBarSectionHeader.border: *border-base
 
   activityBar.background: *bg-lv-3
