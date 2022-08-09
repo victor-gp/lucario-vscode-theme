@@ -33,14 +33,9 @@ palette:
     - &HintYellow     "#f0cc04"
     - &HintRed        "#f92672"
     - &transparent    !alpha ["#f00", 0]
-  variations:
-    - &BgShade1       "#22303f" # value 63 (-17)
-    - &BgShade2       "#1b2732" # value 50 / for subtle borders b/w BG & BgShade1
-    - &BgShade3       "#141c25" # value 37 (-43)
+  tmp:
     - &BgTint1        "#344a5e" # luminance + 5
     - &AccentTint1    "#65a6df" # Accent { luminance + 5 }
-    - &AccentShade1   "#548bbc" # Accent { luminance - 5 }
-  tmp:
     - &Invalid      "#f8f8f0" # aka: Border
     - &DiffHeader   "#75715e"
     - &Invisibles   "#666666"
@@ -85,7 +80,7 @@ colors:
   sideBar.border: *border-base
   sideBar.dropBackground: #todo
   sideBarTitle.foreground: # => sideBar.foreground
-  sideBarSectionHeader.background: *bg-lv-2
+  sideBarSectionHeader.background: *bg-lv-2 #todo: consider lv-3 (with a stronger border)
   sideBarSectionHeader.foreground: # => sideBar.foreground
   sideBarSectionHeader.border: *border-base
 
@@ -185,7 +180,7 @@ colors:
 
   # Editor widget colors
   editorHoverWidget.foreground: # => foreground
-  editorHoverWidget.background: *BgShade1
+  editorHoverWidget.background: *bg-lv-1
   editorHoverWidget.border: *Accent
   editorHoverWidget.highlightForeground:
   editorHoverWidget.statusBarBackground:
@@ -193,7 +188,7 @@ colors:
   # Text colors: for text documents like Markdown previews
   textBlockQuote.background: !alpha [*BgTint1, c0]
   textBlockQuote.border: !alpha [*Pink, 80]
-  textCodeBlock.background: # not respected? / trying *BgShade3
+  textCodeBlock.background: # not respected?
   textLink.activeForeground: *Cyan
   textLink.foreground: *Cyan
   textPreformat.foreground: *Orange
@@ -420,7 +415,7 @@ tokenColors:
     settings:
       foreground: *Orange
       # json linter says: token background colors are currently not supported
-      # background: *BgShade2
+      # background: *bg-lv-1/2
 
   - name: Markdown - Block-level punctuation
     scope:
