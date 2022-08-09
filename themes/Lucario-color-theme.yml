@@ -120,6 +120,13 @@ colors:
   breadcrumb.activeSelectionForeground: *fg-selected
   breadcrumbPicker.background: *bg-lv-1
 
+  # Scrollbar control
+  # something b/w lv-1 & lv-2 would be ideal... lv-1-border?
+  scrollbar.shadow: *bg-lv-1 # below breadcrumbs
+  scrollbarSlider.background: !alpha [*FG, 16]
+  scrollbarSlider.hoverBackground: !alpha [*FG, 32]
+  scrollbarSlider.activeBackground: !alpha [*FG, 48]
+
   # Status Bar colors
   statusBar.background: *bg-lv-3
   statusBar.foreground: *fg-base # => foreground #todo
@@ -139,13 +146,6 @@ colors:
 
   editorGroup.border: *Cyan
   panel.border: *Cyan
-
-  # Scrollbar control
-  # something b/w lv-1 & lv-2 would be ideal... lv-1-border?
-  scrollbar.shadow: *bg-lv-1 # below breadcrumbs
-  scrollbarSlider.background: !alpha [*FG, 16]
-  scrollbarSlider.hoverBackground: !alpha [*FG, 32]
-  scrollbarSlider.activeBackground: !alpha [*FG, 48]
 
   # Integrated Terminal colors
   terminal.background: *BG
