@@ -26,7 +26,7 @@ palette:
     - &fg-base          "#99a8b8"
     - &fg-subtle        "#99a8b899"
     - &fg-highlight     "#d5dbe2"
-    - &fg-selected      "#f"
+    - &fg-selected      "#fff"
   other:
     - &NonText        "#61bbc8" #todo: replace Invisibles?
     - &HintGreen      "#a6e22e"
@@ -114,11 +114,11 @@ colors:
   # todo: etc.
 
   # Breadcrumbs colors
-  breadcrumb.foreground: # Color of breadcrumb items.
-  breadcrumb.background: *BgShade3
-  breadcrumb.focusForeground: # Color of focused breadcrumb items.
-  breadcrumb.activeSelectionForeground: # Color of selected breadcrumb items.
-  breadcrumbPicker.background: *BgShade3 # = breadcrumb.background
+  breadcrumb.foreground: *fg-base
+  breadcrumb.background: # => editor.background
+  breadcrumb.focusForeground: *fg-highlight
+  breadcrumb.activeSelectionForeground: *fg-selected
+  breadcrumbPicker.background: *bg-lv-1
 
   # Status Bar colors
   statusBar.background: *bg-lv-3
@@ -141,7 +141,8 @@ colors:
   panel.border: *Cyan
 
   # Scrollbar control
-  scrollbar.shadow: # below breadcrumbs
+  # something b/w lv-1 & lv-2 would be ideal... lv-1-border?
+  scrollbar.shadow: *bg-lv-1 # below breadcrumbs
   scrollbarSlider.background: !alpha [*FG, 16]
   scrollbarSlider.hoverBackground: !alpha [*FG, 32]
   scrollbarSlider.activeBackground: !alpha [*FG, 48]
