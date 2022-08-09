@@ -86,14 +86,15 @@ colors:
   sideBarSectionHeader.border: *border-base
 
   activityBar.background: *bg-lv-3
+  activityBar.inactiveForeground: *fg-subtle # aka: .foreground
   activityBar.border: *border-base
-  activityBar.foreground: *fg-highlight # foreground?
-  activityBar.activeBackground: *bg-lv-3-active
+  activityBar.activeBackground: *bg-lv-2
+  activityBar.foreground: *fg-highlight # aka: .activeForeground
   activityBar.activeBorder: *Accent
-  activityBar.inactiveForeground: *fg-subtle
-  activityBarBadge.background: *Accent #nice: make it a shade
-  activityBarBadge.foreground: *BgShade3
+  activityBarBadge.background: *Accent #fixme: darken
+  activityBarBadge.foreground: *bg-lv-3
   activityBar.dropBorder: *Accent
+  activityBar.focusBorder: # => focusBorder
 
   editorGroupHeader.tabsBackground: *BgShade3
   editorGroupHeader.tabsBorder: *BgShade1
