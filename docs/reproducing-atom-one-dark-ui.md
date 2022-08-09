@@ -32,7 +32,7 @@ I have cross-checked the hex values with Atom DevTools, inspecting UI elements t
 
 `level-3-color := base-background-color { lightness - 3 = 11% } =~ #141c25`
 
-`level-3-color-hover := level-3-color { lightness + 6 = 17% } =~ x` — ¿unused?
+`level-3-color-hover := level-3-color { lightness + 6 = 17% } =~ #1e2c39`
 
 `level-3-color-active := level-3-color { lightness + 3 = 14% } = selection`
 

@@ -20,6 +20,7 @@ palette:
     - &bg-lv-2          "#19242f"
     - &bg-lv-3          "#141c25"
     - &bg-lv-1-hover    "#27384a"
+    - &bg-lv-3-hover    "#1e2c39"
     - &bg-lv-3-active   "#19242f"
     - &border-base      "#0f161c"
     - &fg-base          "#99a8b8"
@@ -31,6 +32,7 @@ palette:
     - &HintGreen      "#a6e22e"
     - &HintYellow     "#f0cc04"
     - &HintRed        "#f92672"
+    - &transparent    !alpha ["#f00", 0]
   variations:
     - &BgShade1       "#22303f" # value 63 (-17)
     - &BgShade2       "#1b2732" # value 50 / for subtle borders b/w BG & BgShade1
@@ -107,13 +109,20 @@ colors:
   breadcrumb.activeSelectionForeground: # Color of selected breadcrumb items.
   breadcrumbPicker.background: *BgShade3 # = breadcrumb.background
 
-  statusBar.background: *BgShade3
-  statusBarItem.remoteBackground: *BgShade3
-  statusBarItem.remoteForeground: *Accent
+  statusBar.background: *bg-lv-3
+  statusBar.foreground: *fg-base # => foreground #todo
+  statusBar.border: *border-base
+  statusBarItem.activeBackground: *bg-lv-3-active
+  statusBarItem.hoverBackground: *bg-lv-3-hover
+  # todo: Item + prominent, error, warning, etc.
+  statusBarItem.remoteBackground: *bg-lv-3
+  statusBarItem.remoteForeground: *fg-base
   statusBar.debuggingBackground: !alpha [*Orange, a8]
   statusBar.debuggingForeground: "#000"
+  statusBar.debuggingBorder: *transparent
   statusBar.noFolderBackground: !alpha [*Pink, a0]
   statusBar.noFolderForeground: "#000"
+  statusBar.noFolderBorder: *transparent
   statusBar.focusBorder: *Accent
 
   editorGroup.border: *Cyan
