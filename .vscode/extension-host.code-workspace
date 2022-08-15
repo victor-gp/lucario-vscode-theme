@@ -1,4 +1,6 @@
 //nit: this workspace shouldn't feature in "Open Recent"
+//fixme: this workspace, with the folders and all, gets opened when launching the
+//		 Extension Host from another extension's project. WTF :(
 {
 	"folders": [
 		{ "path": "../themes" },
