@@ -4,9 +4,11 @@
 
 ### Syntax
 
-- Markdown: colorize strikethroughs, tweak blockquote text's alpha
+- Markdown: theme strikethroughs, slightly increase opacity of blockquote text.
 
 ### UI
+
+- Redo UI colors to imitate Atom's One Dark UI. Only updated the most visible elements yet.
 
 ### Other
 

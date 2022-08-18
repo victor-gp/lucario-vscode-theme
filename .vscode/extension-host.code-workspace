@@ -1,4 +1,6 @@
 //nit: this workspace shouldn't feature in "Open Recent"
+//fixme: this workspace, with the folders and all, gets opened when launching the
+//		 Extension Host from another extension's project. WTF :(
 {
 	"folders": [
 		{ "path": "../themes" },
@@ -24,12 +26,12 @@
 		// extension host-only settings
 		"editor.bracketPairColorization.enabled": true,
 		// colorize the status bar *Accent so the Extension Host is easier to differentiate
-		"peacock.color": "#5c98cd",
+		"peacock.color": "#5c98cda0",
 		"workbench.colorCustomizations": {
-			"statusBar.background": "#5c98cd",
+			"statusBar.background": "#5c98cda0",
 			"statusBar.foreground": "#15202b",
-			"statusBarItem.hoverBackground": "#3a7fbc",
-			"statusBarItem.remoteBackground": "#5c98cd",
+			"statusBarItem.hoverBackground": "#3a7fbca0",
+			"statusBarItem.remoteBackground": "#5c98cda0",
 			"statusBarItem.remoteForeground": "#15202b"
 		},
 		"peacock.affectActivityBar": false,
