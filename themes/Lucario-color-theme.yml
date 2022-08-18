@@ -97,6 +97,7 @@ colors:
   activityBar.focusBorder: # => focusBorder
 
   # Editor Groups & Tabs
+  editorGroup.border: *Cyan
   editorGroup.dropBackground: #todo
   editorGroupHeader.noTabsBackground: # ?
   editorGroupHeader.tabsBackground: *bg-lv-3
@@ -150,13 +151,10 @@ colors:
   titleBar.inactiveForeground:
   titleBar.border: *border-base
 
-  editorGroup.border: *Cyan
-  panel.border: *Cyan
-
   # Integrated Terminal colors
-  terminal.background: *BG
+  terminal.background: *bg-lv-1
   terminal.foreground: *FG
-  terminal.ansiBlack: *BG
+  terminal.ansiBlack: *bg-lv-1
   terminal.ansiRed:           "#ff6c60"
   terminal.ansiGreen:         "#8ee478"
   terminal.ansiYellow:        "#ffffb6"
@@ -213,6 +211,20 @@ colors:
   problemsErrorIcon.foreground: # The color used for the problems error icon.
   problemsWarningIcon.foreground: # The color used for the problems warning icon.
   problemsInfoIcon.foreground: # The color used for the problems info icon.
+
+  # Panel colors
+  panel.background: *bg-lv-1
+  panel.border: *Cyan
+  panel.dropBorder: # Drag and drop feedback color for the panel titles.
+  panelTitle.activeBorder: # => panelTitle.activeForeground
+  panelTitle.activeForeground: *fg-highlight
+  panelTitle.inactiveForeground: *fg-base
+  panelInput.border: # Input box border for inputs in the panel.
+  panelSection.border: # => panel.border
+  panelSection.dropBackground: # Drag and drop feedback color for the panel sections.
+  panelSectionHeader.background: *bg-lv-1
+  panelSectionHeader.foreground: *fg-base
+  panelSectionHeader.border: *Cyan
 
 
 tokenColors:

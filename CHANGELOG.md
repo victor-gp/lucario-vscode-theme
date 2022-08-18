@@ -6,6 +6,8 @@
 
 ### UI
 
+- **Make the integrated terminal's background color darker (`bg-lv-1`).** For all of the bottom panel too, including Problems and Debug Console.
+
 ### Other
 
 ## 2.1.0 - 2022-08-18
