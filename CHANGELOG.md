@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Syntax
+
+### UI
+
+### Other
+
 ## 2.1.0 - 2022-08-18
 
 ### Syntax
