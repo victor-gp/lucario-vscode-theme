@@ -271,16 +271,15 @@ colors:
   # inputOption.activeBorder: r # Border color of activated options in input fields.
   # inputOption.activeForeground: r # Foreground color of activated options in input fields.
   inputOption.hoverBackground: # !alpha [*FG, 18]
-  inputValidation.errorBackground: r # Input validation background color for error severity.
-  inputValidation.errorForeground: r # Input validation foreground color for error severity.
-  inputValidation.errorBorder: r # Input validation border color for error severity.
-  inputValidation.infoBackground: r # Input validation background color for information severity.
-  inputValidation.infoForeground: r # Input validation foreground color for information severity.
-  inputValidation.infoBorder: r # Input validation border color for information severity.
-  inputValidation.warningBackground: r # Input validation background color for information warning.
-  inputValidation.warningForeground: r # Input validation foreground color for warning severity.
-  inputValidation.warningBorder: r # Input validation border color for warning severity.
-
+  inputValidation.errorBackground: # Input validation background color for error severity.
+  inputValidation.errorForeground: # Input validation foreground color for error severity.
+  inputValidation.errorBorder: # Input validation border color for error severity.
+  inputValidation.infoBackground: # Input validation background color for information severity.
+  inputValidation.infoForeground: # Input validation foreground color for information severity.
+  inputValidation.infoBorder: # Input validation border color for information severity.
+  inputValidation.warningBackground: # Input validation background color for information warning.
+  inputValidation.warningForeground: # Input validation foreground color for warning severity.
+  inputValidation.warningBorder: # Input validation border color for warning severity.
 
 
 tokenColors:
