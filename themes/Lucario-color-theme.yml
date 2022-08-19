@@ -64,7 +64,7 @@ colors:
   editorRuler.foreground: !alpha [*Invisibles, 64]
 
   # Base colors
-  focusBorder: *Accent
+  focusBorder: !alpha [*Accent, c0]
   foreground: *FG
   disabledForeground: # seen in menu dropdowns. default is #cccccc with 0.5 alpha
   widget.shadow: # default is fine, black with low alpha
