@@ -236,15 +236,15 @@ colors:
   editorWidget.border: # Border color of the editor widget unless the widget does not contain a border or defines its own border color.
   editorWidget.resizeBorder: # <= focusBorder
   # editorSuggestionWidget =~ IntelliSense completion
-  editorSuggestWidget.background: # Background color of the suggestion widget.
-  editorSuggestWidget.border: # Border color of the suggestion widget.
-  editorSuggestWidget.foreground: # Foreground color of the suggestion widget.
-  editorSuggestWidget.focusHighlightForeground: # Color of the match highlights in the suggest widget when an item is focused.
-  editorSuggestWidget.highlightForeground: # Color of the match highlights in the suggestion widget.
-  editorSuggestWidget.selectedBackground: # Background color of the selected entry in the suggestion widget.
-  editorSuggestWidget.selectedForeground: # Foreground color of the selected entry in the suggest widget.
-  editorSuggestWidget.selectedIconForeground: # Icon foreground color of the selected entry in the suggest widget.
-  editorSuggestWidgetStatus.foreground: # Foreground color of the suggest widget status.
+  editorSuggestWidget.background: # <= editorWidget.background
+  editorSuggestWidget.border: *border-base #nice: reconsider
+  editorSuggestWidget.foreground: *fg-base
+  editorSuggestWidget.focusHighlightForeground: *fg-highlight
+  editorSuggestWidget.highlightForeground: *fg-base
+  editorSuggestWidget.selectedBackground: # Background color of the selected entry in the suggestion widget. #todo
+  editorSuggestWidget.selectedForeground: *fg-highlight
+  editorSuggestWidget.selectedIconForeground: # <= ./selectedForeground
+  editorSuggestWidgetStatus.foreground: *fg-subtle
   # editorHoverWidget =~ IntelliSense hover info
   editorHoverWidget.foreground: *fg-highlight
   editorHoverWidget.background: *bg-lv-1
