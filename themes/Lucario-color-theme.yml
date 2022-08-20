@@ -283,6 +283,9 @@ colors:
   inputValidation.warningForeground: # Input validation foreground color for warning severity.
   inputValidation.warningBorder: # Input validation border color for warning severity.
 
+  # Git colors #todo
+  gitDecoration.ignoredResourceForeground: *fg-subtle
+
 
 tokenColors:
   # syntax colors
