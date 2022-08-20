@@ -65,7 +65,7 @@ colors:
 
   # Base colors
   focusBorder: !alpha [*Accent, c0]
-  foreground: *FG
+  foreground: *FG #fixme: change for fg-base and propagate
   disabledForeground: # seen in menu dropdowns. default is #cccccc with 0.5 alpha
   widget.shadow: # default is fine, black with low alpha
   selection.background: *Selection
@@ -76,7 +76,7 @@ colors:
 
   # Side Bar
   sideBar.background: *bg-lv-3
-  sideBar.foreground: *fg-base # <= foreground #todo
+  sideBar.foreground: *fg-base
   sideBar.border: *border-base
   sideBar.dropBackground: #todo
   sideBarTitle.foreground: # <= sideBar.foreground
@@ -86,10 +86,10 @@ colors:
 
   # Activity Bar
   activityBar.background: *bg-lv-3
-  activityBar.inactiveForeground: *fg-subtle # aka: .foreground
+  activityBar.inactiveForeground: *fg-subtle # aka: ./foreground
   activityBar.border: *border-base
   activityBar.activeBackground: *bg-lv-2
-  activityBar.foreground: *fg-highlight # aka: .activeForeground
+  activityBar.foreground: *fg-highlight # aka: ./activeForeground
   activityBar.activeBorder: *Accent
   activityBarBadge.background: *Accent #fixme: darken
   activityBarBadge.foreground: *bg-lv-3
@@ -129,7 +129,7 @@ colors:
 
   # Status Bar colors
   statusBar.background: *bg-lv-3
-  statusBar.foreground: *fg-base # <= foreground #todo
+  statusBar.foreground: *fg-base
   statusBar.border: *border-base
   statusBarItem.activeBackground: *bg-lv-3-active
   statusBarItem.hoverBackground: *bg-lv-3-hover
@@ -209,7 +209,7 @@ colors:
   panel.background: *bg-lv-1
   panel.border: *Cyan
   panel.dropBorder: # Drag and drop feedback color for the panel titles.
-  panelTitle.activeBorder: # <= panelTitle.activeForeground
+  panelTitle.activeBorder: # <= ./activeForeground
   panelTitle.activeForeground: *fg-highlight
   panelTitle.inactiveForeground: *fg-base
   panelInput.border: # Input box border for inputs in the panel.
@@ -234,18 +234,18 @@ colors:
   editorWidget.foreground: *fg-base
   editorWidget.background: *bg-lv-2
   editorWidget.border: # Border color of the editor widget unless the widget does not contain a border or defines its own border color.
-  editorWidget.resizeBorder: # <= focusBorder
-  # editorSuggestionWidget =~ IntelliSense completion
+  editorWidget.resizeBorder: # <= sash.hoverBorder
+  # Suggestion Widget =~ IntelliSense completion
   editorSuggestWidget.background: # <= editorWidget.background
   editorSuggestWidget.border: *border-base #nice: reconsider
   editorSuggestWidget.foreground: *fg-base
   editorSuggestWidget.focusHighlightForeground: *fg-highlight
   editorSuggestWidget.highlightForeground: *fg-base
-  editorSuggestWidget.selectedBackground: # Background color of the selected entry in the suggestion widget. #todo
+  editorSuggestWidget.selectedBackground: # Background color of the selected entry. #todo: depends on ui:accent
   editorSuggestWidget.selectedForeground: *fg-highlight
   editorSuggestWidget.selectedIconForeground: # <= ./selectedForeground
   editorSuggestWidgetStatus.foreground: *fg-subtle
-  # editorHoverWidget =~ IntelliSense hover info
+  # Hover Widget =~ IntelliSense hover info
   editorHoverWidget.foreground: *fg-highlight
   editorHoverWidget.background: *bg-lv-1
   editorHoverWidget.border: *Accent
