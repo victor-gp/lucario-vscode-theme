@@ -72,16 +72,16 @@ colors:
   descriptionForeground: # ???
   errorForeground: *HintRed
   icon.foreground: # default is ok, #c5c5c5
-  sash.hoverBorder: # => focusBorder
+  sash.hoverBorder: # <= focusBorder
 
   # Side Bar
   sideBar.background: *bg-lv-3
-  sideBar.foreground: *fg-base # => foreground #todo
+  sideBar.foreground: *fg-base # <= foreground #todo
   sideBar.border: *border-base
   sideBar.dropBackground: #todo
-  sideBarTitle.foreground: # => sideBar.foreground
+  sideBarTitle.foreground: # <= sideBar.foreground
   sideBarSectionHeader.background: *bg-lv-2 #todo: consider lv-3 (with a stronger border)
-  sideBarSectionHeader.foreground: # => sideBar.foreground
+  sideBarSectionHeader.foreground: # <= sideBar.foreground
   sideBarSectionHeader.border: *border-base
 
   # Activity Bar
@@ -94,7 +94,7 @@ colors:
   activityBarBadge.background: *Accent #fixme: darken
   activityBarBadge.foreground: *bg-lv-3
   activityBar.dropBorder: *Accent
-  activityBar.focusBorder: # => focusBorder
+  activityBar.focusBorder: # <= focusBorder
 
   # Editor Groups & Tabs
   editorGroup.border: *Cyan
@@ -115,7 +115,7 @@ colors:
 
   # Breadcrumbs colors
   breadcrumb.foreground: *fg-base
-  breadcrumb.background: # => editor.background
+  breadcrumb.background: # <= editor.background
   breadcrumb.focusForeground: *fg-highlight
   breadcrumb.activeSelectionForeground: *fg-selected
   breadcrumbPicker.background: *bg-lv-1
@@ -129,7 +129,7 @@ colors:
 
   # Status Bar colors
   statusBar.background: *bg-lv-3
-  statusBar.foreground: *fg-base # => foreground #todo
+  statusBar.foreground: *fg-base # <= foreground #todo
   statusBar.border: *border-base
   statusBarItem.activeBackground: *bg-lv-3-active
   statusBarItem.hoverBackground: *bg-lv-3-hover
@@ -209,11 +209,11 @@ colors:
   panel.background: *bg-lv-1
   panel.border: *Cyan
   panel.dropBorder: # Drag and drop feedback color for the panel titles.
-  panelTitle.activeBorder: # => panelTitle.activeForeground
+  panelTitle.activeBorder: # <= panelTitle.activeForeground
   panelTitle.activeForeground: *fg-highlight
   panelTitle.inactiveForeground: *fg-base
   panelInput.border: # Input box border for inputs in the panel.
-  panelSection.border: # => panel.border
+  panelSection.border: # <= panel.border
   panelSection.dropBackground: # Drag and drop feedback color for the panel sections.
   panelSectionHeader.background: *bg-lv-1
   panelSectionHeader.foreground: *fg-base
