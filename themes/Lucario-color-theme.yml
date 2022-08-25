@@ -221,10 +221,10 @@ colors:
 
   # Editor - Find
   editor.findMatchBackground: # Color of the current search match.
-  editor.findMatchHighlightBackground: # Color of the other search matches. The color must not be opaque so as not to hide underlying decorations.
+  editor.findMatchHighlightBackground: *transparent
   editor.findRangeHighlightBackground: # Color the range limiting the search (Enable 'Find in Selection' in the find widget). The color must not be opaque so as not to hide underlying decorations.
   editor.findMatchBorder: # Border color of the current search match.
-  editor.findMatchHighlightBorder: # Border color of the other search matches.
+  editor.findMatchHighlightBorder: *fg-base
   editor.findRangeHighlightBorder: # Border color the range limiting the search (Enable 'Find in Selection' in the find widget).
   searchEditor.findMatchBackground: # Color of the editor's results.
   searchEditor.findMatchBorder: # Border color of the editor's results.
