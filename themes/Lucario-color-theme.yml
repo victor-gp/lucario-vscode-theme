@@ -223,7 +223,7 @@ colors:
   # Editor - Find
   editor.findMatchBackground: !alpha [*FG, 50]
   editor.findMatchHighlightBackground: !alpha [*Selection, 80]
-  editor.findRangeHighlightBackground: # Color the range limiting the search (Enable 'Find in Selection' in the find widget). The color must not be opaque so as not to hide underlying decorations.
+  editor.findRangeHighlightBackground: !alpha [*FG, "08"]
   editor.findMatchBorder: # none
   editor.findMatchHighlightBorder: !alpha [*FG, 80]
   editor.findRangeHighlightBorder: # none
