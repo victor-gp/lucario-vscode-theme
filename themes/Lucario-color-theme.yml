@@ -231,6 +231,10 @@ colors:
   searchEditor.findMatchBorder: #  # <= editor.findMatchHighlightBorder
   searchEditor.textInputBorder: # Search editor text input box border.
 
+  # Editor - Overview ruler
+  #todo: etc
+  editorOverviewRuler.findMatchForeground: !alpha [*Selection, c0]
+
   # Editor widget colors
   editorWidget.foreground: *fg-base
   editorWidget.background: *bg-lv-2
