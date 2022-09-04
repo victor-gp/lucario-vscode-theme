@@ -15,7 +15,7 @@ palette:
     - &Yellow   "#e6db74"
     - &LineHighlight  "#243443"
     - &Selection      "#19242f"
-  ui: # One Dark
+  ui: # like Atom One Dark
     - &bg-lv-1          "#243343"
     - &bg-lv-2          "#19242f"
     - &bg-lv-3          "#141c25"
@@ -228,7 +228,7 @@ colors:
   editor.findMatchHighlightBorder: !alpha [*FG, 80]
   editor.findRangeHighlightBorder: # none
   searchEditor.findMatchBackground: !alpha [*Selection, a0]
-  searchEditor.findMatchBorder: #  # <= editor.findMatchHighlightBorder
+  searchEditor.findMatchBorder: # <= editor.findMatchHighlightBorder
   searchEditor.textInputBorder: # Search editor text input box border.
 
   # Editor - Overview ruler
