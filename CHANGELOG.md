@@ -6,7 +6,8 @@
 
 ### UI
 
-- **Make the integrated terminal's background color darker (`bg-lv-1`).** For all of the bottom panel too, including Problems and Debug Console.
+- **Make the bottom panel's background color darker.** Including Terminal, Problems, Debug Console, etc.
+- **Theme elements surrounding search.** From editor widgets, to input control, to find matches and more.
 
 ### Other
 
@@ -18,7 +19,7 @@
 
 ### UI
 
-- **Redo UI colors to imitate Atom's One Dark UI.** Only updated the most visible elements yet.
+- **Redo UI colors to better imitate Atom's One Dark UI.** Only updated the most visible elements yet.
 
 ## 2.0.0 - 2022-07-27
 

@@ -1,3 +1,5 @@
+//fixme: it stops watching after a merge conflict. or stops re-building?
+
 const { watch } = require("fs");
 const build = require("./build");
 

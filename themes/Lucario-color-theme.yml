@@ -15,7 +15,7 @@ palette:
     - &Yellow   "#e6db74"
     - &LineHighlight  "#243443"
     - &Selection      "#19242f"
-  ui: # One Dark
+  ui: # like Atom One Dark
     - &bg-lv-1          "#243343"
     - &bg-lv-2          "#19242f"
     - &bg-lv-3          "#141c25"
@@ -40,6 +40,7 @@ palette:
     - &DiffHeader   "#75715e"
     - &Invisibles   "#666666"
 
+# ---------------------------------------------------------------------------- #
 
 colors:
   # UI colors (non-syntax)
@@ -64,37 +65,37 @@ colors:
   editorRuler.foreground: !alpha [*Invisibles, 64]
 
   # Base colors
-  focusBorder: *Accent
-  foreground: *FG
+  focusBorder: !alpha [*Accent, c0]
+  foreground: *FG #fixme: change for fg-base and propagate
   disabledForeground: # seen in menu dropdowns. default is #cccccc with 0.5 alpha
   widget.shadow: # default is fine, black with low alpha
   selection.background: *Selection
   descriptionForeground: # ???
   errorForeground: *HintRed
   icon.foreground: # default is ok, #c5c5c5
-  sash.hoverBorder: # => focusBorder
+  sash.hoverBorder: # <= focusBorder
 
   # Side Bar
   sideBar.background: *bg-lv-3
-  sideBar.foreground: *fg-base # => foreground #todo
+  sideBar.foreground: *fg-base
   sideBar.border: *border-base
   sideBar.dropBackground: #todo
-  sideBarTitle.foreground: # => sideBar.foreground
+  sideBarTitle.foreground: # <= sideBar.foreground
   sideBarSectionHeader.background: *bg-lv-2 #todo: consider lv-3 (with a stronger border)
-  sideBarSectionHeader.foreground: # => sideBar.foreground
+  sideBarSectionHeader.foreground: # <= sideBar.foreground
   sideBarSectionHeader.border: *border-base
 
   # Activity Bar
   activityBar.background: *bg-lv-3
-  activityBar.inactiveForeground: *fg-subtle # aka: .foreground
+  activityBar.inactiveForeground: *fg-subtle # aka: ./foreground
   activityBar.border: *border-base
   activityBar.activeBackground: *bg-lv-2
-  activityBar.foreground: *fg-highlight # aka: .activeForeground
+  activityBar.foreground: *fg-highlight # aka: ./activeForeground
   activityBar.activeBorder: *Accent
   activityBarBadge.background: *Accent #fixme: darken
   activityBarBadge.foreground: *bg-lv-3
   activityBar.dropBorder: *Accent
-  activityBar.focusBorder: # => focusBorder
+  activityBar.focusBorder: # <= focusBorder
 
   # Editor Groups & Tabs
   editorGroup.border: *Cyan
@@ -115,7 +116,7 @@ colors:
 
   # Breadcrumbs colors
   breadcrumb.foreground: *fg-base
-  breadcrumb.background: # => editor.background
+  breadcrumb.background: # <= editor.background
   breadcrumb.focusForeground: *fg-highlight
   breadcrumb.activeSelectionForeground: *fg-selected
   breadcrumbPicker.background: *bg-lv-1
@@ -129,7 +130,7 @@ colors:
 
   # Status Bar colors
   statusBar.background: *bg-lv-3
-  statusBar.foreground: *fg-base # => foreground #todo
+  statusBar.foreground: *fg-base
   statusBar.border: *border-base
   statusBarItem.activeBackground: *bg-lv-3-active
   statusBarItem.hoverBackground: *bg-lv-3-hover
@@ -180,13 +181,6 @@ colors:
   editorBracketHighlight.foreground6: *Orange
   editorBracketHighlight.unexpectedBracket.foreground: *HintRed
 
-  # Editor widget colors
-  editorHoverWidget.foreground: # => foreground
-  editorHoverWidget.background: *bg-lv-1
-  editorHoverWidget.border: *Accent
-  editorHoverWidget.highlightForeground:
-  editorHoverWidget.statusBarBackground:
-
   # Text colors: for text documents like Markdown previews
   textBlockQuote.background: !alpha [*BgTint1, c0]
   textBlockQuote.border: !alpha [*Pink, 80]
@@ -216,16 +210,88 @@ colors:
   panel.background: *bg-lv-1
   panel.border: *Cyan
   panel.dropBorder: # Drag and drop feedback color for the panel titles.
-  panelTitle.activeBorder: # => panelTitle.activeForeground
+  panelTitle.activeBorder: # <= ./activeForeground
   panelTitle.activeForeground: *fg-highlight
   panelTitle.inactiveForeground: *fg-base
   panelInput.border: # Input box border for inputs in the panel.
-  panelSection.border: # => panel.border
+  panelSection.border: # <= panel.border
   panelSection.dropBackground: # Drag and drop feedback color for the panel sections.
   panelSectionHeader.background: *bg-lv-1
   panelSectionHeader.foreground: *fg-base
   panelSectionHeader.border: *Cyan
 
+  # Editor - Find
+  editor.findMatchBackground: !alpha [*FG, 50]
+  editor.findMatchHighlightBackground: !alpha [*Selection, 80]
+  editor.findRangeHighlightBackground: !alpha [*FG, "08"]
+  editor.findMatchBorder: # none
+  editor.findMatchHighlightBorder: !alpha [*FG, 80]
+  editor.findRangeHighlightBorder: # none
+  searchEditor.findMatchBackground: !alpha [*Selection, a0]
+  searchEditor.findMatchBorder: # <= editor.findMatchHighlightBorder
+  searchEditor.textInputBorder: # Search editor text input box border.
+
+  # Editor - Overview ruler
+  #todo: etc
+  editorOverviewRuler.findMatchForeground: !alpha [*Selection, c0]
+
+  # Editor widget colors
+  editorWidget.foreground: *fg-base
+  editorWidget.background: *bg-lv-2
+  editorWidget.border: # Border color of the editor widget unless the widget does not contain a border or defines its own border color.
+  editorWidget.resizeBorder: # <= sash.hoverBorder
+  # Suggestion Widget =~ IntelliSense completion
+  editorSuggestWidget.background: # <= editorWidget.background
+  editorSuggestWidget.border: *border-base #nice: reconsider
+  editorSuggestWidget.foreground: *fg-base
+  editorSuggestWidget.focusHighlightForeground: *fg-highlight
+  editorSuggestWidget.highlightForeground: *fg-base
+  editorSuggestWidget.selectedBackground: # Background color of the selected entry. #todo: depends on ui:accent
+  editorSuggestWidget.selectedForeground: *fg-highlight
+  editorSuggestWidget.selectedIconForeground: # <= ./selectedForeground
+  editorSuggestWidgetStatus.foreground: *fg-subtle
+  # Hover Widget =~ IntelliSense hover info
+  editorHoverWidget.foreground: *fg-highlight
+  editorHoverWidget.background: *bg-lv-1
+  editorHoverWidget.border: *Accent
+  editorHoverWidget.highlightForeground: # Foreground color of the active item in the parameter hint.
+  editorHoverWidget.statusBarBackground: # Background color of the editor hover status bar.
+  editorGhostText.border: # Border color of the ghost text shown by inline completion providers and the suggest preview.
+  editorGhostText.background: # Background color of the ghost text in the editor.
+  editorGhostText.foreground: # Foreground color of the ghost text shown by inline completion providers and the suggest preview.
+  debugExceptionWidget.background: # Exception widget background color.
+  debugExceptionWidget.border: # Exception widget border color.
+  editorMarkerNavigation.background: # Editor marker navigation widget background.
+  editorMarkerNavigationError.background: # Editor marker navigation widget error color.
+  editorMarkerNavigationWarning.background: # Editor marker navigation widget warning color.
+  editorMarkerNavigationInfo.background: # Editor marker navigation widget info color.
+  editorMarkerNavigationError.headerBackground: # Editor marker navigation widget error heading background.
+  editorMarkerNavigationWarning.headerBackground: # Editor marker navigation widget warning heading background.
+  editorMarkerNavigationInfo.headerBackground: # Editor marker navigation widget info heading background.
+
+  # Input control
+  input.background: *bg-lv-1
+  input.border: # none, transparent default is fine
+  input.foreground: *fg-highlight
+  input.placeholderForeground: *fg-base # on the fence with -subtle. there should be a middle ground...
+  inputOption.activeBackground: # Background color of activated options in input fields.
+  inputOption.activeBorder: # Border color of activated options in input fields.
+  inputOption.activeForeground: # Foreground color of activated options in input fields.
+  inputOption.hoverBackground: # !alpha [*FG, 18]
+  inputValidation.errorBackground: # Input validation background color for error severity.
+  inputValidation.errorForeground: # Input validation foreground color for error severity.
+  inputValidation.errorBorder: # Input validation border color for error severity.
+  inputValidation.infoBackground: # Input validation background color for information severity.
+  inputValidation.infoForeground: # Input validation foreground color for information severity.
+  inputValidation.infoBorder: # Input validation border color for information severity.
+  inputValidation.warningBackground: # Input validation background color for information warning.
+  inputValidation.warningForeground: # Input validation foreground color for warning severity.
+  inputValidation.warningBorder: # Input validation border color for warning severity.
+
+  # Git colors #todo
+  gitDecoration.ignoredResourceForeground: *fg-subtle
+
+# ---------------------------------------------------------------------------- #
 
 tokenColors:
   # syntax colors
