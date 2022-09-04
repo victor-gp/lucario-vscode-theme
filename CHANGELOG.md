@@ -1,13 +1,19 @@
 # Changelog
 
+## Unreleased
+
+### Syntax
+
+### UI
+
+### Other
+
 ## 2.2.0 - 2022-09-04
 
 ### UI
 
 - **Make the bottom panel's background color darker.** Including Terminal, Problems, Debug Console, etc.
 - **Theme elements surrounding search.** From editor widgets, to input control, to find matches and more.
-
-### Other
 
 ## 2.1.0 - 2022-08-18
 
