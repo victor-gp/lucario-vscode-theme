@@ -198,14 +198,14 @@ colors:
 
   # Editor - Errors and warnings
   editorError.foreground: *HintRed # squiggles
-  editorError.border: # overlaps with squiggles
-  editorError.background:
+  editorError.border: # none, overlaps with squiggles
+  editorError.background: # none
   editorWarning.foreground: *HintYellow
-  editorWarning.border:
-  editorWarning.background:
+  editorWarning.border: # none
+  editorWarning.background: # none
   editorInfo.foreground: # Foreground color of info squiggles in the editor.
-  editorInfo.border: # Border color of info boxes in the editor.
-  editorInfo.background: # Background color of info text in the editor. The color must not be opaque so as not to hide underlying decorations.
+  editorInfo.border: # none
+  editorInfo.background: # none
   editorHint.foreground: # Foreground color of hints in the editor.
   editorHint.border: # Border color of hint boxes in the editor.
   problemsErrorIcon.foreground: # The color used for the problems error icon.
