@@ -1,8 +1,6 @@
 # Changelog
 
-## Unreleased
-
-### Syntax
+## 2.2.0 - 2022-09-04
 
 ### UI
 
