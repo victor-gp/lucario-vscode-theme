@@ -269,9 +269,9 @@ colors:
   editorMarkerNavigationWarning.headerBackground: # Editor marker navigation widget warning heading background.
   editorMarkerNavigationInfo.headerBackground: # Editor marker navigation widget info heading background.
 
-  # Input control: colors for input controls such as in the Search view or the Find/Replace dialog.
+  # Input control
   input.background: *bg-lv-1
-  input.border: # transparent default is fine
+  input.border: # none, transparent default is fine
   input.foreground: *fg-highlight
   input.placeholderForeground: *fg-base # on the fence with -subtle. there should be a middle ground...
   inputOption.activeBackground: # Background color of activated options in input fields.
