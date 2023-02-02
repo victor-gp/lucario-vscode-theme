@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Syntax
+
+### UI
+
+### Other
+
 ## 2.2.1 - 2023-02-02
 
 ### UI
