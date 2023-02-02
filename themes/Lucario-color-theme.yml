@@ -291,6 +291,26 @@ colors:
   # Git colors #todo
   gitDecoration.ignoredResourceForeground: *fg-subtle
 
+  # Dropdown control
+  dropdown.background: *bg-lv-2
+  dropdown.listBackground: *bg-lv-2
+  dropdown.border: *border-base
+  dropdown.foreground: *fg-base
+
+  # Menu Bar colors
+  menubar.selectionForeground: # Foreground color of the selected menu item in the menubar.
+  menubar.selectionBackground: # Background color of the selected menu item in the menubar.
+  menubar.selectionBorder: # Border color of the selected menu item in the menubar.
+  menu.foreground: # <= dropdown.foreground
+  menu.background: # <= dropdown.background
+  menu.selectionForeground: # Foreground color of the selected menu item in menus.
+  #nice: I don't dislike the default, but maybe we should do bg-lv-2-active
+  menu.selectionBackground: # Background color of the selected menu item in menus.
+  menu.selectionBorder: # Border color of the selected menu item in menus.
+  #nit: add a border-light / separator color that's darker?
+  menu.separatorBackground: *fg-subtle
+  menu.border: # none
+
 # ---------------------------------------------------------------------------- #
 
 tokenColors:
