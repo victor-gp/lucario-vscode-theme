@@ -291,6 +291,12 @@ colors:
   # Git colors #todo
   gitDecoration.ignoredResourceForeground: *fg-subtle
 
+  # Dropdown control
+  dropdown.background: *bg-lv-2
+  dropdown.listBackground: *bg-lv-2
+  dropdown.border: *border-base
+  dropdown.foreground: *fg-base
+
 # ---------------------------------------------------------------------------- #
 
 tokenColors:
