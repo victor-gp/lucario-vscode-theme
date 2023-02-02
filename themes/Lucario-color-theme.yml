@@ -297,6 +297,18 @@ colors:
   dropdown.border: *border-base
   dropdown.foreground: *fg-base
 
+  # Menu Bar colors
+  menubar.selectionForeground: # Foreground color of the selected menu item in the menubar.
+  menubar.selectionBackground: # Background color of the selected menu item in the menubar.
+  menubar.selectionBorder: # Border color of the selected menu item in the menubar.
+  menu.foreground: # Foreground color of menu items.
+  menu.background: # Background color of menu items.
+  menu.selectionForeground: # Foreground color of the selected menu item in menus.
+  menu.selectionBackground: # Background color of the selected menu item in menus.
+  menu.selectionBorder: # Border color of the selected menu item in menus.
+  menu.separatorBackground: # Color of a separator menu item in menus.
+  menu.border: # Border color of menus.
+
 # ---------------------------------------------------------------------------- #
 
 tokenColors:
