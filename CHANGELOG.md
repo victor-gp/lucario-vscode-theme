@@ -1,12 +1,11 @@
 # Changelog
 
-## Unreleased
-
-### Syntax
+## 2.3.0 - 2023-02-02
 
 ### UI
 
-### Other
+- Theme the menubar.
+- Theme dropdown elements.
 
 ## 2.2.0 - 2022-09-04
 
