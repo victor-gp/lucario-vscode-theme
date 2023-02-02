@@ -20,6 +20,8 @@ here's a code fence:
 puts 'hello'
 ```
 
+And more `inline code`.
+
 lists:
 
 - one item
@@ -29,7 +31,7 @@ lists:
     * 1.1
 2. two
 
-- [ ] task 1
+- [x] task 1
 - [ ] task 2
 
 ## A heading with a {#custom-anchor}
