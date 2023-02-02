@@ -44,11 +44,5 @@
     "qna": "false",
     "engines": {
         "vscode": "^1.64.0"
-    },
-    "__metadata": {
-        "id": "796484d7-b3e5-429f-8160-e725b1c7e112",
-        "publisherDisplayName": "Víctor González Prieto",
-        "publisherId": "c05b7133-dae3-465e-a42a-bb9a678aeb32",
-        "isPreReleaseVersion": false
     }
 }
