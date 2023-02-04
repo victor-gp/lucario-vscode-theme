@@ -24,8 +24,8 @@ palette:
     - &bg-lv-3-active   "#19242f"
     - &border-base      "#0f161c"
     - &fg-base          "#99a8b8"
-    - &fg-dim           !alpha [*fg-base, b0]
-    - &fg-subtle        "#99a8b899"
+    - &fg-dim-1         !alpha [*fg-base, b0]
+    - &fg-dim-2         !alpha [*fg-base, 99]
     - &fg-highlight     "#d5dbe2"
     - &fg-selected      "#fff"
     - &fg-separator     !alpha [*fg-base, 50]
@@ -70,7 +70,7 @@ colors:
   focusBorder: !alpha [*Accent, c0]
   foreground: *FG #fixme: change for fg-base and propagate
   # disabledForeground: !alpha [*fg-base, b0]
-  disabledForeground: *fg-dim
+  disabledForeground: *fg-dim-1
   widget.shadow: # default is fine, black with low alpha
   selection.background: *Selection
   descriptionForeground: # ???
@@ -90,7 +90,7 @@ colors:
 
   # Activity Bar
   activityBar.background: *bg-lv-3
-  activityBar.inactiveForeground: *fg-subtle # aka: ./foreground
+  activityBar.inactiveForeground: *fg-dim-2 # aka: ./foreground
   activityBar.border: *border-base
   activityBar.activeBackground: *bg-lv-2
   activityBar.foreground: *fg-highlight # aka: ./activeForeground
@@ -113,8 +113,8 @@ colors:
   tab.border: *border-base
   tab.activeForeground: *fg-highlight
   tab.inactiveForeground: *fg-base
-  tab.unfocusedActiveForeground: *fg-subtle
-  tab.unfocusedInactiveForeground: *fg-subtle
+  tab.unfocusedActiveForeground: *fg-dim-2
+  tab.unfocusedInactiveForeground: *fg-dim-2
   # todo: etc.
 
   # Breadcrumbs colors
@@ -252,7 +252,7 @@ colors:
   editorSuggestWidget.selectedBackground: # Background color of the selected entry. #todo: depends on ui:accent
   editorSuggestWidget.selectedForeground: *fg-highlight
   editorSuggestWidget.selectedIconForeground: # <= ./selectedForeground
-  editorSuggestWidgetStatus.foreground: *fg-subtle
+  editorSuggestWidgetStatus.foreground: *fg-dim-2
   # Hover Widget =~ IntelliSense hover info
   editorHoverWidget.foreground: *fg-highlight
   editorHoverWidget.background: *bg-lv-1
@@ -292,7 +292,7 @@ colors:
   inputValidation.warningBorder: # Input validation border color for warning severity.
 
   # Git colors #todo
-  gitDecoration.ignoredResourceForeground: *fg-subtle
+  gitDecoration.ignoredResourceForeground: *fg-dim-2
 
   # Dropdown control
   dropdown.background: *bg-lv-2
