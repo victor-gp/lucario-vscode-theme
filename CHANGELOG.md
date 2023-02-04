@@ -6,7 +6,8 @@
 
 ### UI
 
-- Darken the menu separator
+- Darken the menu separator.
+- Theme disabled elements, e.g.: in the menues.
 
 ### Other
 

@@ -24,6 +24,7 @@ palette:
     - &bg-lv-3-active   "#19242f"
     - &border-base      "#0f161c"
     - &fg-base          "#99a8b8"
+    - &fg-dim           !alpha [*fg-base, b0]
     - &fg-subtle        "#99a8b899"
     - &fg-highlight     "#d5dbe2"
     - &fg-selected      "#fff"
@@ -68,7 +69,8 @@ colors:
   # Base colors
   focusBorder: !alpha [*Accent, c0]
   foreground: *FG #fixme: change for fg-base and propagate
-  disabledForeground: # seen in menu dropdowns. default is #cccccc with 0.5 alpha
+  # disabledForeground: !alpha [*fg-base, b0]
+  disabledForeground: *fg-dim
   widget.shadow: # default is fine, black with low alpha
   selection.background: *Selection
   descriptionForeground: # ???
