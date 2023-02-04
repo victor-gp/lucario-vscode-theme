@@ -6,14 +6,16 @@
 
 ### UI
 
+- Darken the menu separator
+
 ### Other
 
 ## 2.2.1 - 2023-02-02
 
 ### UI
 
-- Theme the menubar.
-- Theme dropdown elements.
+- Theme menu dropdowns.
+- Theme other dropdown elements.
 
 ## 2.2.0 - 2022-09-04
 

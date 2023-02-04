@@ -27,6 +27,7 @@ palette:
     - &fg-subtle        "#99a8b899"
     - &fg-highlight     "#d5dbe2"
     - &fg-selected      "#fff"
+    - &fg-separator     !alpha [*fg-base, 50]
   other:
     - &NonText        "#61bbc8" #todo: replace Invisibles?
     - &HintGreen      "#a6e22e"
@@ -307,8 +308,7 @@ colors:
   #nice: I don't dislike the default, but maybe we should do bg-lv-2-active
   menu.selectionBackground: # Background color of the selected menu item in menus.
   menu.selectionBorder: # Border color of the selected menu item in menus.
-  #nit: add a border-light / separator color that's darker?
-  menu.separatorBackground: *fg-subtle
+  menu.separatorBackground: *fg-separator
   menu.border: # none
 
 # ---------------------------------------------------------------------------- #
