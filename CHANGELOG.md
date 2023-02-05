@@ -6,8 +6,9 @@
 
 ### UI
 
-- Darken the menu separator.
-- Theme disabled elements, e.g.: in the menues.
+- Dim menu separators.
+- Theme disabled elements, e.g.: in menues.
+- Dim input placeholders, e.g.: in search boxes.
 
 ### Other
 

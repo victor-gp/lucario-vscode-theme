@@ -276,7 +276,7 @@ colors:
   input.background: *bg-lv-1
   input.border: # none, transparent default is fine
   input.foreground: *fg-highlight
-  input.placeholderForeground: *fg-base # on the fence with -subtle. there should be a middle ground...
+  input.placeholderForeground: *fg-dim-1
   inputOption.activeBackground: # Background color of activated options in input fields.
   inputOption.activeBorder: # Border color of activated options in input fields.
   inputOption.activeForeground: # Foreground color of activated options in input fields.
