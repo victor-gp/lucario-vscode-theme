@@ -12,7 +12,7 @@ Selling points:
 
 ## Installation
 
-Launch VS Code Quick Open (`Ctrl+P`), paste the following command, and press enter.
+Launch VS Code Quick Open (`Ctrl+P`), paste the following command and press enter.
 
 ```txt
 ext install victor-gp.lucario-theme
@@ -22,7 +22,7 @@ ext install victor-gp.lucario-theme
 
 The Lucario color scheme was [created by Raphael Amorim](https://github.com/raphamorim/lucario). It's available for a bunch of editors including Atom, Vim and Sublime Text.
 
-VS Code takes JSON color themes. The scripts to develop in YAML are adapted from [the Dracula theme](https://github.com/dracula/visual-studio-code).
+VS Code takes JSON color themes. The scripts to make YAML work are adapted from [the Dracula theme](https://github.com/dracula/visual-studio-code).
 
 Some of the code samples used for testing come from other projects. They are attributed in [this document](./samples/_attribution.md).
 
