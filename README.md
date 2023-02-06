@@ -4,9 +4,9 @@ VS Code port of [Raphael Amorim's Lucario theme](https://github.com/raphamorim/l
 
 ![A VS Code window showing how pretty Lucario Theme looks.](./assets/preview.png)
 
-Selling points:
+Three reasons to use this:
 
-- a dark-ish theme that prevents eye strain while providing enough contrast for a well-lit room
+- a darkish theme that prevents eye strain while providing enough contrast for a well-lit room
 - committed to provide good syntax highlighting for many languages (not just Python and JavaScript 🙊)
 - inspired by [this beautiful creature](https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)#firstHeading) ![Lucario menusprite](./assets/lucario-menusprite.png)
 
