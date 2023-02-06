@@ -1,16 +1,12 @@
 # Changelog
 
-## Unreleased
-
-### Syntax
+## 2.2.2 - 2023-02-06
 
 ### UI
 
 - Dim menu separators.
 - Theme disabled elements, e.g.: in menues.
 - Dim input placeholders, e.g.: in search boxes.
-
-### Other
 
 ## 2.2.1 - 2023-02-02
 
