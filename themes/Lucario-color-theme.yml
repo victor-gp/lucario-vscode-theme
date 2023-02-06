@@ -136,6 +136,7 @@ colors:
   statusBar.foreground: *fg-base
   statusBar.border: *border-base
   statusBarItem.activeBackground: *bg-lv-3-active
+  #fixme: make this an alpha (of fg-base?) because this doesn't play well with e.g. Debug mode, when bg becomes orange and this hardcoded hover appears out of place
   statusBarItem.hoverBackground: *bg-lv-3-hover
   # todo: Item + prominent, error, warning, etc.
   statusBarItem.remoteBackground: *bg-lv-3
@@ -302,6 +303,7 @@ colors:
 
   # Menu Bar colors
   menubar.selectionForeground: # Foreground color of the selected menu item in the menubar.
+  #todo: make this like statusBar.hoverBackground
   menubar.selectionBackground: # Background color of the selected menu item in the menubar.
   menubar.selectionBorder: # Border color of the selected menu item in the menubar.
   menu.foreground: # <= dropdown.foreground
