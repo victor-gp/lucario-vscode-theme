@@ -5,18 +5,6 @@
     "description": "VS Code port of the Lucario theme. A darkish theme for the 80% use case.",
     "publisher": "victor-gp",
     "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/victor-gp/lucario-vscode-theme"
-    },
-    "scripts": {
-        "build": "node ./scripts/build.js",
-        "prewatch": "npm run build",
-        "watch": "node ./scripts/watch.js"
-    },
-    "devDependencies": {
-        "js-yaml": "^4.1.0"
-    },
     "contributes": {
         "themes": [
             {
@@ -40,9 +28,21 @@
         "color": "#2b3e50",
         "theme": "dark"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/victor-gp/lucario-vscode-theme"
+    },
     "bugs": "https://github.com/victor-gp/lucario-vscode-theme/issues",
     "qna": "false",
     "engines": {
         "vscode": "^1.64.0"
+    },
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "prewatch": "npm run build",
+        "watch": "node ./scripts/watch.js"
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.0"
     }
 }
