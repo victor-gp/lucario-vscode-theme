@@ -1,10 +1,22 @@
-# Reproducing Atom's One Dark UI
+# Style Guide / Workbench
 
-The One Dark UI theme [depends on the syntax theme](https://github.com/atom/atom/tree/master/packages/one-dark-ui#faq), Lucario in our case.
+This document details the colors for those elements surrounding the code editor: Sidebars, widgets, menus, tabs, buttons, etc.
 
-In particular, the base background color is the syntax background color. Lucario defines its `*Selection` color for that.  Most every other UI color is derived from this color.
+This is what the Atom editor called the 'UI theme' (as opposed to 'syntax theme'), or Sublime Text calls the 'theme' (as opposed to the 'color scheme', which "controls the highlighting of source code, markup and prose").
 
-## Tracing ~~back~~ forward the color variables for One Dark + Lucario
+VS Code calls this 'workbench'. Its colorable elements are documented [here](https://code.visualstudio.com/api/references/theme-color).
+
+## Reproducing Atom's One Dark UI
+
+This port of the Lucario theme is **inspired by the combination of Lucario + One Dark UI on Atom.** Lucario being the syntax theme and One Dark UI being the UI theme.
+
+On Atom, the One Dark UI theme [depends on the syntax theme](https://github.com/atom/atom/tree/master/packages/one-dark-ui#faq), Lucario in our case.
+
+In particular, the base background color is the syntax background color. Lucario defines its `*Selection` color for that. Pretty much every other UI color is derived from this color.
+
+## Main background & foreground colors
+
+### Tracing ~~back~~ forward the color variables for One Dark + Lucario
 
 This is the math, with references to the code on GitHub.
 
@@ -18,7 +30,7 @@ I have cross-checked the hex values with Atom DevTools, inspecting UI elements t
 
 `ui-fg := ui-syntax-color { saturation = 18%, lightness = 66% } =~ #99a8b8 ` — [reference](https://github.com/atom/atom/blob/17a31e3a3729070768f31bbce7ce9bcc09f5a2b8/packages/one-dark-ui/styles/ui-variables-custom.less#L37)
 
-`ui-bg := ui-syntax-color = Selection` 
+`ui-bg := ui-syntax-color = Selection`
 
 `ui-border := ui-syntax-color { lightness * 0,6 = 8.46% } =~ #0f161c`
 
@@ -44,15 +56,15 @@ I have cross-checked the hex values with Atom DevTools, inspecting UI elements t
 
 `text-color-subtle := text-color { alpha - 40% = 60% } =~ #99a8b899`
 
-`text-color-highlight := text-color { lightness + 20% = 86% } =~ #d5dbe2` 
+`text-color-highlight := text-color { lightness + 20% = 86% } =~ #d5dbe2`
 
-`text-color-selected := white =~ #fff` 
+`text-color-selected := white =~ #fff`
 
 **#todo:** accent-color, text-color-warning, error, ignored, modified, level-1-color gradient avg, etc.
 
 [^1]: `level-1-color` and its variations are only used in buttons, with a gradient. So I want to use the gradient's average.
 
-## Translation to our variables
+### Translation to our variables
 
 We're also doing `kebab-case` variable names, to differentiate them from the `PascalCase` names for base / syntax colors. Also, cause they're easier to type. 😝
 
