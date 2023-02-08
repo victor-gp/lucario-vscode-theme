@@ -89,3 +89,13 @@ We're also doing `kebab-case` variable names, to differentiate them from the `Pa
 `text-color-highlight -> fg-highlight`
 
 `text-color-selected -> fg-selected`
+
+## Semantic colors
+
+Semantic colors include red (error), green (added), amber (modified), etc. For these colors, we're sticking to VS Code's defaults for dark themes.
+
+Mainly because I've gotten used to that distribution of semantic colors, I don't dislike it. Also because most other themes I use as reference honor them.
+
+But their lightness against our background colors are all over the place. As is their relative contrast with `fg-base`: most semantic colors eclipse it. We need to harmonize that.
+
+So we're preserving the hue for every semantic color, but we're tweaking contrast and luminance to make them fit the rest of the workbench color scheme.
