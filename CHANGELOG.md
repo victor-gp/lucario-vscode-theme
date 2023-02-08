@@ -1,8 +1,16 @@
 # Changelog
 
+## Unreleased
+
+### Syntax
+
+### Workbench
+
+### Other
+
 ## 2.2.2 - 2023-02-06
 
-### UI
+### Workbench
 
 - Dim menu separators.
 - Theme disabled elements, e.g.: in menues.
@@ -10,14 +18,14 @@
 
 ## 2.2.1 - 2023-02-02
 
-### UI
+### Workbench
 
 - Theme menu dropdowns.
 - Theme other dropdown elements.
 
 ## 2.2.0 - 2022-09-04
 
-### UI
+### Workbench
 
 - **Make the bottom panel's background color darker.** Including Terminal, Problems, Debug Console, etc.
 - **Theme elements surrounding search.** From editor widgets, to input control, to find matches and more.
@@ -28,9 +36,9 @@
 
 - Markdown: theme strikethroughs, slightly increase opacity of blockquote text.
 
-### UI
+### Workbench
 
-- **Redo UI colors to better imitate Atom's One Dark UI.** Only updated the most visible elements yet.
+- **Redo workbench colors to better imitate Atom's One Dark UI.** Only updated the most visible elements yet.
 
 ## 2.0.0 - 2022-07-27
 
