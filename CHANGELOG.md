@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Syntax
+
+### Workbench
+
+### Other
+
 ## 2.3.1 - 2024-01-14
 
 ### Syntax
