@@ -1,12 +1,12 @@
 # Changelog
 
-## Unreleased
-
-### Syntax
-
-### Workbench
+## 2.2.3
 
 ### Other
+
+- Readme: update the theme's preview (workbench has changed quite a bit).
+- Readme: add an animated Lucario menusprite.
+- Extension tags: add 'blue'.
 
 ## 2.2.2 - 2023-02-06
 
