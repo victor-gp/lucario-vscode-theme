@@ -160,20 +160,20 @@ colors:
   terminal.background: *bg-lv-1
   terminal.foreground: *FG
   terminal.ansiBlack: *bg-lv-1
-  terminal.ansiRed:           "#ff6c60"
-  terminal.ansiGreen:         "#8ee478"
-  terminal.ansiYellow:        "#ffffb6"
-  terminal.ansiBlue:          "#5796ed"
-  terminal.ansiMagenta:       "#ff73fd"
-  terminal.ansiCyan:          "#fbb036" # actually orange ¯\_ (ツ)_/¯
-  terminal.ansiWhite:         "#eeeeee"
-  terminal.ansiBrightBlack:   "#4f4f4f"
-  terminal.ansiBrightRed:     "#fa6960"
-  terminal.ansiBrightGreen:   "#8ee478" # == standard
-  terminal.ansiBrightYellow:  "#feffb9"
-  terminal.ansiBrightBlue:    "#6b9fed"
-  terminal.ansiBrightMagenta: "#fc6ffa"
-  terminal.ansiBrightCyan:    "#fbb036" # == standard
+  terminal.ansiRed:           "#e94b35"
+  terminal.ansiGreen:         "#199c4b"
+  terminal.ansiYellow:        "#f0cc04"
+  terminal.ansiBlue:          "#5c98cd"
+  terminal.ansiMagenta:       "#ca94ff"
+  terminal.ansiCyan:          "#8be0fd"
+  terminal.ansiWhite:         "#EFEFE1"
+  terminal.ansiBrightBlack:   "#2f3943"
+  terminal.ansiBrightRed:     "#ff6541"
+  terminal.ansiBrightGreen:   "#72cc5a"
+  terminal.ansiBrightYellow:  "#FFFFA5"
+  terminal.ansiBrightBlue:    "#D6ACFF" # actually pink ¯\_(ツ)_/¯
+  terminal.ansiBrightMagenta: "#d4a9ff"
+  terminal.ansiBrightCyan:    "#b9ecfd"
   terminal.ansiBrightWhite: *FG
 
   # Editor - Bracket pair colorization
