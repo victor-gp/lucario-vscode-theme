@@ -5,7 +5,7 @@
     "properties": {
         "colors": {
             "description": "Colors in the workbench",
-            "$ref": "vscode://schemas/workbench-colors",
+            "$ref": "workbench-colors.json",
             "additionalProperties": false
         },
         "tokenColors": {
@@ -16,7 +16,7 @@
                 },
                 {
                     "description": "Colors for syntax highlighting",
-                    "$ref": "vscode://schemas/textmate-colors"
+                    "$ref": "textmate-colors.json"
                 }
             ]
         },
@@ -27,7 +27,7 @@
         "semanticTokenColors": {
             "type": "object",
             "description": "Colors for semantic tokens",
-            "$ref": "vscode://schemas/token-styling"
+            "$ref": "token-styling.json"
         }
     }
 }
