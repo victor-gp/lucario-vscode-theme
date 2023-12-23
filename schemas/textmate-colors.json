@@ -5,8 +5,7 @@
             "default": "#FF0000",
             "anyOf": [
                 {
-                    "type": "string",
-                    "format": "color-hex"
+                    "$ref": "yaml-color-hex.json"
                 },
                 {
                     "$ref": "#/definitions/settings"
@@ -18,10 +17,9 @@
             "description": "Colors and styles for the token.",
             "properties": {
                 "foreground": {
-                    "type": "string",
                     "description": "Foreground color for the token.",
-                    "format": "color-hex",
-                    "default": "#ff0000"
+                    "default": "#ff0000",
+                    "$ref": "yaml-color-hex.json"
                 },
                 "background": {
                     "type": "string",

@@ -197,7 +197,7 @@ colors:
   # Editor - Errors and warnings
   editorError.foreground: *HintRed # squiggles
   editorError.border: # none, overlaps with squiggles
-  editorError.background: !alpha [*Pink, 80]
+  editorError.background: # none
   editorWarning.foreground: *HintYellow
   editorWarning.border: # none
   editorWarning.background: # none
