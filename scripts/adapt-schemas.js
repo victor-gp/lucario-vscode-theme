@@ -4,7 +4,7 @@ const path = require('path');
 const SCHEMAS_DIR = path.join(__dirname, '..', 'schemas');
 
 module.exports = async () => {
-    //todo: automate download from https://github.com/wraith13/vscode-schemas/
+    await downloadSchemaFiles();
 
     const files = await fsp.readdir(SCHEMAS_DIR);
     // yaml-color-hex.json is custom, no need to adapt anything
@@ -25,6 +25,24 @@ module.exports = async () => {
 
 if (require.main === module) {
     module.exports();
+}
+
+// alt: install wraith13/save-vscode-schemas itself, run it as a workspace task, then this
+async function downloadSchemaFiles() {
+    const baseUrl = 'https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/'
+    const relevantSchemas = [
+        'color-theme.json',
+        'textmate-colors.json',
+        'token-styling.json',
+        'workbench-colors.json',
+    ]
+
+    for (schema of relevantSchemas) {
+        const response = await fetch(baseUrl + schema);
+        const content = await response.text();
+        const schemaPath = path.join(SCHEMAS_DIR, schema);
+        await fsp.writeFile(schemaPath, content);
+    }
 }
 
 function adaptIncompatibleBits(schema) {
