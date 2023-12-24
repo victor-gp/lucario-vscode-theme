@@ -11,15 +11,15 @@ module.exports = async () => {
     const filterFn = file => file.endsWith(".json") && file !== "yaml-color-hex.json";
     const schemaPaths = files.filter(filterFn).map(file => path.join(SCHEMAS_DIR, file));
 
-    for (const path of schemaPaths) {
-        const schemaString = await fsp.readFile(path, 'utf-8');
+    for (const schemaPath of schemaPaths) {
+        const schemaString = await fsp.readFile(schemaPath, 'utf-8');
         const schema = JSON.parse(schemaString);
 
         adaptIncompatibleBits(schema);
-        if (path.endsWith("color-theme.json")) addMainSchemaInfo(schema);
+        if (schemaPath.endsWith("color-theme.json")) addMainSchemaInfo(schema);
 
         const newSchemaString = JSON.stringify(schema, null, 4);
-        await fsp.writeFile(path, newSchemaString)
+        await fsp.writeFile(schemaPath, newSchemaString)
     }
 };
 
@@ -55,7 +55,7 @@ function adaptIncompatibleBits(schema) {
     }
 }
 
-// the original schemas come with $ref URIs like "vscode://schemas/workbench-colors"
+// the original schemas come with $ref URIs like "vscode://schemas/workbench-colors",
 // replace them for relative paths (no dirname as they're in the same directory)
 function replaceVscodeUris(schema) {
     if (schema['$ref'] && schema['$ref'].startsWith('vscode://schemas/')) {
@@ -64,9 +64,10 @@ function replaceVscodeUris(schema) {
     }
 }
 
-// the original schema is doesn't allow some YAML themes' patterns:
-// nullable colors (usually placeholders or commented) and !alpha tags (color + alpha channel)
-// the yaml-color-hex.json schema covers that
+// the original schema doesn't allow some YAML themes' patterns:
+// - nullable colors (usually placeholders or commented)
+// - !alpha tags (color + alpha channel)
+// the yaml-color-hex.json schema covers them
 function replaceColorHexTypes(schema) {
     if (schema['type'] === 'string' && schema['format'] === 'color-hex') {
         delete schema['type'];
