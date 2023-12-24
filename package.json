@@ -42,7 +42,8 @@
     "scripts": {
         "build": "node ./scripts/build.js",
         "prewatch": "npm run build",
-        "watch": "node ./scripts/watch.js"
+        "watch": "node ./scripts/watch.js",
+        "schemas:update": "node ./scripts/adapt-schemas.js"
     },
     "devDependencies": {
         "js-yaml": "^4.1.0"

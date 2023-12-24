@@ -1,0 +1,16 @@
+    {
+        "anyOf": [
+            {
+                "type": "string",
+                "format": "color-hex"
+            },
+            {
+                "type": "null"
+            },
+            {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2
+            }
+        ]
+    }
