@@ -7,15 +7,15 @@ module.exports = async () => {
     //todo: automate download from https://github.com/wraith13/vscode-schemas/
 
     const files = await fsp.readdir(SCHEMAS_DIR);
-    const schemaPaths = files
-        .filter(file => file.endsWith(".json") && file !== "yaml-color-hex.json")
-        .map(file => path.join(SCHEMAS_DIR, file));
+    // yaml-color-hex.json is custom, no need to adapt anything
+    const filterFn = file => file.endsWith(".json") && file !== "yaml-color-hex.json";
+    const schemaPaths = files.filter(filterFn).map(file => path.join(SCHEMAS_DIR, file));
 
     for (const path of schemaPaths) {
         const schemaString = await fsp.readFile(path, 'utf-8');
         const schema = JSON.parse(schemaString);
 
-        performReplacements(schema);
+        adaptIncompatibleBits(schema);
         if (path.endsWith("color-theme.json")) addMainSchemaInfo(schema);
 
         const newSchemaString = JSON.stringify(schema, null, 4);
@@ -27,14 +27,13 @@ if (require.main === module) {
     module.exports();
 }
 
-//tsk: find a better name, perhaps adaptIncompatibleBits
-function performReplacements(schema) {
+function adaptIncompatibleBits(schema) {
     replaceVscodeUris(schema);
     replaceColorHexTypes(schema);
 
     for (let key in schema) {
         if (typeof schema[key] === 'object')
-            performReplacements(schema[key]);
+            adaptIncompatibleBits(schema[key]);
     }
 }
 
