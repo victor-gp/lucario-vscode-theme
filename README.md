@@ -4,7 +4,7 @@ A darkish syntax theme for the 80% use case. VS Code port of [Raphael Amorim's L
 
 ![A VS Code window showing how pretty Lucario Theme looks.](./assets/preview.png)
 
-Three reasons to use this:
+Some reasons to use this:
 
 - a darkish theme that prevents eye strain while providing enough contrast for a well-lit room
 - committed to provide good syntax highlighting for many languages (not just Python and JavaScript 🙊)
@@ -20,13 +20,13 @@ ext install victor-gp.lucario-theme
 
 ## Credit
 
-The Lucario color scheme was [created by Raphael Amorim](https://github.com/raphamorim/lucario). It's available for a bunch of editors including Atom, Vim and Sublime Text.
+The Lucario color scheme was [created by Raphael Amorim](https://github.com/raphamorim/lucario). It's available for many editors, including Atom, Vim and Sublime Text.
 
-VS Code takes JSON color themes. The scripts to make YAML work are adapted from [the Dracula theme](https://github.com/dracula/visual-studio-code).
+VS Code takes JSON color themes. The scripts to make YAML work are adapted from those in [the Dracula theme](https://github.com/dracula/visual-studio-code).
 
 Some of the code samples used for testing come from other projects. They are attributed in [this document](./samples/_attribution.md).
 
-The theme logo on the VS Code Marketplace is a Lucario sprite from Pokémon Café Mix. The animated Lucario on the Readme is a menusprite from the Gen IV games.
+The theme logo on the Visual Studio Marketplace is a Lucario sprite from Pokémon Café Mix. The animated Lucario on the Readme is a menusprite from the Gen IV games.
 
 ## License
 
