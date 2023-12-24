@@ -51,13 +51,14 @@ async function downloadSchemaFiles() {
 }
 
 function adaptIncompatibleBits(schema) {
-    replaceVscodeUris(schema);
-    replaceColorHexTypes(schema);
+    schema = replaceVscodeUris(schema);
+    schema = replaceColorHexTypes(schema);
 
     for (let key in schema) {
         if (typeof schema[key] === 'object')
-            adaptIncompatibleBits(schema[key]);
+            schema[key] = adaptIncompatibleBits(schema[key]);
     }
+
     return schema;
 }
 
@@ -68,6 +69,7 @@ function replaceVscodeUris(schema) {
         const relativePath = schema['$ref'].replace('vscode://schemas/', '') + '.json';
         schema['$ref'] = relativePath;
     }
+    return schema;
 }
 
 // the original schema doesn't allow some YAML themes' patterns:
@@ -78,9 +80,12 @@ function replaceColorHexTypes(schema) {
     if (schema['type'] === 'string' && schema['format'] === 'color-hex') {
         delete schema['type'];
         delete schema['format'];
-        //nit: place the $ref key first like type, not last
-        schema['$ref'] = 'yaml-color-hex.json'
+        schema = {
+            '$ref': 'yaml-color-hex.json',
+            ...schema
+        };
     }
+    return schema;
 }
 
 // prevents the looong absolute path to the schema from showing in the status bar
