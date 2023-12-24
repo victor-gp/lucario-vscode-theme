@@ -539,9 +539,9 @@
             "description": "Colors and styles for the token.",
             "properties": {
                 "foreground": {
+                    "$ref": "yaml-color-hex.json",
                     "description": "Foreground color for the token.",
-                    "default": "#ff0000",
-                    "$ref": "yaml-color-hex.json"
+                    "default": "#ff0000"
                 },
                 "background": {
                     "type": "string",
