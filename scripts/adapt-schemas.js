@@ -11,12 +11,15 @@ module.exports = async () => {
         .filter(file => file.endsWith(".json") && file !== "yaml-color-hex.json")
         .map(file => path.join(SCHEMAS_DIR, file));
 
-    for (const schemaPath of schemaPaths) {
-        const schemaString = await fsp.readFile(schemaPath, 'utf-8');
+    for (const path of schemaPaths) {
+        const schemaString = await fsp.readFile(path, 'utf-8');
         const schema = JSON.parse(schemaString);
+
         performReplacements(schema);
-        const adaptedSchemaString = JSON.stringify(schema, null, 4);
-        await fsp.writeFile(schemaPath, adaptedSchemaString)
+        if (path.endsWith("color-theme.json")) addMainSchemaInfo(schema);
+
+        const newSchemaString = JSON.stringify(schema, null, 4);
+        await fsp.writeFile(path, newSchemaString)
     }
 };
 
@@ -54,4 +57,11 @@ function replaceColorHexTypes(schema) {
         //nit: place the $ref key first like type, not last
         schema['$ref'] = 'yaml-color-hex.json'
     }
+}
+
+// prevents the looong absolute path to the schema from showing in the status bar
+function addMainSchemaInfo(schema) {
+    //nit: place these first
+    schema['title'] = 'VS Code YAML color theme';
+    schema['description'] = 'VS Code color theme YAML file';
 }
