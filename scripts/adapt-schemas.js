@@ -15,10 +15,13 @@ module.exports = async () => {
         const schemaString = await fsp.readFile(schemaPath, 'utf-8');
         const schema = JSON.parse(schemaString);
 
-        adaptIncompatibleBits(schema);
-        if (schemaPath.endsWith("color-theme.json")) addMainSchemaInfo(schema);
+        let newSchema = adaptIncompatibleBits(schema);
+        if (schemaPath.endsWith("color-theme.json")) {
+            newSchema = addMainSchemaAnnotations(newSchema);
 
-        const newSchemaString = JSON.stringify(schema, null, 4);
+        }
+
+        const newSchemaString = JSON.stringify(newSchema, null, 4);
         await fsp.writeFile(schemaPath, newSchemaString)
     }
 };
@@ -37,12 +40,14 @@ async function downloadSchemaFiles() {
         'workbench-colors.json',
     ]
 
+    console.log('downloading schemas...')
     for (schema of relevantSchemas) {
         const response = await fetch(baseUrl + schema);
         const content = await response.text();
         const schemaPath = path.join(SCHEMAS_DIR, schema);
         await fsp.writeFile(schemaPath, content);
     }
+    console.log('downloads finished')
 }
 
 function adaptIncompatibleBits(schema) {
@@ -53,6 +58,7 @@ function adaptIncompatibleBits(schema) {
         if (typeof schema[key] === 'object')
             adaptIncompatibleBits(schema[key]);
     }
+    return schema;
 }
 
 // the original schemas come with $ref URIs like "vscode://schemas/workbench-colors",
@@ -78,8 +84,11 @@ function replaceColorHexTypes(schema) {
 }
 
 // prevents the looong absolute path to the schema from showing in the status bar
-function addMainSchemaInfo(schema) {
-    //nit: place these first
-    schema['title'] = 'VS Code YAML color theme';
-    schema['description'] = 'VS Code color theme YAML file';
+function addMainSchemaAnnotations(schema) {
+    const annotations = {
+        title: 'VS Code YAML color theme',
+        description: 'VS Code color theme YAML file',
+    }
+
+    return {...annotations, ...schema}
 }

@@ -1,4 +1,6 @@
 {
+    "title": "VS Code YAML color theme",
+    "description": "VS Code color theme YAML file",
     "type": "object",
     "allowComments": true,
     "allowTrailingCommas": true,
@@ -29,7 +31,5 @@
             "description": "Colors for semantic tokens",
             "$ref": "token-styling.json"
         }
-    },
-    "title": "VS Code YAML color theme",
-    "description": "VS Code color theme YAML file"
+    }
 }
