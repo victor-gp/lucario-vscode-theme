@@ -62,8 +62,8 @@ colors:
   editorGutter.foldingControlForeground: *FG
 
   editorWhitespace.foreground: *Invisibles
-  editorIndentGuide.background: !alpha [*Invisibles, 64]
-  editorIndentGuide.activeBackground: *Invisibles
+  editorIndentGuide.background1: !alpha [*Invisibles, 64]
+  editorIndentGuide.activeBackground1: *Invisibles
   editorRuler.foreground: !alpha [*Invisibles, 64]
 
   # Base colors
@@ -98,7 +98,7 @@ colors:
   activityBarBadge.background: *Accent #fixme: darken
   activityBarBadge.foreground: *bg-lv-3
   activityBar.dropBorder: *Accent
-  activityBar.focusBorder: # <= focusBorder
+  activityBar.activeFocusBorder: # <= focusBorder
 
   # Editor Groups & Tabs
   editorGroup.border: *Cyan
