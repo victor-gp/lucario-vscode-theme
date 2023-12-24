@@ -19,13 +19,12 @@ module.exports = async () => {
         const schema = JSON.parse(schemaString);
 
         let newSchema = adaptIncompatibleBits(schema);
-        if (schemaPath.endsWith("color-theme.json")) {
+        if (schemaPath.endsWith('color-theme.json')) {
             newSchema = addMainSchemaAnnotations(newSchema);
-
         }
 
         const newSchemaString = JSON.stringify(newSchema, null, 4);
-        await fsp.writeFile(schemaPath, newSchemaString)
+        await fsp.writeFile(schemaPath, newSchemaString);
     }
 };
 
@@ -50,11 +49,10 @@ function adaptIncompatibleBits(schema) {
     schema = replaceVscodeUris(schema);
     schema = replaceColorHexTypes(schema);
 
-    for (let key in schema) {
+    for (const key in schema) {
         if (typeof schema[key] === 'object')
             schema[key] = adaptIncompatibleBits(schema[key]);
     }
-
     return schema;
 }
 
@@ -69,9 +67,9 @@ function replaceVscodeUris(schema) {
 }
 
 // the original schema doesn't allow some YAML themes' patterns:
-// - nullable colors (usually placeholders or commented)
-// - !alpha tags (color + alpha channel)
-// the yaml-color-hex.json schema covers them
+// - null values: usually placeholders for a color setting
+// - !alpha tags with color-hex + alpha channel
+// our custom yaml-color-hex.json schema covers them
 function replaceColorHexTypes(schema) {
     if (schema['type'] === 'string' && schema['format'] === 'color-hex') {
         delete schema['type'];
@@ -89,7 +87,6 @@ function addMainSchemaAnnotations(schema) {
     const annotations = {
         title: 'VS Code YAML color theme',
         description: 'VS Code color theme YAML file',
-    }
-
-    return {...annotations, ...schema}
+    };
+    return { ...annotations, ...schema };
 }
