@@ -1,17 +1,20 @@
 const fsp = require('fs/promises');
 const path = require('path');
 
+const SCHEMAS = [
+    'color-theme.json',
+    'textmate-colors.json',
+    'token-styling.json',
+    'workbench-colors.json',
+];
+const BASE_URL = 'https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/';
 const SCHEMAS_DIR = path.join(__dirname, '..', 'schemas');
 
 module.exports = async () => {
     await downloadSchemaFiles();
 
-    const files = await fsp.readdir(SCHEMAS_DIR);
-    // yaml-color-hex.json is custom, no need to adapt anything
-    const filterFn = file => file.endsWith(".json") && file !== "yaml-color-hex.json";
-    const schemaPaths = files.filter(filterFn).map(file => path.join(SCHEMAS_DIR, file));
-
-    for (const schemaPath of schemaPaths) {
+    for (const schemaFile of SCHEMAS) {
+        const schemaPath = path.join(SCHEMAS_DIR, schemaFile);
         const schemaString = await fsp.readFile(schemaPath, 'utf-8');
         const schema = JSON.parse(schemaString);
 
@@ -30,19 +33,12 @@ if (require.main === module) {
     module.exports();
 }
 
-// alt: install wraith13/save-vscode-schemas itself, run it as a workspace task, then this
+//nice: install wraith13/save-vscode-schemas itself, run it as a workspace task, then all of this.
+//      pros: won't depend on a repo that may be outdated. / cons: tasks are tricky to configure.
 async function downloadSchemaFiles() {
-    const baseUrl = 'https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/'
-    const relevantSchemas = [
-        'color-theme.json',
-        'textmate-colors.json',
-        'token-styling.json',
-        'workbench-colors.json',
-    ]
-
     console.log('downloading schemas...')
-    for (schema of relevantSchemas) {
-        const response = await fetch(baseUrl + schema);
+    for (const schema of SCHEMAS) {
+        const response = await fetch(BASE_URL + schema);
         const content = await response.text();
         const schemaPath = path.join(SCHEMAS_DIR, schema);
         await fsp.writeFile(schemaPath, content);
