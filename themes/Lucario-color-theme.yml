@@ -166,12 +166,12 @@ colors:
   terminal.ansiBlue:          "#5c98cd"
   terminal.ansiMagenta:       "#ca94ff"
   terminal.ansiCyan:          "#8be0fd"
-  terminal.ansiWhite:         "#EFEFE1"
+  terminal.ansiWhite:         "#efefe1"
   terminal.ansiBrightBlack:   "#2f3943"
   terminal.ansiBrightRed:     "#ff6541"
   terminal.ansiBrightGreen:   "#72cc5a"
-  terminal.ansiBrightYellow:  "#FFFFA5"
-  terminal.ansiBrightBlue:    "#D6ACFF" # actually pink ¯\_(ツ)_/¯
+  terminal.ansiBrightYellow:  "#ffffa5"
+  terminal.ansiBrightBlue:    "#d6acff" # actually pink ¯\_(ツ)_/¯
   terminal.ansiBrightMagenta: "#d4a9ff"
   terminal.ansiBrightCyan:    "#b9ecfd"
   terminal.ansiBrightWhite: *FG
