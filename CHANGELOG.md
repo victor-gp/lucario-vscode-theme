@@ -1,12 +1,10 @@
 # Changelog
 
-## Unreleased
-
-### Syntax
+## 2.3.0 - 2024-01-06
 
 ### Workbench
 
-### Other
+- Terminal: use (most of) the colors for the Rio terminal implementation.
 
 ## 2.2.3 - 2023-05-27
 
