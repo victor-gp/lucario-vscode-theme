@@ -166,7 +166,7 @@ colors:
   terminal.ansiBlue:          "#5796ed"
   terminal.ansiMagenta:       "#ca94ff"
   terminal.ansiCyan:          "#8be0fd"
-  terminal.ansiWhite:         "#efefe1"
+  terminal.ansiWhite:         "#dfdfd9"
   terminal.ansiBrightBlack:   "#2f3943"
   terminal.ansiBrightRed:     "#ff6541"
   terminal.ansiBrightGreen:   "#72cc5a"
