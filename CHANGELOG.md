@@ -12,7 +12,13 @@
 
 ### Workbench
 
-- Terminal: use (most of) the colors for the Rio terminal implementation.
+- **Terminal: use (most of) the colors from the Lucario implementation for the Rio terminal.**
+
+### Other
+
+- Extension tags: add 'flat'.
+- Enable JSON Schema support for the theme.
+- Fix some schema errors (deprecated color keys).
 
 ## 2.2.3 - 2023-05-27
 
