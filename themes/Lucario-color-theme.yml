@@ -100,6 +100,10 @@ colors:
   activityBar.dropBorder: *Accent
   activityBar.activeFocusBorder: # <= focusBorder
 
+  # Profiles
+  profileBadge.background: *bg-lv-1
+  profileBadge.foreground: *fg-base
+
   # Editor Groups & Tabs
   editorGroup.border: *Cyan
   editorGroup.dropBackground: #todo

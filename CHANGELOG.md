@@ -6,6 +6,8 @@
 
 ### Workbench
 
+- Theme the profile badge.
+
 ### Other
 
 ## 2.3.0 - 2024-01-06
