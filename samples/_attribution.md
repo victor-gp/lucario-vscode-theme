@@ -16,3 +16,4 @@ From [Night Owl's demo files](https://github.com/sdras/night-owl-vscode-theme/tr
 Other sources:
 
 - `yaml.yaml`: examples 2.27 & 2.28 in <https://yaml.org/spec/1.2.2/>
+- `tmTheme.xml` from [victor-gp's dotfiles](https://github.com/victor-gp/dotfiles/blob/main/misc/bat/themes/custom16.tmTheme)
