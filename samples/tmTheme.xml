@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>name</key>
+        <string>Custom16</string>
+        <key>description</key>
+        <string>Hyper-specific scope selectors to bat-colorize some commands.</string>
+        <key>author</key>
+        <string>Víctor González Prieto</string>
+        <key>colorSpaceName</key>
+        <string>sRGB</string>
+        <key>settings</key>
+        <array>
+            <!--/// color code key //////////////////////////////////////////////////////////////////////
+                color codes: #0?000000 (where ? = color hex char)
+
+                0: black (background)
+                1: red
+                2: green
+                3: yellow / orange
+                4: blue
+                5: magenta
+                6: cyan
+                7: clear gray (standard white)
+                8: dark gray (bright black)
+                9: bright red
+                a: bright green
+                b: bright yellow / orange
+                c: bright blue
+                d: bright magenta
+                e: bright cyan
+                f: white (foreground)
+            -->
+
+            <dict>
+                <key>settings</key>
+                <dict>
+                    <key>background</key>
+                    <string>#00000000</string>
+                    <key>foreground</key>
+                    <string>#0f000000</string>
+                    <key>invisibles</key>
+                    <string>#0f000000</string>
+                </dict>
+            </dict>
+
+            <!--/// git log /////////////////////////////////////////////////////////////////////-->
+
+            <dict>
+                <key>name</key>
+                <string>commit header: boilerplate</string>
+                <key>scope</key>
+                <string>
+                    keyword.other.commit.git.log,
+                    keyword.other.header.git.log,
+                    punctuation.separator.mapping.pair.git.log,
+                    punctuation.section.parens.begin.git.log,
+                    punctuation.section.parens.end.git.log,
+                    punctuation.separator.sequence.git.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#02000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commit header: data</string>
+                <key>scope</key>
+                <string>
+                    constant.other.hash.git.log,
+                    string.unquoted.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commmit header: HEAD + arrow</string>
+                <key>scope</key>
+                <string>
+                    support.type.git.log,
+                    punctuation.separator.mapping.git.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#04000000</string>
+                    <key>fontStyle</key>
+                    <string>bold</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commmit header: refs names</string>
+                <key>scope</key>
+                <string>
+                    entity.other.branch-name.git.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commmit header: main/master</string>
+                <key>scope</key>
+                <string>
+                    entity.other.branch-name.master.git.log
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0d000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commit message: subject</string>
+                <key>scope</key>
+                <string>meta.subject.git.commit</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#03000000</string>
+                    <!--
+                    <key>fontStyle</key>
+                    <string>bold</string>
+                    -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>commit message: body</string>
+                <key>scope</key>
+                <string>meta.message.git.commit</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#08000000</string>
+                </dict>
+            </dict>
+
+            <!--/// cmd help ////////////////////////////////////////////////////////////////////-->
+
+            <dict>
+                <key>name</key>
+                <string>command help: section heading</string>
+                <key>scope</key>
+                <string>string.section-heading.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#03000000</string>
+                    <!-- I wanted fontStyle=bold but then it becomes bright yellow... -->
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: inline usage</string>
+                <key>scope</key>
+                <string>string.section-heading.inline-usage.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#03000000</string>
+                    <key>fontStyle</key>
+                    <string>italic</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: option</string>
+                <key>scope</key>
+                <string>
+                    entity.name.function.option.cmd-help,
+                    entity.name.function.option.plus.cmd-help
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#02000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: argument or variable</string>
+                <key>scope</key>
+                <string>
+                    keyword.other.argument.cmd-help,
+                    keyword.other.variable.cmd-help
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: end of options</string>
+                <key>scope</key>
+                <string>constant.other.end-of-options.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0e000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: other term</string>
+                <key>scope</key>
+                <string>constant.other.keyword.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>command help: pathname</string>
+                <key>scope</key>
+                <string>variable.parameter.pathname.cmd-help</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#04000000</string>
+                </dict>
+            </dict>
+
+            <!--/// man /////////////////////////////////////////////////////////////////////////-->
+
+            <dict>
+                <key>name</key>
+                <string>man: command name</string>
+                <key>scope</key>
+                <string>meta.preprocessor.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: operator</string>
+                <key>scope</key>
+                <string>keyword.operator.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <!-- setting this for command/function parens
+                         but I'd rather not colorize operators -->
+                    <string>#06000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: man section number</string>
+                <key>scope</key>
+                <string>string.quoted.other.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0c000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: title</string>
+                <key>scope</key>
+                <string>markup.heading.title.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0c000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: section name</string>
+                <key>scope</key>
+                <string>
+                    markup.heading.synopsis.man,
+                    markup.heading.other.man
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#03000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: function</string>
+                <key>scope</key>
+                <string>entity.name.function.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#06000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: number</string>
+                <!-- used as man section number in function names -->
+                <key>scope</key>
+                <string>constant.numeric.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0c000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: variable dollar</string>
+                <key>scope</key>
+                <string>punctuation.definition.variable.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: variable name</string>
+                <key>scope</key>
+                <string>constant.other.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: command option</string>
+                <key>scope</key>
+                 <!-- first scope fixes a bug in man.sublime-syntax L82 -->
+                <string>
+                entity.name.command-line-option,
+                entity.name.command-line-option.man
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#02000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>man: command option parameter</string>
+                <key>scope</key>
+                <string>variable.parameter.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#05000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string> man: brackets</string>
+                <key>scope</key>
+                <string>
+                    punctuation.section.brackets.begin.man,
+                    punctuation.section.brackets.end.man
+                </string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0f000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string> man: commas</string>
+                <key>scope</key>
+                <string>punctuation.separator.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0f000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string> man: logical operator</string>
+                <key>scope</key>
+                <string>keyword.operator.logical.man</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#0f000000</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string> man: C code</string>
+                <key>scope</key>
+                <string>source.c</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <string>#07000000</string>
+                </dict>
+            </dict>
+        </array>
+    </dict>
+</plist>

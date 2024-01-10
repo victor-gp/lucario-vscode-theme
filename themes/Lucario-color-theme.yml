@@ -416,6 +416,12 @@ tokenColors:
     settings:
       foreground: *Red
 
+  #todo: consider enabling on html
+  - name: XML - Tag angle brackets
+    scope: punctuation.definition.tag.xml
+    settings:
+      foreground: !alpha [*FG, 80]
+
   - name: Tag attribute
     scope:
       - entity.other.attribute-name

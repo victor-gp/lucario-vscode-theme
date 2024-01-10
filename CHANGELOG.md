@@ -4,6 +4,8 @@
 
 ### Syntax
 
+- XML: dim tag angle brackets.
+
 ### Workbench
 
 - Theme the profile badge.
