@@ -16,7 +16,6 @@
     ],
     // not supported:
     // "colorize.colorized_variables": [ "yaml" ],
-
-    //todo: remove. set by `sandorex.vscode-theme-quick-switch`
+    "themeSwitcher.themesList": "Lucario,Dracula,Night Owl,Chinolor",
     "workbench.colorTheme": "Lucario",
 }
