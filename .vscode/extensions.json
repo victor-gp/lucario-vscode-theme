@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"redhat.vscode-yaml",
+		// optional, nice to have:
+		"kamikillerto.vscode-colorize",
+		"JanBn.vscode-theme-switcher",
+	],
+	"unwantedRecommendations": []
+}

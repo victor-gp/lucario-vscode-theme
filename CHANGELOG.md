@@ -10,6 +10,8 @@
 
 ### Other
 
+- List recommended extensions (.vscode/extensions.json).
+
 ## 2.3.0 - 2024-01-06
 
 ### Workbench
