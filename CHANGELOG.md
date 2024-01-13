@@ -13,6 +13,7 @@
 ### Other
 
 - List recommended extensions (.vscode/extensions.json).
+- Update the preview image.
 
 ## 2.3.0 - 2024-01-06
 

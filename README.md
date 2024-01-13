@@ -2,7 +2,7 @@
 
 A darkish syntax theme for the 80% use case. VS Code port of [Raphael Amorim's Lucario theme](https://github.com/raphamorim/lucario).
 
-![A VS Code window showing how pretty Lucario Theme looks.](./assets/preview.png)
+![A VS Code workspace with the Lucario Theme.](./assets/preview.png)
 
 A few reasons to use this:
 
