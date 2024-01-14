@@ -6,7 +6,7 @@ A darkish syntax theme for the 80% use case. VS Code port of [Raphael Amorim's L
 
 A few reasons to use this:
 
-- dark to prevent eye strain, but bright enough for a well-lit room
+- dark & low contrast to prevent eye strain, but bright enough for a well-lit room
 - has good syntax highlighting for many languages (not just Python and JavaScript)
 - inspired by [this beautiful creature](https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)) ![Lucario menusprite](./assets/lucario-menusprite.png)
 
