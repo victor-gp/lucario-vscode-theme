@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      VERSION: vTEST #todo: ${{ github.ref }}
+
+    steps:
+      - name: Git checkout️
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.VERSION }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Build the theme
+        run: |
+          npm ci
+          npm run build
+
+      - name: Release on GitHub
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          name: ${{ env.VERSION }}
+          #nice: add the version number to the file
+          files: themes/Lucario-color-theme.json
+          # body: #todo
+          generate_release_notes: true
+          make_latest: false # problematic if we release a v1 minor version
