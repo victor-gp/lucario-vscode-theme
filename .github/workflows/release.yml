@@ -18,6 +18,7 @@ jobs:
           version="${{ env.VERSION }}"
           # i.e: drop the 'v' from 'vX.Y.Z'
           number=$(echo $version | sed 's/v//')
+          echo "VERSION_NUMBER=$number" >> "$GITHUB_ENV"
           echo "OUT=$number" >> "$GITHUB_OUTPUT"
 
       - name: Git checkout️
@@ -40,17 +41,17 @@ jobs:
 
       - name: Package the extension
         run: |
-          vsce package ${{ steps.version-number.outputs.OUT }} \
-            --no-git-tag-version --no-update-package-json
+          vsce package $VERSION_NUMBER \
+              --no-git-tag-version --no-update-package-json
 
       #todo: - name: Publish to Visual Studio Marketplace
 
       - name: Gather release assets
         run: |
           mkdir release-assets
-          rename=Lucario-color-theme-${{ steps.version-number.outputs.OUT }}.json
+          rename=Lucario-color-theme-$VERSION_NUMBER.json
           cp themes/Lucario-color-theme.json release-assets/$rename
-          cp lucario-theme-${{ steps.version-number.outputs.OUT }}.vsix release-assets
+          cp lucario-theme-$VERSION_NUMBER.vsix release-assets
 
       - name: Release on GitHub
         uses: softprops/action-gh-release@v1
