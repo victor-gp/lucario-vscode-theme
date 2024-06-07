@@ -9,9 +9,17 @@ jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      VERSION: vTEST #todo: ${{ github.ref }}
+      VERSION: v0.0.0 #todo: ${{ github.ref }}
 
     steps:
+      - name: Compute version number
+        id: version-number
+        run: |
+          version="${{ env.VERSION }}"
+          # i.e: drop the 'v' from 'vX.Y.Z'
+          number=$(echo $version | sed 's/v//')
+          echo "OUT=$number" >> "$GITHUB_OUTPUT"
+
       - name: Git checkout️
         uses: actions/checkout@v4
         with:
@@ -22,18 +30,34 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Build the theme
+      - name: Install dependencies
         run: |
           npm ci
-          npm run build
+          npm install --global @vscode/vsce
+
+      - name: Build the theme
+        run: npm run build
+
+      - name: Package the extension
+        run: |
+          vsce package ${{ steps.version-number.outputs.OUT }} \
+            --no-git-tag-version --no-update-package-json
+
+      #todo: - name: Publish to Visual Studio Marketplace
+
+      - name: Gather release assets
+        run: |
+          mkdir release-assets
+          rename=Lucario-color-theme-${{ steps.version-number.outputs.OUT }}.json
+          cp themes/Lucario-color-theme.json release-assets/$rename
+          cp lucario-theme-${{ steps.version-number.outputs.OUT }}.vsix release-assets
 
       - name: Release on GitHub
         uses: softprops/action-gh-release@v1
         with:
           draft: true
           name: ${{ env.VERSION }}
-          #nice: add the version number to the file
-          files: themes/Lucario-color-theme.json
+          files: release-assets/*
           # body: #todo
           generate_release_notes: true
           make_latest: false # problematic if we release a v1 minor version
