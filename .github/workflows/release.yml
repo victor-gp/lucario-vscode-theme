@@ -58,6 +58,7 @@ jobs:
         with:
           draft: true
           name: ${{ env.VERSION }}
+          tag_name: ${{ env.VERSION }}
           files: release-assets/*
           # body: #todo
           generate_release_notes: true
