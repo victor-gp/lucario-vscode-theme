@@ -8,6 +8,8 @@
 
 ### Other
 
+- Automate releases with a GitHub Action.
+
 ## 2.3.1 - 2024-01-14
 
 ### Syntax
