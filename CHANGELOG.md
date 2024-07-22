@@ -1,10 +1,6 @@
 # Changelog
 
-## Unreleased
-
-### Syntax
-
-### Workbench
+## 2.3.2 - 2024-07-22
 
 ### Other
 
