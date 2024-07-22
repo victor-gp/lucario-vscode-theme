@@ -44,6 +44,7 @@ jobs:
         run: |
           vsce package $VERSION_NUMBER \
               --no-git-tag-version --no-update-package-json
+          # packages as "lucario-theme-$VERSION_NUMBER.vsix"
 
       - name: Publish to Visual Studio Marketplace
         env:
@@ -78,5 +79,5 @@ jobs:
           tag_name: ${{ env.VERSION }}
           files: release-assets/*
           body_path: RELEASE_BODY.md
-          generate_release_notes: true
-          make_latest: false # problematic if we release a v1 minor version
+          generate_release_notes: true # appends the "Full Changelog" link to RELEASE_BODY.md
+          make_latest: false # true would be problematic if we release a v1 minor version
