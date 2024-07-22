@@ -9,7 +9,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      VERSION: v0.0.0 #todo: ${{ github.ref }}
+      VERSION: v2.1.0 #todo: ${{ github.ref }}
 
     steps:
       - name: Compute version number
@@ -44,7 +44,12 @@ jobs:
           vsce package $VERSION_NUMBER \
               --no-git-tag-version --no-update-package-json
 
-      #todo: - name: Publish to Visual Studio Marketplace
+      - name: Publish to Visual Studio Marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: |
+          vsce publish --pat $VSCE_PAT \
+              --packagePath lucario-theme-$VERSION_NUMBER.vsix
 
       - name: Gather release assets
         run: |
