@@ -1,0 +1,83 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ github.ref }}
+
+    steps:
+      - name: Compute version number
+        id: version-number
+        run: |
+          version="${{ env.VERSION }}"
+          # i.e: drop the 'v' from 'vX.Y.Z'
+          number=$(echo $version | sed 's/v//')
+          echo "VERSION_NUMBER=$number" >> "$GITHUB_ENV"
+          echo "OUT=$number" >> "$GITHUB_OUTPUT"
+
+      - name: Git checkout️
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.VERSION }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm install --global @vscode/vsce
+
+      - name: Build the theme
+        run: npm run build
+
+      - name: Package the extension
+        run: |
+          vsce package $VERSION_NUMBER \
+              --no-git-tag-version --no-update-package-json
+          # packages as "lucario-theme-$VERSION_NUMBER.vsix"
+
+      - name: Publish to Visual Studio Marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: |
+          vsce publish --pat $VSCE_PAT \
+              --packagePath lucario-theme-$VERSION_NUMBER.vsix
+
+      - name: Gather release assets
+        run: |
+          mkdir release-assets
+          rename=Lucario-color-theme-$VERSION_NUMBER.json
+          cp themes/Lucario-color-theme.json release-assets/$rename
+          cp lucario-theme-$VERSION_NUMBER.vsix release-assets
+
+      - name: Extract changelog for release body
+        run: |
+          # extracts the current version's changeset,
+          # includes its heading (e.g.: "## 2.0.0 - 2022-07-27") and the next heading (previous version)
+          sed -e "/^## $VERSION_NUMBER/,/^## / ! d" CHANGELOG.md > /tmp/body-1.md
+          # drop the leading and trailing headings & the empty lines below/above
+          tail --lines=+3 /tmp/body-1.md | head --lines=-2 > /tmp/body-2.md
+          # upgrade all headings by one level
+          sed 's/^#//g' /tmp/body-2.md > /tmp/body-3.md
+          cp /tmp/body-3.md RELEASE_BODY.md
+
+      - name: Release on GitHub
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          name: ${{ env.VERSION }}
+          tag_name: ${{ env.VERSION }}
+          files: release-assets/*
+          body_path: RELEASE_BODY.md
+          generate_release_notes: true # appends the "Full Changelog" link to RELEASE_BODY.md
+          make_latest: false # true would be problematic if we release a v1 minor version
