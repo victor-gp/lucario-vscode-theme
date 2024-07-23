@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Other
+
+- Fix the GitHub Action.
+
 ## 2.3.2 - 2024-07-22
 
 ### Other
