@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+### Syntax
+
+### Workbench
+
+### Other changes
+
+- Misc changes to the GitHub Action.
+
 ## 2.3.3 - 2024-07-23
 
 ### Other
