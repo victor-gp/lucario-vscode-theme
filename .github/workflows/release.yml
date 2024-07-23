@@ -1,4 +1,4 @@
-name: Release
+name: Publish & Release
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  release:
+  delivery:
     runs-on: ubuntu-latest
     env:
       # e.g.: "v2.3.2"
@@ -57,8 +57,8 @@ jobs:
       - name: Gather release assets
         run: |
           mkdir release-assets
-          rename=Lucario-color-theme-$VERSION_NUMBER.json
-          cp themes/Lucario-color-theme.json release-assets/$rename
+          new_name=Lucario-color-theme-$VERSION_NUMBER.json
+          cp themes/Lucario-color-theme.json release-assets/$new_name
           cp lucario-theme-$VERSION_NUMBER.vsix release-assets
 
       - name: Extract changelog for release body
