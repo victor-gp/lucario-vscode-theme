@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 2.3.3 - 2024-07-23
 
 ### Other
 
