@@ -10,23 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # e.g.: "v2.3.2"
-      #nice: rename this to VERSION_NAME (vs _NUMBER)
-      VERSION: ${{ github.ref_name }}
+      VERSION_NAME: ${{ github.ref_name }}
 
     steps:
       - name: Compute version number
         id: version-number
         run: |
-          version="${{ env.VERSION }}"
-          # i.e: drop the 'v' from 'vX.Y.Z'
-          number=$(echo $version | sed 's/v//')
+          # i.e.: drop the 'v' from 'vX.Y.Z'
+          name="${{ env.VERSION_NAME }}"
+          number=$(echo $name | sed 's/v//')
           echo "VERSION_NUMBER=$number" >> "$GITHUB_ENV"
           echo "OUT=$number" >> "$GITHUB_OUTPUT"
 
       - name: Git checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.VERSION }}
+          ref: ${{ env.VERSION_NAME }}
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -79,8 +78,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           draft: true
-          name: ${{ env.VERSION }}
-          tag_name: ${{ env.VERSION }}
+          name: ${{ env.VERSION_NAME }}
+          tag_name: ${{ env.VERSION_NAME }}
           files: release-assets/*
           body_path: RELEASE_BODY.md
           generate_release_notes: true # appends the "Full Changelog" link to RELEASE_BODY.md
