@@ -58,6 +58,8 @@ colors:
   editorLineNumber.activeForeground: *FG
   editorGutter.addedBackground: *HintGreen
   editorGutter.modifiedBackground: *HintYellow
+  #fixme: this should definitely not be the same as errorForeground
+  # deleted should be magenta, while error should be red?
   editorGutter.deletedBackground: *HintRed
   editorGutter.foldingControlForeground: *FG
 

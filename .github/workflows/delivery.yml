@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # e.g.: "v2.3.2"
+      #nice: rename this to VERSION_NAME (vs _NUMBER)
       VERSION: ${{ github.ref_name }}
 
     steps:
@@ -22,7 +23,7 @@ jobs:
           echo "VERSION_NUMBER=$number" >> "$GITHUB_ENV"
           echo "OUT=$number" >> "$GITHUB_OUTPUT"
 
-      - name: Git checkout️
+      - name: Git checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ env.VERSION }}
@@ -63,6 +64,7 @@ jobs:
 
       - name: Extract changelog for release body
         run: |
+          #nice place this in a script
           # extracts the current version's changeset,
           # includes its heading (e.g.: "## 2.0.0 - 2022-07-27") and the next heading (previous version)
           sed -e "/^## $VERSION_NUMBER/,/^## / ! d" CHANGELOG.md > /tmp/body-1.md
@@ -72,6 +74,7 @@ jobs:
           sed 's/^#//g' /tmp/body-2.md > /tmp/body-3.md
           cp /tmp/body-3.md RELEASE_BODY.md
 
+      #todo: don't use tags cause they're insecure
       - name: Release on GitHub
         uses: softprops/action-gh-release@v2
         with:
