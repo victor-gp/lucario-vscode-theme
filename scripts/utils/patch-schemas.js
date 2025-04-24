@@ -7,7 +7,9 @@ const SCHEMAS = [
     'token-styling.json',
     'workbench-colors.json',
 ];
-const BASE_URL = 'https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/';
+//todo Change to https://github.com/andymcintosh/vscode-schemas (recently updated). Original is unmaintained.
+//nice-TBD Or maybe keep my own fork? Run the save-vscode-schemas extension myself (headless vscode?) and point to that repo from here.
+const BASE_URL = 'https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/';
 const ROOT_DIR = path.join(__dirname, '..', '..');
 //nice-TBD should I move the schemas/ dir to .vscode? It's for supporting intellisense in the IDE...
 const SCHEMAS_DIR = path.join(ROOT_DIR, 'schemas');
