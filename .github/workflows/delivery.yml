@@ -4,13 +4,19 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      ref_name:
+        description: 'Git tag to publish & release'
+        type: string
+        required: true
 
 jobs:
   delivery:
     runs-on: ubuntu-latest
     env:
       # e.g.: "v2.3.2"
-      VERSION_NAME: ${{ github.ref_name }}
+      VERSION_NAME: ${{ inputs.ref_name || github.ref_name }}
 
     steps:
       - name: Compute version number
