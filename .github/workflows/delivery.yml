@@ -10,10 +10,15 @@ on:
         description: 'Git tag to publish & release'
         type: string
         required: true
+      #todo: add option to skip publish-vs-marketplace
 
 jobs:
   delivery:
     runs-on: ubuntu-latest
+    #todo: make the whole thing more granular: prep, publish-vs-marketplace, release-github
+    #       and update things accordingly: contents:w to release-github; VSCE_PAT to publish-vs-marketplace, etc.
+    permissions:
+      contents: write
     env:
       # e.g.: "v2.3.2"
       VERSION_NAME: ${{ inputs.ref_name || github.ref_name }}
