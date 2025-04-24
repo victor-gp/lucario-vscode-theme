@@ -47,13 +47,6 @@ jobs:
               --no-git-tag-version --no-update-package-json
           # packages as "lucario-theme-$VERSION_NUMBER.vsix"
 
-      - name: Publish to Visual Studio Marketplace
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
-        run: |
-          vsce publish --pat $VSCE_PAT \
-              --packagePath lucario-theme-$VERSION_NUMBER.vsix
-
       - name: Gather release assets
         run: |
           mkdir release-assets
