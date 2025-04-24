@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # cd to root project dir
-cd "$(dirname "${BASH_SOURCE[0]}")/.."
+cd "$(dirname "${BASH_SOURCE[0]}")/../.."
 
 #nice: VERSION_NUMBER as script input
 # extracts the current version's changeset,

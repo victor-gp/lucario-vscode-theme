@@ -63,7 +63,7 @@ jobs:
 
       - name: Gather release assets
         run: |
-          scripts/extract_version_changelog.sh > RELEASE_BODY.md
+          scripts/utils/extract_version_changelog.sh > RELEASE_BODY.md
           mkdir release-assets
           cp "lucario-theme-$VERSION_NUMBER.vsix" release-assets
           json_assets_path="release-assets/Lucario-color-theme-$VERSION_NUMBER.json"

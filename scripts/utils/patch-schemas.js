@@ -8,7 +8,9 @@ const SCHEMAS = [
     'workbench-colors.json',
 ];
 const BASE_URL = 'https://raw.githubusercontent.com/wraith13/vscode-schemas/master/en/latest/schemas/';
-const SCHEMAS_DIR = path.join(__dirname, '..', 'schemas');
+const ROOT_DIR = path.join(__dirname, '..', '..');
+//nice-TBD should I move the schemas/ dir to .vscode? It's for supporting intellisense in the IDE...
+const SCHEMAS_DIR = path.join(ROOT_DIR, 'schemas');
 
 module.exports = async () => {
     await downloadSchemaFiles();
