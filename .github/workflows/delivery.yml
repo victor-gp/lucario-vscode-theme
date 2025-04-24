@@ -64,14 +64,15 @@ jobs:
       - name: Gather release assets
         run: |
           scripts/utils/extract_version_changelog.sh > RELEASE_BODY.md
+          #nit: I should add a check/fallback for old versions that lack the extract_version script
           mkdir release-assets
           cp "lucario-theme-$VERSION_NUMBER.vsix" release-assets
           json_assets_path="release-assets/Lucario-color-theme-$VERSION_NUMBER.json"
           cp themes/Lucario-color-theme.json "$json_assets_path"
 
-      #todo: don't use tags cause they're insecure
-      - name: Release on GitHub
-        uses: softprops/action-gh-release@v2
+      # (!) You have to manually publish the draft!
+      - name: Create release draft on GitHub
+        uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631 # v2.2.2
         with:
           draft: true
           name: ${{ env.VERSION_NAME }}
