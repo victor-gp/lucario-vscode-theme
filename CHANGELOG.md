@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 9.0.5 - 2025-04-24
 
 ### Syntax
 
