@@ -10,7 +10,10 @@ on:
         description: 'Git tag to publish & release'
         type: string
         required: true
-      #todo: add option to skip publish-vs-marketplace
+      skip_publish:
+        description: 'Skip VS Marketplace publication'
+        type: boolean
+        required: true
 
 jobs:
   delivery:
@@ -22,6 +25,7 @@ jobs:
     env:
       # e.g.: "v2.3.2"
       VERSION_NAME: ${{ inputs.ref_name || github.ref_name }}
+      SKIP_PUBLISH: ${{ inputs.skip_publish || true }}
 
     steps:
       - name: Compute version number
@@ -59,6 +63,7 @@ jobs:
           # packages as "lucario-theme-$VERSION_NUMBER.vsix"
 
       - name: Publish to Visual Studio Marketplace
+        if: ${{ ! env.SKIP_PUBLISH }}
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: |

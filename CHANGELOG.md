@@ -1,6 +1,6 @@
 # Changelog
 
-## 9.0.6 - 2025-04-24
+## 9.0.9 - 2025-04-24
 
 ### Syntax
 
@@ -8,7 +8,8 @@
 
 ### Other changes
 
-- Misc changes to the GitHub Action.
+- Misc improvements to the GitHub Action.
+- Fix patch-schemas.js
 
 ## 2.3.3 - 2024-07-23
 
