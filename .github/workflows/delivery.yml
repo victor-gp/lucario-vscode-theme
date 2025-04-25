@@ -21,7 +21,7 @@ jobs:
     env:
       # e.g.: "v2.3.2"
       VERSION_NAME: ${{ inputs.ref_name || github.ref_name }}
-      SKIP_PUBLISH: ${{ inputs.skip_publish || true }}
+      SKIP_PUBLISH: ${{ inputs.skip_publish || false }}
 
     steps:
       - name: Compute version number
