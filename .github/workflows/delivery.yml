@@ -1,4 +1,4 @@
-name: Publish & Release
+name: Delivery
 
 on:
   push:
@@ -16,12 +16,8 @@ on:
         required: true
 
 jobs:
-  delivery:
+  prep-and-publish:
     runs-on: ubuntu-latest
-    #todo: make the whole thing more granular: prep, publish-vs-marketplace, release-github
-    #       and update things accordingly: contents:w to release-github; VSCE_PAT to publish-vs-marketplace, etc.
-    permissions:
-      contents: write
     env:
       # e.g.: "v2.3.2"
       VERSION_NAME: ${{ inputs.ref_name || github.ref_name }}
@@ -62,6 +58,23 @@ jobs:
               --no-git-tag-version --no-update-package-json
           # packages as "lucario-theme-$VERSION_NUMBER.vsix"
 
+      - name: Gather release assets
+        run: |
+          scripts/utils/extract_version_changelog.sh > RELEASE_BODY.md
+          #nit: I should add a check/fallback for old versions that lack the extract_version script
+          mkdir release-assets
+          cp "lucario-theme-$VERSION_NUMBER.vsix" release-assets
+          json_assets_path="release-assets/Lucario-color-theme-$VERSION_NUMBER.json"
+          cp themes/Lucario-color-theme.json "$json_assets_path"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-artifacts
+          path: |
+            ./RELEASE_BODY.md
+            ./release-assets
+          retention-days: 1
+
       - name: Publish to Visual Studio Marketplace
         if: ${{ ! env.SKIP_PUBLISH }}
         env:
@@ -72,14 +85,20 @@ jobs:
 
       #nice publish to Open VSX Registry
 
-      - name: Gather release assets
-        run: |
-          scripts/utils/extract_version_changelog.sh > RELEASE_BODY.md
-          #nit: I should add a check/fallback for old versions that lack the extract_version script
-          mkdir release-assets
-          cp "lucario-theme-$VERSION_NUMBER.vsix" release-assets
-          json_assets_path="release-assets/Lucario-color-theme-$VERSION_NUMBER.json"
-          cp themes/Lucario-color-theme.json "$json_assets_path"
+  draft-github-release:
+    runs-on: ubuntu-latest
+    needs: prep-and-publish
+    permissions:
+      contents: write
+    env:
+      # e.g.: "v2.3.2"
+      VERSION_NAME: ${{ inputs.ref_name || github.ref_name }}
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-artifacts
+          path: ./release-artifacts
 
       # (!) You have to manually publish the draft!
       - name: Create release draft on GitHub
@@ -88,7 +107,7 @@ jobs:
           draft: true
           name: ${{ env.VERSION_NAME }}
           tag_name: ${{ env.VERSION_NAME }}
-          files: release-assets/*
-          body_path: RELEASE_BODY.md
+          files: release-artifacts/release-assets/*
+          body_path: release-artifacts/RELEASE_BODY.md
           generate_release_notes: true # appends the "Full Changelog" link to RELEASE_BODY.md
           make_latest: false # true would be problematic if we release a v1 minor version
