@@ -60,8 +60,11 @@ jobs:
 
       - name: Gather release assets
         run: |
-          scripts/utils/extract_version_changelog.sh > RELEASE_BODY.md
-          #nit: I should add a check/fallback for old versions that lack the extract_version script
+          if [ -f "scripts/utils/extract_version_changelog.sh" ]; then
+              scripts/utils/extract_version_changelog.sh > RELEASE_BODY.md
+          else
+              echo "Could not extract version changelog." > RELEASE_BODY.md
+          fi
           mkdir release-assets
           cp "lucario-theme-$VERSION_NUMBER.vsix" release-assets
           json_assets_path="release-assets/Lucario-color-theme-$VERSION_NUMBER.json"
