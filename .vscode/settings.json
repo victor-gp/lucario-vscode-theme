@@ -1,6 +1,6 @@
 {
     "yaml.schemas": {
-        "schemas/color-theme.json": [
+        ".vscode/schemas/color-theme.json": [
             "*-color-theme.yml",
             "*-color-theme.yaml"
         ]
