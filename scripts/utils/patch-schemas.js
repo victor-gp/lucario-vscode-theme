@@ -69,6 +69,13 @@ function replaceVscodeUris(schema) {
     return schema;
 }
 
+//fixme: nulls are only allowed on "colors:"" keys (workbench). cf: generate.js#L39.
+//      Update this to only apply it to "colors:".
+//      Actually, I need to duplicate this to have both yalm-workbench-color-property & yaml-token-color-property (no nulls).
+//nice: It does make sense to extend tokenColors (syntax)...
+//      use cases: annotate alternatives, TBD; annotate default values.
+//      Algorithm: if !color && !fontStyle: remove the whole theming rule; if any exists: keep it but remove empty keys
+//      Then I should also replaceFontStyleTypes() in adaptIncompatibleBits() to allow null.
 // the original schema doesn't allow some YAML themes' patterns:
 // - null values: usually placeholders for a color setting
 // - !alpha tags with color-hex + alpha channel
