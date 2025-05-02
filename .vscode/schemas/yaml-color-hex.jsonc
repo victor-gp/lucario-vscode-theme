@@ -1,0 +1,19 @@
+{
+    "anyOf": [
+        {
+            // only allowed value in color-theme.json
+            "type": "string",
+            "format": "color-hex"
+        },
+        {
+            // empty keys are removed in the yaml->json conversion
+            "type": "null"
+        },
+        {
+            // !alpha custom tags
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2
+        }
+    ]
+}

@@ -72,13 +72,13 @@ function replaceVscodeUris(schema) {
 // the original schema doesn't allow some YAML themes' patterns:
 // - null values: usually placeholders for a color setting
 // - !alpha tags with color-hex + alpha channel
-// our custom yaml-color-hex.json schema covers them
+// our custom yaml-color-hex schema covers them
 function replaceColorHexTypes(schema) {
     if (schema['type'] === 'string' && schema['format'] === 'color-hex') {
         delete schema['type'];
         delete schema['format'];
         schema = {
-            '$ref': 'yaml-color-hex.json',
+            '$ref': 'yaml-color-hex.jsonc',
             ...schema
         };
     }
