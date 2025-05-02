@@ -74,8 +74,6 @@ function replaceVscodeUris(schema) {
 // - !alpha tags with color-hex + alpha channel
 // our custom yaml-color-hex schema covers them
 function replaceColorHexTypes(schema) {
-    //todo: make this more strict, I want to check that this hasn't changed across versions.
-    //      When it has, this all should error and yaml-color-hex should be updated
     if (schema['type'] === 'string' && schema['format'] === 'color-hex') {
         delete schema['type'];
         delete schema['format'];
