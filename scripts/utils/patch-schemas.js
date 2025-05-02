@@ -80,7 +80,7 @@ function replaceColorHexTypes(schema) {
         delete schema['type'];
         delete schema['format'];
         schema = {
-            '$ref': 'yaml-color-hex.jsonc',
+            '$ref': 'yaml-color-property.yml',
             ...schema
         };
     }
