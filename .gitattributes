@@ -1,3 +1,6 @@
 # Git & GitHub Linguist overrides
-.vscode/schemas/*.json -diff linguist-generated
-.vscode/schemas/yaml-color-hex.json diff linguist-generated=false
+
+.vscode/schemas/*                       -diff   linguist-generated
+.vscode/schemas/yaml-color-property.*   diff    linguist-generated=false
+# previous name
+.vscode/schemas/yaml-color-hex.*        diff    linguist-generated=false
