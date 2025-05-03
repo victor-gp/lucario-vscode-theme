@@ -1,6 +1,6 @@
 {
     "yaml.schemas": {
-        "schemas/color-theme.json": [
+        "https://raw.githubusercontent.com/victor-gp/yaml-vscode-theme-json-schema/refs/heads/main/schemas/v1/color-theme.json": [
             "*-color-theme.yml",
             "*-color-theme.yaml"
         ]
