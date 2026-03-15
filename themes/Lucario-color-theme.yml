@@ -41,6 +41,8 @@ palette:
     - &Invalid      "#f8f8f0" # aka: Border
     - &DiffHeader   "#75715e"
     - &Invisibles   "#666666"
+    - &bg-lv-3-green "#21381b" # &Green { value = 56 }
+    - &bg-lv-3-green-hover "#26401f" # &Green { value = 64 }
 
 # ---------------------------------------------------------------------------- #
 
@@ -145,8 +147,10 @@ colors:
   #fixme: make this an alpha (of fg-base?) because this doesn't play well with e.g. Debug mode, when bg becomes orange and this hardcoded hover appears out of place
   statusBarItem.hoverBackground: *bg-lv-3-hover
   # todo: Item + prominent, error, warning, etc.
-  statusBarItem.remoteBackground: *bg-lv-3
-  statusBarItem.remoteForeground: *fg-base
+  statusBarItem.remoteBackground: *bg-lv-3-green
+  statusBarItem.remoteForeground: *fg-highlight
+  statusBarItem.remoteHoverBackground: *bg-lv-3-green-hover
+  statusBarItem.remoteHoverForeground: *fg-highlight
   statusBar.debuggingBackground: !alpha [*Orange, a8]
   statusBar.debuggingForeground: "#000"
   statusBar.debuggingBorder: *transparent

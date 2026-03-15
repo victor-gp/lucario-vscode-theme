@@ -6,6 +6,8 @@
 
 ### Workbench
 
+- Colorize in green the remote indicator in the status bar.
+
 ### Other changes
 
 - Misc improvements to the GitHub Action.
