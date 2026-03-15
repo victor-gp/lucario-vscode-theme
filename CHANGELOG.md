@@ -11,7 +11,7 @@
 ### Other changes
 
 - Misc improvements to the GitHub Action.
-- Fix patch-schemas.js
+- Extract everything YAML Theme JSON Schema into [a separate project](https://github.com/victor-gp/yaml-vscode-theme-json-schema)
 
 ## 2.3.3 - 2024-07-23
 
