@@ -569,7 +569,7 @@ tokenColors:
 
   - name: Markdown - Link visible parts
     scope:
-      - text.html.markdown string.other.link.title # title in "[title](url)" and images' "![title](url)"
+      - text.html.markdown string.other.link.title # title in "[title](url)"
       - text.html.markdown meta.link.inet markup.underline.link.markdown # the raw url in "<raw url>"
       # known issue: the tmLanguage grammar doesn't catch true raw urls (without the angle brackets),
       #   so they're "color: *FG", but also "fontStyle: underline" (VS Code styling for urls).
@@ -579,13 +579,27 @@ tokenColors:
 
   - name: Markdown - Link invisible parts (url, punctuation)
     scope:
-      - text.html.markdown markup.underline.link # url in "[title](url)" and images' "![title](url)"
-      # punctuation
-      - text.html.markdown punctuation.definition.link # [] and ![]
-      - text.html.markdown punctuation.definition.metadata # the parens in []()
-      - text.html.markdown meta.link.inet punctuation.definition.link.markdown # the angle quotes in a "<raw url>"
+      - text.html.markdown markup.underline.link # the url in "[title](url)"
+      - text.html.markdown punctuation.definition.link # []
+      - text.html.markdown punctuation.definition.metadata # the parens in "[]()"
+      - text.html.markdown meta.link.inet punctuation.definition.link.markdown # the angle quotes in "<raw url>"
     settings:
       foreground: !alpha [*Cyan, 90]
+
+  - name: Markdown - Inline images alt component
+    scope:
+      - text.html.markdown meta.image.inline.markdown punctuation.definition.link # the ![] in "![alt](image url)"
+      - text.html.markdown meta.image.inline.markdown string.other.link.description # the alt in "![alt](image url)"
+    settings:
+      foreground: *Yellow
+
+  # the path/url component of MD inline images is handled the same as "Markdown - Link invisible parts"
+
+  - name: Markdown - Inline images title
+    # the optional "title" in '![alt](image url "title")'
+    scope: text.html.markdown meta.image.inline.markdown string.other.link.description.title
+    settings:
+      foreground: !alpha [*Yellow, 90]
 
   - name: Markdown - List item marker
     # i.e.: "- ", "* ", "1. "

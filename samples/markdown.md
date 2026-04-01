@@ -58,10 +58,18 @@ special characters: &nbsp; &amp;
 
 emoji: :sweat_smile:
 
-an img tag:
+# Images
 
-<img src="./some-image.jpg">
+MD inline images with different components:
 
-or an md-like image:
+![alt](https://picsum.photos/200 "title")
 
-![image alt](image-url)
+![alt text](./path/to/nowhere)
+
+![](https://picsum.photos/id/237/536/354)
+
+another link for comparison: [Lorem Picsum is cool](https://picsum.photos/)
+
+an html img tag:
+
+<img src="https://picsum.photos/200" alt="text" title="title">
