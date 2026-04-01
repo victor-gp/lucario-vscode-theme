@@ -8,7 +8,7 @@ a link: [Advent of Code 2021](https://adventofcode.com/2021)
 
 Also _italics_ and **bold**.
 
-~~A strikethrough with _italic text_~~
+~~A strikethrough with _italic_ and **bold** text~~
 
 > here's a md **block**quote
 >
@@ -22,13 +22,13 @@ puts 'hello'
 
 And more `inline code`.
 
-lists:
+## Lists
 
 - one item
+    * a sub-item
 - another item
 
 1. one
-    * 1.1
 2. two
 
 - [x] task 1
@@ -58,7 +58,7 @@ special characters: &nbsp; &amp;
 
 emoji: :sweat_smile:
 
-# Images
+## Images
 
 MD inline images with different components:
 

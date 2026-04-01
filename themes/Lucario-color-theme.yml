@@ -515,20 +515,39 @@ tokenColors:
     settings:
       foreground: *Cyan
 
+  # Markdown start #############################################################
+
   - name: Markdown - Heading
     scope: markup.heading.markdown
     settings:
       fontStyle: bold
 
-  - name: Markdown - Bold
-    scope: markup.bold.markdown
+  - name: Markdown - fontStyle punctuation
+    scope:
+      - punctuation.definition.bold.markdown # double asterisks or underscores
+      - punctuation.definition.italic.markdown # single asterisk or underscore
+      - markup.strikethrough.markdown punctuation.definition # strikethrough tildes ~~
     settings:
+      foreground: !alpha [*Red, c0]
+      fontStyle: ""
+
+  - name: Markdown - Bold text
+    scope: text.html.markdown markup.bold
+    settings:
+      foreground: *FG
       fontStyle: bold
 
-  - name: Markdown - Italics
+  - name: Markdown - Italic text
     scope: markup.italic.markdown
     settings:
+      foreground: *FG
       fontStyle: italic
+
+  - name: Markdown - Strikethrough text
+    scope:
+      - markup.strikethrough.markdown
+    settings:
+      fontStyle: strikethrough
 
   - name: Markdown - Raw Inline
     scope:
@@ -557,21 +576,11 @@ tokenColors:
     settings:
       foreground: !alpha [*FG, c0]
 
-  - name: Markdown - Strikethrough punctuation # i.e: "~~"
-    scope: punctuation.definition.strikethrough.markdown
-    settings:
-      foreground: *Red
-
-  - name: Markdown - Strikethrough plain text
-    scope: markup.strikethrough.markdown
-    settings:
-      foreground: !alpha [*FG, 80]
-
   - name: Markdown - Link visible parts
     scope:
       - text.html.markdown string.other.link.title # title in "[title](url)"
       - text.html.markdown meta.link.inet markup.underline.link.markdown # the raw url in "<raw url>"
-      # known issue: the tmLanguage grammar doesn't catch true raw urls (without the angle brackets),
+      #nit known issue: the tmLanguage grammar doesn't catch true raw urls (without the angle brackets),
       #   so they're "color: *FG", but also "fontStyle: underline" (VS Code styling for urls).
       #   repo: https://github.com/microsoft/vscode-markdown-tm-grammar
     settings:
@@ -614,7 +623,7 @@ tokenColors:
       foreground: *Pink
 
   #nice: improve md syntax to pick up emoji, like ":emoji-code:"
-  #      or perhaps I can target that with semantic scopes?
+  #      or perhaps I can target that with semantic scopes? They'd be Pink.
 
   - scope:
       - punctuation.definition.tag.xml.plist
