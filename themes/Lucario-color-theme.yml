@@ -515,20 +515,39 @@ tokenColors:
     settings:
       foreground: *Cyan
 
+  # Markdown start #############################################################
+
   - name: Markdown - Heading
     scope: markup.heading.markdown
     settings:
       fontStyle: bold
 
-  - name: Markdown - Bold
-    scope: markup.bold.markdown
+  - name: Markdown - fontStyle punctuation
+    scope:
+      - punctuation.definition.bold.markdown # double asterisks or underscores
+      - punctuation.definition.italic.markdown # single asterisk or underscore
+      - markup.strikethrough.markdown punctuation.definition # strikethrough tildes ~~
     settings:
+      foreground: !alpha [*Red, c0]
+      fontStyle: ""
+
+  - name: Markdown - Bold text
+    scope: text.html.markdown markup.bold
+    settings:
+      foreground: *FG
       fontStyle: bold
 
-  - name: Markdown - Italics
+  - name: Markdown - Italic text
     scope: markup.italic.markdown
     settings:
+      foreground: *FG
       fontStyle: italic
+
+  - name: Markdown - Strikethrough text
+    scope:
+      - markup.strikethrough.markdown
+    settings:
+      fontStyle: strikethrough
 
   - name: Markdown - Raw Inline
     scope:
@@ -557,36 +576,39 @@ tokenColors:
     settings:
       foreground: !alpha [*FG, c0]
 
-  - name: Markdown - Strikethrough punctuation # i.e: "~~"
-    scope: punctuation.definition.strikethrough.markdown
-    settings:
-      foreground: *Red
-
-  - name: Markdown - Strikethrough plain text
-    scope: markup.strikethrough.markdown
-    settings:
-      foreground: !alpha [*FG, 80]
-
-  - name: Markdown - Link title
+  - name: Markdown - Link visible parts
     scope:
-      - text.html.markdown string.other.link # for [link](url) and ![image](url)
-      - text.html.markdown punctuation.definition.link # [] and ![]
+      - text.html.markdown string.other.link.title # title in "[title](url)"
+      - text.html.markdown meta.link.inet markup.underline.link.markdown # the raw url in "<raw url>"
+      #nit known issue: the tmLanguage grammar doesn't catch true raw urls (without the angle brackets),
+      #   so they're "color: *FG", but also "fontStyle: underline" (VS Code styling for urls).
+      #   repo: https://github.com/microsoft/vscode-markdown-tm-grammar
     settings:
-      foreground: *Yellow
+      foreground: *Cyan
 
-  - name: Markdown - Link url
+  - name: Markdown - Link invisible parts (url, punctuation)
     scope:
-      - text.html.markdown markup.underline.link
-      - punctuation.definition.metadata.markdown # the parens in []()
+      - text.html.markdown markup.underline.link # the url in "[title](url)"
+      - text.html.markdown punctuation.definition.link # []
+      - text.html.markdown punctuation.definition.metadata # the parens in "[]()"
+      - text.html.markdown meta.link.inet punctuation.definition.link.markdown # the angle quotes in "<raw url>"
     settings:
       foreground: !alpha [*Cyan, 90]
 
-  - name: Markdown - Raw url # like "<url>"
+  - name: Markdown - Inline images alt component
     scope:
-      - meta.link.inet.markdown markup.underline.link.markdown
-      - meta.link.inet.markdown punctuation.definition.link.markdown # the angle quotes
+      - text.html.markdown meta.image.inline.markdown punctuation.definition.link # the ![] in "![alt](image url)"
+      - text.html.markdown meta.image.inline.markdown string.other.link.description # the alt in "![alt](image url)"
     settings:
-      foreground: *Cyan
+      foreground: *Yellow
+
+  # the path/url component of MD inline images is handled the same as "Markdown - Link invisible parts"
+
+  - name: Markdown - Inline images title
+    # the optional "title" in '![alt](image url "title")'
+    scope: text.html.markdown meta.image.inline.markdown string.other.link.description.title
+    settings:
+      foreground: !alpha [*Yellow, 90]
 
   - name: Markdown - List item marker
     # i.e.: "- ", "* ", "1. "
@@ -601,7 +623,7 @@ tokenColors:
       foreground: *Pink
 
   #nice: improve md syntax to pick up emoji, like ":emoji-code:"
-  #      or perhaps I can target that with semantic scopes?
+  #      or perhaps I can target that with semantic scopes? They'd be Pink.
 
   - scope:
       - punctuation.definition.tag.xml.plist

@@ -8,7 +8,7 @@ a link: [Advent of Code 2021](https://adventofcode.com/2021)
 
 Also _italics_ and **bold**.
 
-~~A strikethrough with _italic text_~~
+~~A strikethrough with _italic_ and **bold** text~~
 
 > here's a md **block**quote
 >
@@ -22,13 +22,13 @@ puts 'hello'
 
 And more `inline code`.
 
-lists:
+## Lists
 
 - one item
+    * a sub-item
 - another item
 
 1. one
-    * 1.1
 2. two
 
 - [x] task 1
@@ -58,10 +58,18 @@ special characters: &nbsp; &amp;
 
 emoji: :sweat_smile:
 
-an img tag:
+## Images
 
-<img src="./some-image.jpg">
+MD inline images with different components:
 
-or an md-like image:
+![alt](https://picsum.photos/200 "title")
 
-![image alt](image-url)
+![alt text](./path/to/nowhere)
+
+![](https://picsum.photos/id/237/536/354)
+
+another link for comparison: [Lorem Picsum is cool](https://picsum.photos/)
+
+an html img tag:
+
+<img src="https://picsum.photos/200" alt="text" title="title">
