@@ -4,6 +4,8 @@
 
 ### Syntax
 
+- Markdown: make link titles cyan (were yellow); styled text white (was red).
+
 ### Workbench
 
 - Colorize in green the remote indicator in the status bar.
